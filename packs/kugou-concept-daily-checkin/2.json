@@ -1,0 +1,78 @@
+{
+  "schema": 3,
+  "id": "kugou-concept-daily-checkin",
+  "name": "酷狗概念版每日签到",
+  "version": 2,
+  "usage": "每天首次打开酷狗概念版后，轻启会关闭遮挡首页的活动弹窗，进入每日签到并领取今日畅听VIP。若今天已由用户领取，会直接记录完成，不重复点击；次日打开时恢复。",
+  "appliesTo": [
+    "com.kugou.hmmusic.lite"
+  ],
+  "entryOnForeground": true,
+  "oncePerDay": true,
+  "dailyCheckIn": {
+    "homeTexts": [
+      "发现",
+      "乐库"
+    ],
+    "entryRegion": [
+      0.77,
+      0.02,
+      0.89,
+      0.09
+    ],
+    "dialogText": "天天签到领畅听VIP",
+    "claimText": "领取今日畅听VIP",
+    "completedText": "已完成今天签到",
+    "claimedTexts": [
+      "领取成功",
+      "已领取",
+      "今日已签到",
+      "恭喜"
+    ],
+    "closeRegion": [
+      0.88,
+      0.16,
+      0.99,
+      0.49
+    ],
+    "dismissTexts": [
+      "关闭",
+      "跳过",
+      "我知道了",
+      "稍后再说",
+      "暂不参与"
+    ],
+    "startupDialogs": [
+      {
+        "contextText": "天天签到领畅听VIP",
+        "source": "tree",
+        "closeRegion": [
+          0.88,
+          0.16,
+          0.99,
+          0.49
+        ]
+      },
+      {
+        "contextText": "首页搜索「邀新活动」",
+        "source": "tree",
+        "targetText": "我知道了"
+      },
+      {
+        "contextText": "逐月福利",
+        "source": "ocr",
+        "readRegion": [
+          0.08,
+          0.14,
+          0.9,
+          0.59
+        ],
+        "closePoint": [
+          0.5,
+          0.805
+        ]
+      }
+    ]
+  },
+  "tasks": []
+}

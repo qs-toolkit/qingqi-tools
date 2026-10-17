@@ -1,0 +1,203 @@
+{
+  "schema": 3,
+  "id": "quietstart.qqmusic-free-listen-video",
+  "name": "QQ音乐免会员视频任务",
+  "version": 1,
+  "usage": "在 QQ 音乐首页点击右上角「免」。若直接进入奖励广告，轻启从广告页继续；若进入免费听歌页面，轻启点击「加时长」。每次跳转停留 5 秒并返回，未领奖最多再试 3 次；领奖后关闭广告或等待自动返回，继续领取至「加时长」不可用。",
+  "appliesTo": [
+    "com.tencent.hm.qqmusic"
+  ],
+  "entryAfterClick": "免费听歌",
+  "entryAfterClickAny": [
+    "点击后看"
+  ],
+  "landingVisit": {
+    "promptText": "可获得奖励",
+    "promptKeywords": [
+      "点击"
+    ],
+    "maxPendingRetries": 3,
+    "promptRegion": [
+      0.02,
+      0.03,
+      0.7,
+      0.18
+    ],
+    "buttonRegion": [
+      0.1,
+      0.8,
+      0.9,
+      0.92
+    ],
+    "dwellMs": 5000,
+    "chooserTexts": [
+      "选择应用",
+      "选择打开方式",
+      "应用分身",
+      "打开方式",
+      "微信1"
+    ],
+    "confirmContexts": [
+      "是否确认",
+      "确认打开",
+      "即将打开",
+      "是否打开",
+      "想要打开"
+    ],
+    "confirmButton": "确定",
+    "confirmButtons": [
+      "打开"
+    ],
+    "externalOpenPolicy": "open",
+    "cancelButton": "取消",
+    "dismissPoint": [
+      0.5,
+      0.15
+    ],
+    "backFrom": [
+      0.005,
+      0.52
+    ],
+    "backTo": [
+      0.4,
+      0.52
+    ],
+    "backSpeed": 800,
+    "externalReturnText": "QQ音乐",
+    "returnPolicy": "navigation",
+    "returnAbility": {
+      "moduleName": "entry",
+      "abilityName": "EntryAbility"
+    },
+    "earnedTexts": [
+      "恭喜已获得奖励",
+      "恭喜获得奖励",
+      "恭喜你已获得奖励"
+    ]
+  },
+  "tasks": [
+    {
+      "schema": 2,
+      "id": "quietstart.qqmusic-free-listen-video-cycle",
+      "name": "QQ音乐免费听歌加时长",
+      "version": 1,
+      "priority": 210,
+      "appliesTo": [
+        "com.tencent.hm.qqmusic"
+      ],
+      "when": {
+        "trigger": "app-foreground",
+        "lifetime": "foreground"
+      },
+      "defaults": {
+        "totalMs": 240000,
+        "limit": {
+          "maxWidth": 0.5,
+          "maxHeight": 0.12,
+          "maxArea": 0.05
+        }
+      },
+      "repeat": {
+        "maxCycles": 300,
+        "cooldownMs": 1000,
+        "idleMs": 12000
+      },
+      "steps": [
+        {
+          "find": {
+            "by": "text",
+            "match": [
+              "加时长"
+            ],
+            "limit": {
+              "maxWidth": 0.4,
+              "maxHeight": 0.09,
+              "maxArea": 0.04
+            }
+          },
+          "need": {
+            "visibleText": [
+              "免费听歌"
+            ],
+            "absentText": [
+              "恭喜已获得奖励",
+              "恭喜获得奖励"
+            ],
+            "evidence": {
+              "text": [
+                "免费听歌"
+              ]
+            }
+          },
+          "do": {
+            "capability": "click"
+          },
+          "expect": {
+            "result": "appeared",
+            "match": [
+              "点击后看",
+              "秒可获得奖励",
+              "点击后看15秒可获得奖励",
+              "点击后，继续看14秒可获得奖励"
+            ],
+            "settleMs": 12000,
+            "samples": 2
+          }
+        },
+        {
+          "find": {
+            "by": "text",
+            "match": [
+              "关闭广告"
+            ],
+            "explicit": false,
+            "idHints": [
+              [
+                "close",
+                "关闭广告"
+              ]
+            ],
+            "limit": {
+              "maxWidth": 0.12,
+              "maxHeight": 0.08,
+              "maxArea": 0.01
+            }
+          },
+          "need": {
+            "visibleText": [
+              "恭喜已获得奖励",
+              "恭喜获得奖励",
+              "恭喜你已获得奖励"
+            ],
+            "evidence": {
+              "text": [
+                "恭喜已获得奖励",
+                "恭喜获得奖励",
+                "恭喜你已获得奖励"
+              ]
+            }
+          },
+          "do": {
+            "capability": "click"
+          },
+          "expect": {
+            "result": "gone",
+            "settleMs": 15000,
+            "samples": 2
+          },
+          "skipWhen": {
+            "visibleText": [
+              "免费听歌"
+            ],
+            "absentText": [
+              "恭喜已获得奖励",
+              "恭喜获得奖励",
+              "点击后看"
+            ],
+            "stopRepeat": false
+          }
+        }
+      ]
+    }
+  ]
+}

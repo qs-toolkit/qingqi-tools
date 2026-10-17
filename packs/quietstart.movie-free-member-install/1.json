@@ -1,0 +1,50 @@
+{
+  "schema": 3,
+  "id": "quietstart.movie-free-member-install",
+  "name": "视频免会员安装任务",
+  "version": 1,
+  "usage": "在视频「我的」页，常用服务里点击「免费领会员」进入免费领视频会员页面。轻启先读取当前金币，达到 1000 即停止；不足时按每项 80 金币依次安装。点任务「打开」后，即使新应用弹出网络或权限窗口，也无需操作；轻启等待 5 秒就直接唤回视频，并核对任务奖励。最多完成 13 项，同一应用再次显示「安装」也会继续做。确认任务完成后尝试卸载本次新安装的应用；没有任务时点「换一换」，连续 3 次仍没有任务便结束。",
+  "appliesTo": [
+    "com.huawei.hmsapp.himovie"
+  ],
+  "entryAfterClick": "免费领会员",
+  "rewardInstall": {
+    "pageText": "免费领会员",
+    "taskActionText": "安装",
+    "taskOpenText": "打开",
+    "taskDoneText": "已打开",
+    "balancePrefix": "我的金币：",
+    "targetBalance": 1000,
+    "pointsPerTask": 80,
+    "marketText": "应用市场",
+    "marketNameId": "app_name",
+    "marketActionId": "download_button_text",
+    "refreshText": "换一换",
+    "taskRegion": [
+      0.04,
+      0.3,
+      0.97,
+      0.99
+    ],
+    "refreshRegion": [
+      0.62,
+      0.11,
+      0.99,
+      0.95
+    ],
+    "marketCloseRegion": [
+      0.83,
+      0.02,
+      0.99,
+      0.11
+    ],
+    "dwellMs": 5000,
+    "maxRefreshes": 3,
+    "maxTasks": 13,
+    "cleanupInstalled": true,
+    "scrollSpeed": 800,
+    "returnModuleName": "entry",
+    "returnAbilityName": "MainAbility"
+  },
+  "tasks": []
+}

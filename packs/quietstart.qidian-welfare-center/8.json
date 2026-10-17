@@ -1,0 +1,968 @@
+{
+  "schema": 3,
+  "id": "quietstart.qidian-welfare-center",
+  "name": "起点读书福利中心任务奖励",
+  "version": 8,
+  "usage": "在起点读书「我的」页，用户点击「福利中心」。新用户点击后会跳到新人页面，需要在新人页面滑到页面底部点「查看更多福利」。\n进入常规福利中心后轻启会自动运行，不用干预。",
+  "appliesTo": [
+    "com.qidian.reader"
+  ],
+  "landingVisit": {
+    "promptText": "可获得奖励",
+    "promptKeywords": [
+      "点击"
+    ],
+    "maxPendingRetries": 5,
+    "promptRegion": [
+      0.02,
+      0.04,
+      0.98,
+      0.35
+    ],
+    "buttonRegion": [
+      0.05,
+      0.55,
+      0.95,
+      0.92
+    ],
+    "dwellMs": 15000,
+    "chooserTexts": [
+      "选择应用",
+      "选择打开方式",
+      "应用分身",
+      "打开方式",
+      "微信1"
+    ],
+    "confirmContexts": [
+      "是否确认",
+      "确认打开",
+      "即将打开",
+      "是否打开",
+      "想要打开"
+    ],
+    "confirmButton": "确定",
+    "confirmButtons": [
+      "打开"
+    ],
+    "externalOpenPolicy": "open",
+    "cancelButton": "取消",
+    "dismissPoint": [
+      0.5,
+      0.14
+    ],
+    "backFrom": [
+      0.005,
+      0.52
+    ],
+    "backTo": [
+      0.4,
+      0.52
+    ],
+    "backSpeed": 800,
+    "externalReturnText": "起点读书",
+    "returnPolicy": "wake-owner",
+    "returnAbility": {
+      "moduleName": "AppEntry",
+      "abilityName": "MainTabAbility"
+    },
+    "earnedTexts": [
+      "恭喜已获得奖励",
+      "恭喜获得奖励"
+    ]
+  },
+  "tasks": [
+    {
+      "schema": 2,
+      "id": "quietstart.qidian-welfare-reward",
+      "name": "起点读书福利中心广告奖励",
+      "version": 6,
+      "priority": 200,
+      "appliesTo": [
+        "com.qidian.reader"
+      ],
+      "when": {
+        "trigger": "app-foreground",
+        "lifetime": "foreground"
+      },
+      "defaults": {
+        "totalMs": 120000,
+        "limit": {
+          "maxWidth": 0.5,
+          "maxHeight": 0.12,
+          "maxArea": 0.05
+        }
+      },
+      "repeat": {
+        "maxCycles": 5,
+        "cooldownMs": 500,
+        "idleMs": 30000,
+        "stopWhen": {
+          "text": "已领取",
+          "nearText": "激励任务"
+        }
+      },
+      "steps": [
+        {
+          "find": {
+            "by": "text",
+            "match": [
+              "去完成"
+            ],
+            "sameParentText": [
+              "激励任务"
+            ],
+            "limit": {
+              "maxWidth": 0.25,
+              "maxHeight": 0.08,
+              "maxArea": 0.02
+            }
+          },
+          "need": {
+            "visibleText": [
+              "完成任务得奖励"
+            ],
+            "absentText": [
+              "恭喜获得"
+            ],
+            "evidence": {
+              "text": [
+                "完成任务得奖励"
+              ]
+            }
+          },
+          "do": {
+            "capability": "click"
+          },
+          "expect": {
+            "result": "gone",
+            "settleMs": 10000,
+            "samples": 2
+          }
+        },
+        {
+          "find": {
+            "by": "text",
+            "match": [
+              "关闭广告"
+            ],
+            "explicit": false,
+            "idHints": [
+              [
+                "close",
+                "关闭广告"
+              ]
+            ],
+            "limit": {
+              "maxWidth": 0.12,
+              "maxHeight": 0.08,
+              "maxArea": 0.01
+            }
+          },
+          "need": {
+            "visibleText": [
+              "恭喜获得奖励",
+              "恭喜已获得奖励"
+            ],
+            "evidence": {
+              "text": [
+                "恭喜获得奖励",
+                "恭喜已获得奖励"
+              ]
+            }
+          },
+          "do": {
+            "capability": "click"
+          },
+          "expect": {
+            "result": "gone",
+            "settleMs": 10000,
+            "samples": 2
+          }
+        },
+        {
+          "find": {
+            "by": "text",
+            "match": [
+              "知道了"
+            ],
+            "limit": {
+              "maxWidth": 0.25,
+              "maxHeight": 0.1,
+              "maxArea": 0.025
+            }
+          },
+          "need": {
+            "visibleText": [
+              "恭喜获得"
+            ]
+          },
+          "do": {
+            "capability": "click"
+          },
+          "expect": {
+            "result": "gone",
+            "settleMs": 12000,
+            "samples": 2
+          },
+          "skipWhen": {
+            "visibleText": [
+              "完成任务得奖励"
+            ],
+            "absentText": [
+              "恭喜获得"
+            ],
+            "stopRepeat": true
+          }
+        }
+      ]
+    },
+    {
+      "schema": 2,
+      "id": "quietstart.qidian-welfare-hourly",
+      "name": "起点读书每小时惊喜福利",
+      "version": 4,
+      "priority": 220,
+      "appliesTo": [
+        "com.qidian.reader"
+      ],
+      "when": {
+        "trigger": "app-foreground",
+        "lifetime": "foreground"
+      },
+      "defaults": {
+        "totalMs": 120000,
+        "limit": {
+          "maxWidth": 0.5,
+          "maxHeight": 0.12,
+          "maxArea": 0.05
+        }
+      },
+      "steps": [
+        {
+          "find": {
+            "by": "text",
+            "match": [
+              "去完成"
+            ],
+            "sameParentText": [
+              "做任务领惊喜福利"
+            ],
+            "limit": {
+              "maxWidth": 0.25,
+              "maxHeight": 0.08,
+              "maxArea": 0.02
+            }
+          },
+          "need": {
+            "visibleText": [
+              "完成任务得奖励"
+            ],
+            "absentText": [
+              "恭喜获得"
+            ],
+            "evidence": {
+              "text": [
+                "做任务领惊喜福利"
+              ]
+            }
+          },
+          "do": {
+            "capability": "click"
+          },
+          "expect": {
+            "result": "gone",
+            "settleMs": 10000,
+            "samples": 2
+          }
+        },
+        {
+          "find": {
+            "by": "text",
+            "match": [
+              "关闭广告"
+            ],
+            "explicit": false,
+            "idHints": [
+              [
+                "close",
+                "关闭广告"
+              ]
+            ],
+            "limit": {
+              "maxWidth": 0.12,
+              "maxHeight": 0.08,
+              "maxArea": 0.01
+            }
+          },
+          "need": {
+            "visibleText": [
+              "恭喜获得奖励",
+              "恭喜已获得奖励"
+            ],
+            "evidence": {
+              "text": [
+                "恭喜获得奖励",
+                "恭喜已获得奖励"
+              ]
+            }
+          },
+          "do": {
+            "capability": "click"
+          },
+          "expect": {
+            "result": "gone",
+            "settleMs": 10000,
+            "samples": 2
+          }
+        },
+        {
+          "find": {
+            "by": "text",
+            "match": [
+              "知道了"
+            ],
+            "limit": {
+              "maxWidth": 0.25,
+              "maxHeight": 0.1,
+              "maxArea": 0.025
+            }
+          },
+          "need": {
+            "visibleText": [
+              "恭喜获得"
+            ]
+          },
+          "do": {
+            "capability": "click"
+          },
+          "expect": {
+            "result": "gone",
+            "settleMs": 12000,
+            "samples": 2
+          },
+          "skipWhen": {
+            "visibleText": [
+              "完成任务得奖励"
+            ],
+            "absentText": [
+              "恭喜获得"
+            ],
+            "stopRepeat": true
+          }
+        }
+      ]
+    },
+    {
+      "schema": 2,
+      "id": "quietstart.qidian-welfare-three-ads",
+      "name": "起点读书三次广告任务奖励",
+      "version": 7,
+      "priority": 210,
+      "appliesTo": [
+        "com.qidian.reader"
+      ],
+      "when": {
+        "trigger": "app-foreground",
+        "lifetime": "foreground"
+      },
+      "defaults": {
+        "totalMs": 120000,
+        "limit": {
+          "maxWidth": 0.5,
+          "maxHeight": 0.12,
+          "maxArea": 0.05
+        }
+      },
+      "repeat": {
+        "maxCycles": 3,
+        "cooldownMs": 500,
+        "idleMs": 30000,
+        "stopWhen": {
+          "text": "已领取",
+          "nearText": "完成3个广告任务得奖励"
+        }
+      },
+      "steps": [
+        {
+          "find": {
+            "by": "text",
+            "match": [
+              "去完成"
+            ],
+            "sameParentText": [
+              "完成3个广告任务得奖励"
+            ],
+            "limit": {
+              "maxWidth": 0.25,
+              "maxHeight": 0.08,
+              "maxArea": 0.02
+            }
+          },
+          "need": {
+            "visibleText": [
+              "完成任务得奖励"
+            ],
+            "absentText": [
+              "恭喜获得"
+            ],
+            "evidence": {
+              "text": [
+                "完成3个广告任务得奖励"
+              ]
+            }
+          },
+          "do": {
+            "capability": "click"
+          },
+          "expect": {
+            "result": "gone",
+            "settleMs": 10000,
+            "samples": 2
+          }
+        },
+        {
+          "find": {
+            "by": "text",
+            "match": [
+              "关闭广告"
+            ],
+            "explicit": false,
+            "idHints": [
+              [
+                "close",
+                "关闭广告"
+              ]
+            ],
+            "limit": {
+              "maxWidth": 0.12,
+              "maxHeight": 0.08,
+              "maxArea": 0.01
+            }
+          },
+          "need": {
+            "visibleText": [
+              "恭喜获得奖励",
+              "恭喜已获得奖励"
+            ],
+            "evidence": {
+              "text": [
+                "恭喜获得奖励",
+                "恭喜已获得奖励"
+              ]
+            }
+          },
+          "do": {
+            "capability": "click"
+          },
+          "expect": {
+            "result": "gone",
+            "settleMs": 10000,
+            "samples": 2
+          }
+        },
+        {
+          "find": {
+            "by": "text",
+            "match": [
+              "知道了"
+            ],
+            "limit": {
+              "maxWidth": 0.25,
+              "maxHeight": 0.1,
+              "maxArea": 0.025
+            }
+          },
+          "need": {
+            "visibleText": [
+              "恭喜获得",
+              "知道了"
+            ]
+          },
+          "do": {
+            "capability": "click"
+          },
+          "expect": {
+            "result": "gone",
+            "settleMs": 12000,
+            "samples": 2
+          },
+          "skipWhen": {
+            "visibleText": [
+              "再完成"
+            ],
+            "absentText": [
+              "恭喜获得",
+              "知道了"
+            ],
+            "stopRepeat": false
+          }
+        }
+      ]
+    },
+    {
+      "schema": 2,
+      "id": "quietstart.qidian-welfare-one-ad",
+      "name": "起点读书单次广告奖励",
+      "version": 4,
+      "priority": 230,
+      "appliesTo": [
+        "com.qidian.reader"
+      ],
+      "when": {
+        "trigger": "app-foreground",
+        "lifetime": "foreground"
+      },
+      "defaults": {
+        "totalMs": 120000,
+        "limit": {
+          "maxWidth": 0.5,
+          "maxHeight": 0.12,
+          "maxArea": 0.05
+        }
+      },
+      "steps": [
+        {
+          "find": {
+            "by": "text",
+            "match": [
+              "去完成"
+            ],
+            "sameParentText": [
+              "完成1个广告任务得奖励"
+            ],
+            "limit": {
+              "maxWidth": 0.25,
+              "maxHeight": 0.08,
+              "maxArea": 0.02
+            }
+          },
+          "need": {
+            "visibleText": [
+              "完成任务得奖励"
+            ],
+            "absentText": [
+              "恭喜获得"
+            ],
+            "evidence": {
+              "text": [
+                "完成1个广告任务得奖励"
+              ]
+            }
+          },
+          "do": {
+            "capability": "click"
+          },
+          "expect": {
+            "result": "gone",
+            "settleMs": 10000,
+            "samples": 2
+          }
+        },
+        {
+          "find": {
+            "by": "text",
+            "match": [
+              "关闭广告"
+            ],
+            "explicit": false,
+            "idHints": [
+              [
+                "close",
+                "关闭广告"
+              ]
+            ],
+            "limit": {
+              "maxWidth": 0.12,
+              "maxHeight": 0.08,
+              "maxArea": 0.01
+            }
+          },
+          "need": {
+            "visibleText": [
+              "恭喜获得奖励",
+              "恭喜已获得奖励"
+            ],
+            "evidence": {
+              "text": [
+                "恭喜获得奖励",
+                "恭喜已获得奖励"
+              ]
+            }
+          },
+          "do": {
+            "capability": "click"
+          },
+          "expect": {
+            "result": "gone",
+            "settleMs": 10000,
+            "samples": 2
+          }
+        },
+        {
+          "find": {
+            "by": "text",
+            "match": [
+              "知道了"
+            ],
+            "limit": {
+              "maxWidth": 0.25,
+              "maxHeight": 0.1,
+              "maxArea": 0.025
+            }
+          },
+          "need": {
+            "visibleText": [
+              "恭喜获得"
+            ]
+          },
+          "do": {
+            "capability": "click"
+          },
+          "expect": {
+            "result": "gone",
+            "settleMs": 12000,
+            "samples": 2
+          },
+          "skipWhen": {
+            "visibleText": [
+              "完成任务得奖励"
+            ],
+            "absentText": [
+              "恭喜获得"
+            ],
+            "stopRepeat": true
+          }
+        }
+      ]
+    },
+    {
+      "schema": 2,
+      "id": "quietstart.qidian-welfare-astronaut",
+      "name": "起点读书白泽宇航员装扮",
+      "version": 4,
+      "priority": 240,
+      "appliesTo": [
+        "com.qidian.reader"
+      ],
+      "when": {
+        "trigger": "app-foreground",
+        "lifetime": "foreground"
+      },
+      "defaults": {
+        "totalMs": 120000,
+        "limit": {
+          "maxWidth": 0.5,
+          "maxHeight": 0.12,
+          "maxArea": 0.05
+        }
+      },
+      "steps": [
+        {
+          "find": {
+            "by": "text",
+            "match": [
+              "去完成"
+            ],
+            "sameParentText": [
+              "做任务得白泽宇航员装扮"
+            ],
+            "limit": {
+              "maxWidth": 0.25,
+              "maxHeight": 0.08,
+              "maxArea": 0.02
+            }
+          },
+          "need": {
+            "visibleText": [
+              "完成任务得奖励"
+            ],
+            "absentText": [
+              "恭喜获得"
+            ],
+            "evidence": {
+              "text": [
+                "做任务得白泽宇航员装扮"
+              ]
+            }
+          },
+          "do": {
+            "capability": "click"
+          },
+          "expect": {
+            "result": "gone",
+            "settleMs": 10000,
+            "samples": 2
+          }
+        },
+        {
+          "find": {
+            "by": "text",
+            "match": [
+              "关闭广告"
+            ],
+            "explicit": false,
+            "idHints": [
+              [
+                "close",
+                "关闭广告"
+              ]
+            ],
+            "limit": {
+              "maxWidth": 0.12,
+              "maxHeight": 0.08,
+              "maxArea": 0.01
+            }
+          },
+          "need": {
+            "visibleText": [
+              "恭喜获得奖励",
+              "恭喜已获得奖励"
+            ],
+            "evidence": {
+              "text": [
+                "恭喜获得奖励",
+                "恭喜已获得奖励"
+              ]
+            }
+          },
+          "do": {
+            "capability": "click"
+          },
+          "expect": {
+            "result": "gone",
+            "settleMs": 10000,
+            "samples": 2
+          }
+        },
+        {
+          "find": {
+            "by": "text",
+            "match": [
+              "知道了"
+            ],
+            "limit": {
+              "maxWidth": 0.25,
+              "maxHeight": 0.1,
+              "maxArea": 0.025
+            }
+          },
+          "need": {
+            "visibleText": [
+              "恭喜获得"
+            ]
+          },
+          "do": {
+            "capability": "click"
+          },
+          "expect": {
+            "result": "gone",
+            "settleMs": 12000,
+            "samples": 2
+          },
+          "skipWhen": {
+            "visibleText": [
+              "完成任务得奖励"
+            ],
+            "absentText": [
+              "恭喜获得"
+            ],
+            "stopRepeat": true
+          }
+        }
+      ]
+    },
+    {
+      "schema": 2,
+      "id": "quietstart.qidian-welfare-scroll",
+      "name": "起点读书查看下方任务",
+      "version": 1,
+      "priority": 225,
+      "appliesTo": [
+        "com.qidian.reader"
+      ],
+      "when": {
+        "trigger": "app-foreground",
+        "lifetime": "foreground"
+      },
+      "defaults": {
+        "limit": {
+          "maxWidth": 1,
+          "maxHeight": 0.1,
+          "maxArea": 0.08
+        }
+      },
+      "steps": [
+        {
+          "find": {
+            "by": "text",
+            "match": [
+              "完成任务得奖励"
+            ],
+            "limit": {
+              "maxWidth": 1,
+              "maxHeight": 0.1,
+              "maxArea": 0.08
+            }
+          },
+          "need": {
+            "visibleText": [
+              "完成任务得奖励"
+            ],
+            "absentText": [
+              "恭喜获得"
+            ],
+            "absentOnScreenText": [
+              "完成1个广告任务得奖励"
+            ],
+            "evidence": {
+              "text": [
+                "完成任务得奖励"
+              ]
+            }
+          },
+          "do": {
+            "capability": "swipe",
+            "from": [
+              0.5,
+              0.78
+            ],
+            "to": [
+              0.5,
+              0.56
+            ],
+            "speed": 600
+          },
+          "expect": {
+            "result": "appeared",
+            "match": [
+              "完成1个广告任务得奖励"
+            ],
+            "onScreen": true,
+            "settleMs": 10000,
+            "samples": 2
+          }
+        }
+      ]
+    },
+    {
+      "schema": 2,
+      "id": "quietstart.qidian-welfare-popup",
+      "name": "起点读书福利领奖弹窗",
+      "version": 1,
+      "priority": 250,
+      "appliesTo": [
+        "com.qidian.reader"
+      ],
+      "when": {
+        "trigger": "app-foreground",
+        "lifetime": "foreground"
+      },
+      "steps": [
+        {
+          "find": {
+            "by": "text",
+            "match": [
+              "知道了"
+            ],
+            "limit": {
+              "maxWidth": 0.25,
+              "maxHeight": 0.1,
+              "maxArea": 0.025
+            }
+          },
+          "need": {
+            "visibleText": [
+              "恭喜获得"
+            ]
+          },
+          "do": {
+            "capability": "click"
+          },
+          "expect": {
+            "result": "gone",
+            "settleMs": 12000,
+            "samples": 2
+          }
+        }
+      ]
+    },
+    {
+      "schema": 2,
+      "id": "quietstart.qidian-welfare-scroll-more",
+      "name": "起点读书查看更下方任务",
+      "version": 1,
+      "priority": 235,
+      "appliesTo": [
+        "com.qidian.reader"
+      ],
+      "when": {
+        "trigger": "app-foreground",
+        "lifetime": "foreground"
+      },
+      "defaults": {
+        "limit": {
+          "maxWidth": 0.8,
+          "maxHeight": 0.1,
+          "maxArea": 0.06
+        }
+      },
+      "steps": [
+        {
+          "find": {
+            "by": "text",
+            "match": [
+              "完成1个广告任务得奖励"
+            ],
+            "limit": {
+              "maxWidth": 0.8,
+              "maxHeight": 0.1,
+              "maxArea": 0.06
+            }
+          },
+          "need": {
+            "visibleText": [
+              "完成任务得奖励"
+            ],
+            "absentText": [
+              "恭喜获得"
+            ],
+            "absentOnScreenText": [
+              "做任务得白泽宇航员装扮"
+            ],
+            "evidence": {
+              "text": [
+                "完成1个广告任务得奖励"
+              ]
+            }
+          },
+          "do": {
+            "capability": "swipe",
+            "from": [
+              0.5,
+              0.78
+            ],
+            "to": [
+              0.5,
+              0.56
+            ],
+            "speed": 600
+          },
+          "expect": {
+            "result": "appeared",
+            "match": [
+              "做任务得白泽宇航员装扮"
+            ],
+            "onScreen": true,
+            "settleMs": 10000,
+            "samples": 2
+          }
+        }
+      ]
+    }
+  ],
+  "entryAfterClick": "完成任务得奖励",
+  "entryClickTexts": [
+    "福利中心",
+    "查看更多福利"
+  ]
+}

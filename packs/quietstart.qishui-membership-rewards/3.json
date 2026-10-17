@@ -1,0 +1,74 @@
+{
+  "schema": 3,
+  "id": "quietstart.qishui-membership-rewards",
+  "name": "汽水音乐免费畅听广告奖励",
+  "version": 3,
+  "usage": "在汽水音乐「我的」页，用户点击「领时长」或「继续领」，部分用户没有入口可忽略。\n轻启会连续看完可领取的广告，并处理续领弹窗，直到活动显示没有更多奖励。",
+  "appliesTo": [
+    "com.luna.hm.music"
+  ],
+  "entryOnTap": [
+    "领时长",
+    "继续领"
+  ],
+  "rewardVideo": {
+    "maxAds": 300,
+    "adBadgeText": "广告",
+    "adReadyText": "领取成功",
+    "adCloseMarks": [
+      "×",
+      "✕",
+      "X"
+    ],
+    "entryRecoveryOnAd": true,
+    "adReadRegion": [
+      0.02,
+      0,
+      0.98,
+      0.1
+    ],
+    "adCloseRegion": [
+      0.88,
+      0,
+      0.95,
+      0.09
+    ],
+    "dialogContextText": "再看",
+    "dialogNextText": "领取奖励",
+    "dialogReadRegion": [
+      0.13,
+      0.27,
+      0.87,
+      0.66
+    ],
+    "dialogButtonRegion": [
+      0.2,
+      0.5,
+      0.8,
+      0.6
+    ],
+    "resumeContextText": "再看",
+    "resumeNextText": "解锁",
+    "resumeAlternateTexts": [
+      "继续观看"
+    ],
+    "resumeReadRegion": [
+      0.02,
+      0.2,
+      0.98,
+      0.99
+    ],
+    "resumeButtonRegion": [
+      0.2,
+      0.48,
+      0.98,
+      0.99
+    ],
+    "terminalTexts": [
+      "已全部领取",
+      "暂无更多奖励",
+      "当前已解锁30天"
+    ]
+  },
+  "tasks": []
+}
