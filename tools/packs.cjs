@@ -44,7 +44,7 @@ function readIndex() {
 
 function check() {
   const index = readIndex();
-  const latest = new Map();
+  const versions = new Map();
   for (const id of fs.readdirSync(packsDir)) {
     const directory = path.join(packsDir, id);
     if (!fs.statSync(directory).isDirectory()) fail(`${directory}: 只允许工具包目录`);
@@ -55,7 +55,8 @@ function check() {
       if (!fs.statSync(file).isFile()) fail(`${file}: 不是普通文件`);
       const pack = assertPack(readJson(file), file);
       if (pack.id !== id || `${pack.version}.json` !== filename) fail(`${file}: id 或 version 与路径不一致`);
-      if (!latest.has(id) || latest.get(id).version < pack.version) latest.set(id, pack);
+      if (!versions.has(id)) versions.set(id, new Map());
+      versions.get(id).set(pack.version, pack);
     }
   }
   let previousId = '';
@@ -63,14 +64,14 @@ function check() {
     if (!entry || typeof entry !== 'object' || !validId.test(entry.id || '')) fail('清单中有无效 id');
     if (entry.id <= previousId) fail(`清单 id 重复或未按字母排序：${entry.id}`);
     previousId = entry.id;
-    const pack = latest.get(entry.id);
+    const pack = versions.get(entry.id)?.get(entry.version);
     if (!pack) fail(`清单中的工具包文件不存在：${entry.id}`);
     if (entry.name !== pack.name || entry.version !== pack.version || entry.url !== packUrl(pack)) {
-      fail(`清单与最新工具包不一致：${entry.id}`);
+      fail(`清单与所选版本的工具包不一致：${entry.id}`);
     }
-    latest.delete(entry.id);
+    versions.delete(entry.id);
   }
-  if (latest.size) fail(`工具包尚未加入清单：${[...latest.keys()].join(', ')}`);
+  if (versions.size) fail(`工具包尚未加入清单：${[...versions.keys()].join(', ')}`);
   console.log(`校验通过：${index.packs.length} 个工具包，版本文件和清单一致`);
   return index;
 }
@@ -83,15 +84,20 @@ function add(source) {
   const existing = index.packs.find(entry => entry.id === pack.id);
   if (existing && pack.version < existing.version) fail(`版本不能回退：${pack.id} 当前为 ${existing.version}`);
   const destination = path.join(root, packUrl(pack));
+  let created = false;
   if (fs.existsSync(destination)) {
-    if (JSON.stringify(readJson(destination)) === JSON.stringify(pack)) {
+    if (JSON.stringify(readJson(destination)) !== JSON.stringify(pack)) {
+      fail(`版本文件已存在且内容不同；请先递增 version：${packUrl(pack)}`);
+    }
+    if (existing?.version === pack.version) {
       console.log(`已经存在，未修改：${packUrl(pack)}`);
       return;
     }
-    fail(`版本文件已存在且内容不同；请先递增 version：${packUrl(pack)}`);
+  } else {
+    fs.mkdirSync(path.dirname(destination), { recursive: true });
+    fs.writeFileSync(destination, `${JSON.stringify(pack, null, 2)}\n`, { flag: 'wx' });
+    created = true;
   }
-  fs.mkdirSync(path.dirname(destination), { recursive: true });
-  fs.writeFileSync(destination, `${JSON.stringify(pack, null, 2)}\n`, { flag: 'wx' });
   const entry = { id: pack.id, name: pack.name, version: pack.version, url: packUrl(pack) };
   index.packs = [...index.packs.filter(item => item.id !== pack.id), entry]
     .sort((left, right) => left.id < right.id ? -1 : left.id > right.id ? 1 : 0);
@@ -101,7 +107,7 @@ function add(source) {
     fs.renameSync(temporary, indexFile);
   } catch (error) {
     if (fs.existsSync(temporary)) fs.unlinkSync(temporary);
-    fs.unlinkSync(destination);
+    if (created) fs.unlinkSync(destination);
     throw error;
   }
   check();

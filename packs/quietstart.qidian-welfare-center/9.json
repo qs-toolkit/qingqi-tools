@@ -55,10 +55,10 @@
       0.52
     ],
     "backTo": [
-      0.4,
+      0.3,
       0.52
     ],
-    "backSpeed": 800,
+    "backSpeed": 2600,
     "externalReturnText": "起点读书",
     "returnPolicy": "wake-owner",
     "returnAbility": {
@@ -75,7 +75,7 @@
       "schema": 2,
       "id": "quietstart.qidian-welfare-reward",
       "name": "起点读书福利中心广告奖励",
-      "version": 6,
+      "version": 7,
       "priority": 200,
       "appliesTo": [
         "com.qidian.reader"
@@ -93,7 +93,7 @@
         }
       },
       "repeat": {
-        "maxCycles": 5,
+        "maxCycles": 300,
         "cooldownMs": 500,
         "idleMs": 30000,
         "stopWhen": {
@@ -960,10 +960,5 @@
       ]
     }
   ],
-  "entryAfterClick": "完成任务得奖励",
-  "entryClickTexts": [
-    "福利中心",
-    "福利中心\n做任务领福利",
-    "查看更多福利"
-  ]
+  "entryAfterClick": "https://h5.if.qidian.com/new/welfareCenter"
 }
