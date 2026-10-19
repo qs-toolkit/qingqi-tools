@@ -1,0 +1,50 @@
+{
+  "schema": 3,
+  "id": "quietstart.cloud-space-50gb-install",
+  "name": "云盘免费领50GB安装任务",
+  "version": 2,
+  "usage": "在系统设置进入「云空间」或「云盘」，由用户点击「免费领 50 GB 云空间」任务卡片，进入出现「已打开：」计数的任务页后轻启开始执行；仅停留在入口卡片时不执行。轻启按活动页「已打开」计数依次完成安装、关闭应用市场弹窗、回到活动页点击「打开」，在新应用停留 5 秒后唤回云盘任务页。累计完成 30 项即停止；无可安装任务时点击「换一换」，连续 3 次仍没有任务便结束。同一应用再次显示「安装」也会继续做；确认任务计数增加后尝试卸载本次新安装的应用。工具包不会点击「立即领取」或「兑换」，奖品由用户自行领取。",
+  "appliesTo": [
+    "com.huawei.hmos.settings"
+  ],
+  "entryAfterClick": "已打开：",
+  "rewardInstall": {
+    "pageText": "免费领 50 GB 云空间",
+    "taskActionText": "安装",
+    "taskOpenText": "打开",
+    "taskDoneText": "已打开",
+    "balancePrefix": "已打开：",
+    "targetBalance": 30,
+    "pointsPerTask": 1,
+    "marketText": "应用市场",
+    "marketNameId": "app_name",
+    "marketActionId": "download_button_text",
+    "refreshText": "换一换",
+    "taskRegion": [
+      0.04,
+      0.3,
+      0.97,
+      0.99
+    ],
+    "refreshRegion": [
+      0.62,
+      0.11,
+      0.99,
+      0.95
+    ],
+    "marketCloseRegion": [
+      0.83,
+      0.02,
+      0.99,
+      0.11
+    ],
+    "dwellMs": 5000,
+    "maxRefreshes": 3,
+    "maxTasks": 30,
+    "cleanupInstalled": true,
+    "scrollSpeed": 800,
+    "returnModuleName": "phone_settings",
+    "returnAbilityName": "com.huawei.hmos.settings.MainAbility"
+  },
+  "tasks": []
+}

@@ -1,0 +1,80 @@
+{
+  "schema": 3,
+  "id": "quietstart.theme-free-gifts",
+  "name": "主题免费领好礼三段任务",
+  "version": 5,
+  "usage": "在「主题」的「我的」页，亲手点击头部「免费领好礼」卡片。轻启依次完成安装并打开应用、打开已安装应用、观看奖励视频三个区域；若打开应用时出现「选择打开方式」，会选择其中一个可见应用。单次打开分别停留 2 秒和 1 秒，视频左上角显示「领取成功」后才点右上角关闭。每个区域达到 15／150／75 次，或连续点击 3 次「换一换」仍无任务，才进入下一段。已确认的安装任务会尝试卸载本次新装应用。金币兑换由用户自行操作；手动返回「我的」页会停止本次三段任务。",
+  "appliesTo": [
+    "com.huawei.hmsapp.thememanager"
+  ],
+  "entryAfterClick": "免费领好礼",
+  "entryAfterClickId": "themeToolTitle",
+  "entryClickTexts": [
+    "免费领好礼"
+  ],
+  "rewardStages": {
+    "pageText": "免费领好礼",
+    "returnModuleName": "entry",
+    "returnAbilityName": "MainAbility",
+    "scrollSpeed": 800,
+    "listScrollX": 0.52,
+    "pageScrollX": 0.015,
+    "scrollTop": 0.34,
+    "scrollBottom": 0.86,
+    "chooserTexts": [
+      "选择打开方式"
+    ],
+    "chooserMaxReads": 9,
+    "chooserPollMs": 250,
+    "stages": [
+      {
+        "kind": "install",
+        "title": "安装并回到本页面打开应用获100金币",
+        "actionText": "安装",
+        "openText": "打开",
+        "doneText": "已打开",
+        "refreshText": "换一换",
+        "maxTasks": 15,
+        "maxRefreshes": 3,
+        "dwellMs": 2000,
+        "marketText": "应用市场",
+        "marketNameId": "app_name",
+        "marketActionId": "download_button_text",
+        "marketCloseRegion": [
+          0.83,
+          0.02,
+          0.99,
+          0.11
+        ],
+        "cleanupInstalled": true
+      },
+      {
+        "kind": "open",
+        "title": "打开应用获10金币",
+        "actionText": "打开",
+        "doneText": "已打开",
+        "refreshText": "换一换",
+        "maxTasks": 150,
+        "maxRefreshes": 3,
+        "dwellMs": 1000
+      },
+      {
+        "kind": "video",
+        "title": "看视频获20金币",
+        "actionText": "去观看",
+        "refreshText": "换一换",
+        "maxTasks": 75,
+        "maxRefreshes": 3,
+        "readyText": "领取成功",
+        "countdownPattern": "[0-9]+秒后领取奖励",
+        "closeRegion": [
+          0.87,
+          0.01,
+          0.97,
+          0.08
+        ]
+      }
+    ]
+  },
+  "tasks": []
+}

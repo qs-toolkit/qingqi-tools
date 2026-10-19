@@ -11,8 +11,8 @@
     {
       "id": "quietstart.cloud-space-50gb-install",
       "name": "云盘免费领50GB安装任务",
-      "version": 1,
-      "url": "packs/quietstart.cloud-space-50gb-install/1.json"
+      "version": 2,
+      "url": "packs/quietstart.cloud-space-50gb-install/2.json"
     },
     {
       "id": "quietstart.movie-free-member-install",
@@ -41,8 +41,8 @@
     {
       "id": "quietstart.qqmusic-free-listen-video",
       "name": "QQ音乐免会员视频任务",
-      "version": 1,
-      "url": "packs/quietstart.qqmusic-free-listen-video/1.json"
+      "version": 3,
+      "url": "packs/quietstart.qqmusic-free-listen-video/3.json"
     },
     {
       "id": "quietstart.splash-ad",
@@ -53,8 +53,8 @@
     {
       "id": "quietstart.theme-free-gifts",
       "name": "主题免费领好礼三段任务",
-      "version": 3,
-      "url": "packs/quietstart.theme-free-gifts/3.json"
+      "version": 5,
+      "url": "packs/quietstart.theme-free-gifts/5.json"
     }
   ]
 }
