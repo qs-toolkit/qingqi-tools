@@ -20,6 +20,8 @@ https://qs-toolkit.github.io/qingqi-tools/index.json
 
 起点手动验证版（2026-10-20）：按维护者指定覆盖发布为 **v9**，包含原 v11 的持续执行调整，以及缩短、加快的返回手势。v10/v11 用户需手动重新导入 [v9 JSON](packs/quietstart.qidian-welfare-center/9.json)，订阅不会自动降级。目录中的 v10/v11 文件保留作历史记录。
 
+淘宝淘金币赚金币任务首次发布为 **v1**，沿用已验收测试包 v21 的完整配置，请使用轻启 **1.2.7(127052) 或更新版本**。已导入 v21 测试包的设备需手动重新导入 [v1 JSON](packs/quietstart.taobao-taojinbi-earn/1.json)，订阅不会自动降级。
+
 本地维护：
 
 ```sh

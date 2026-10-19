@@ -1,0 +1,115 @@
+{
+  "schema": 3,
+  "id": "quietstart.taobao-taojinbi-earn",
+  "name": "淘宝淘金币赚金币任务",
+  "version": 1,
+  "usage": "进入淘宝淘金币后，打开「赚金币」任务面板才启动。自动展开更多专享福利，领取任务到访奖励，并处理以下未完成浏览任务：主标题带「看看、逛、发现、浏览、关注」且副标题带「浏览、看、逛」；主标题带「搜关键字、搜关键词、搜一搜」且副标题带浏览词，默认搜索衣服；无副标题的「逛清单」卡片。答题和灰色已完成项跳过；宽屏列表没有合适任务时从任务区中部向下继续查找。有效任务按页面状态重复做，不限制固定轮次；已出现到账提示时不再等待任务计数核对，单次未确认允许重做。按页面可读时长浏览，读不到时长时以25秒兜底；仍无结束提示时用短促边缘手势返回列表，继续其他任务。",
+  "priority": 600,
+  "readyWhen": {
+    "allText": [
+      "关闭"
+    ],
+    "anyText": [
+      "今日速赚",
+      "更多金币等你赚"
+    ]
+  },
+  "appliesTo": [
+    "com.taobao.taobao4hmos"
+  ],
+  "entryAfterClick": "今日速赚",
+  "entryAfterClickAny": [
+    "更多金币等你赚"
+  ],
+  "entryClickTexts": [
+    "赚金币",
+    "去赚金币"
+  ],
+  "tasks": [],
+  "coinBrowse": {
+    "panelText": "今日速赚",
+    "moreText": "更多专享福利",
+    "expandText": "展开",
+    "expandedText": "收起更多任务",
+    "searchPageText": "搜索有福利",
+    "searchTitle": "搜一搜你心仪的宝贝",
+    "searchQuery": "衣服",
+    "searchButtonText": "搜索",
+    "browseTitles": [
+      "发现精选好物",
+      "浏览心仪好物",
+      "逛逛金币加抵好货",
+      "逛好店赚一大波金币"
+    ],
+    "quickBrowseTitles": [
+      "去芭芭农场逛一逛"
+    ],
+    "keywordPrefix": "看看#",
+    "actionTexts": [
+      "去完成",
+      "逛一逛"
+    ],
+    "earnedTexts": [
+      "已得",
+      "任务完成",
+      "淘金币已到账"
+    ],
+    "earnedPatterns": [
+      "^已得(?:🪙|金币)?[1-9]\\d*",
+      "^完成！.*淘金币已到账$"
+    ],
+    "videoEarnedTitle": "任务已完成",
+    "videoEarnedContinuation": "继续逛逛吧",
+    "quickRewardText": "领取奖励",
+    "reopenTexts": [
+      "赚金币",
+      "去赚金币",
+      "领淘金币"
+    ],
+    "cardTitleWords": [
+      "清单"
+    ],
+    "cardExcludeWords": [
+      "金币",
+      "任务",
+      "规则",
+      "换一换",
+      "已得"
+    ],
+    "quickClaimDwellMs": 6500,
+    "browseWords": [
+      "浏览",
+      "逛",
+      "看"
+    ],
+    "excludeWords": [
+      "邀请",
+      "拉人",
+      "好友",
+      "分享",
+      "下单",
+      "购买",
+      "支付",
+      "安装",
+      "下载",
+      "答题",
+      "课堂",
+      "开通",
+      "授权",
+      "绑定"
+    ],
+    "browseDwellMs": 25000,
+    "swipeIntervalMs": 800,
+    "backFrom": [
+      0.015,
+      0.5
+    ],
+    "backTo": [
+      0.3,
+      0.5
+    ],
+    "backSpeed": 2600,
+    "maxBackAttempts": 3,
+    "swipeSpeed": 300
+  }
+}

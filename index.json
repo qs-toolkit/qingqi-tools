@@ -52,6 +52,12 @@
       "url": "packs/quietstart.splash-ad/6.json"
     },
     {
+      "id": "quietstart.taobao-taojinbi-earn",
+      "name": "淘宝淘金币赚金币任务",
+      "version": 1,
+      "url": "packs/quietstart.taobao-taojinbi-earn/1.json"
+    },
+    {
       "id": "quietstart.theme-free-gifts",
       "name": "主题免费领好礼三段任务",
       "version": 5,
