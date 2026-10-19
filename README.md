@@ -13,6 +13,17 @@ https://qs-toolkit.github.io/qingqi-tools/index.json
 ```
 
 - `index.json`：清单，列出包标识、版本与各自的地址（相对地址，镜像会一起解析）。
-- `packs/<id>/<version>.json`：每个版本的包正文，由 `tools/tool-pack-index.cjs` 生成。
-- 更新：改包 → 递增 `version` → 重新生成（不带 `--base`）→ 提交并推送；订阅地址不变。
+- `packs/<id>/<version>.json`：每个版本的包正文；已发布版本不覆盖。
+- `tools/packs.cjs`：本仓库独立的清单校验与版本导入脚本，无需进入轻启本体工程。
+
+本地维护：
+
+```sh
+node tools/packs.cjs check
+node tools/packs.cjs add /path/to/updated.task.json
+git diff --check
+git diff -- index.json
+```
+
+修改工具包后递增顶层 `version`，再执行 `add`。脚本会保存新版本、更新 `index.json` 并检查清单与文件一致；重复导入相同内容不会修改文件。它只检查发布结构和元数据；实际执行兼容性仍需在轻启中验证。确认后再提交并推送到 `main`，订阅地址不变。
 - Pages：仓库 Settings → Pages → Deploy from a branch → `main` / `(root)`。
