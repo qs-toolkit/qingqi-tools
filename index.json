@@ -54,14 +54,14 @@
     {
       "id": "quietstart.taobao-taojinbi-earn",
       "name": "淘宝淘金币赚金币任务",
-      "version": 2,
-      "url": "packs/quietstart.taobao-taojinbi-earn/2.json"
+      "version": 3,
+      "url": "packs/quietstart.taobao-taojinbi-earn/3.json"
     },
     {
       "id": "quietstart.taobao-taojinbi-energy",
       "name": "淘宝淘金币赚能量任务",
-      "version": 1,
-      "url": "packs/quietstart.taobao-taojinbi-energy/1.json"
+      "version": 2,
+      "url": "packs/quietstart.taobao-taojinbi-energy/2.json"
     },
     {
       "id": "quietstart.theme-free-gifts",

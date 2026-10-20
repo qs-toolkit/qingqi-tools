@@ -24,7 +24,7 @@ const screenshotRows = [
 ];
 const plain = value => JSON.parse(JSON.stringify(value));
 
-test('V2 retains V1 execution settings and is selected by the index', () => {
+test('V2 retains V1 execution settings and the index selects V2 or a newer compatible revision', () => {
   assert.equal(pack.id, previous.id);
   assert.equal(pack.version, 2);
   const changes = new Set(['browseWords', 'excludeWords', 'earnedPatterns']);
@@ -35,8 +35,9 @@ test('V2 retains V1 execution settings and is selected by the index', () => {
   for (const word of previous.entryAfterClickAny) assert.ok(pack.entryAfterClickAny.includes(word));
   for (const word of previous.entryClickTexts) assert.ok(pack.entryClickTexts.includes(word));
   const index = JSON.parse(fs.readFileSync(path.join(root, 'index.json'), 'utf8'));
-  assert.equal(index.packs.find(item => item.id === pack.id).url,
-    'packs/quietstart.taobao-taojinbi-earn/2.json');
+  const selected = index.packs.find(item => item.id === pack.id);
+  assert.ok(selected.version >= 2);
+  assert.equal(JSON.parse(fs.readFileSync(path.join(root, selected.url), 'utf8')).id, pack.id);
 });
 
 const sourceRoot = process.env.QUIETSTART_SOURCE_ROOT;
@@ -186,4 +187,26 @@ runtimeTest('earned-number patterns recognize one or many digits without requiri
     assert.ok(pack.coinBrowse.earnedPatterns.some(pattern => new RegExp(pattern).test(text)), text);
   }
   assert.equal(pack.coinBrowse.earnedPatterns.some(pattern => new RegExp(pattern).test('已得0')), false);
+});
+
+runtimeTest('coin V3 enables a bounded speed range and otherwise retains all V2 execution settings', () => {
+  const updated = JSON.parse(fs.readFileSync(path.join(root, 'packs/quietstart.taobao-taojinbi-earn/3.json'), 'utf8'));
+  assert.deepEqual(updated.coinBrowse.swipeSpeedRange, [250,450]);
+  for (const key of Object.keys(pack.coinBrowse)) assert.deepEqual(updated.coinBrowse[key], pack.coinBrowse[key], key);
+  assert.deepEqual(plain(api().codec.validateTaskSuite(updated)), []);
+});
+runtimeTest('energy V2 compiles its own entry, 查看 browsing, safe completion and energy unit', () => {
+  const updated = JSON.parse(fs.readFileSync(path.join(root, 'packs/quietstart.taobao-taojinbi-energy/2.json'), 'utf8'));
+  assert.deepEqual(plain(api().codec.validateTaskSuite(updated)), []);
+  const decoded = api().codec.decodePackText(api().codec.encodePackJson(JSON.stringify(updated)));
+  assert.equal(decoded.activationPageText, '做任务赚能量');
+  assert.deepEqual(plain(decoded.activationClickTexts), ['赚能量','去赚能量']);
+  assert.equal(decoded.coinBrowse.rewardUnit, '能量');
+  assert.equal(decoded.coinBrowse.panelProgressText, '当前进度');
+  assert.ok(decoded.coinBrowse.browseWords.includes('查看'));
+  assert.equal(decoded.coinBrowse.browseDwellMs, 25000);
+  assert.equal(decoded.coinBrowse.searchQuery, '衣服');
+  assert.equal(decoded.coinBrowse.earnedTexts.includes('已得'), false, 'mixed page earnings cannot confirm energy');
+  assert.equal(api().scheduling.packReadyForHandoff([page([], '做任务赚能量')], bundle, decoded.readyWhen), true);
+  assert.equal(api().scheduling.packReadyForHandoff([page([], '今日速赚')], bundle, decoded.readyWhen), false);
 });
