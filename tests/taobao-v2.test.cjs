@@ -76,6 +76,7 @@ function api() {
   const interaction = load(worker + 'TaskPageInteraction.ets', { './SnapshotLayout': { snapshotBounds: bounds } });
   function workerFor(read, clock = { now: 10000 }) {
     const loaded = load(worker + 'CoinBrowseWorker.ets', {
+      '@kit.PerformanceAnalysisKit': { hilog: { info() {} } },
       './LayoutCapture': { captureLayoutDocument: async () => ({ roots: [read()] }) },
       './SnapshotLayout': { snapshotBounds: bounds },
       './TaskPageInteraction': interaction,
@@ -209,4 +210,11 @@ runtimeTest('energy V2 compiles its own entry, 查看 browsing, safe completion 
   assert.equal(decoded.coinBrowse.earnedTexts.includes('已得'), false, 'mixed page earnings cannot confirm energy');
   assert.equal(api().scheduling.packReadyForHandoff([page([], '做任务赚能量')], bundle, decoded.readyWhen), true);
   assert.equal(api().scheduling.packReadyForHandoff([page([], '今日速赚')], bundle, decoded.readyWhen), false);
+});
+
+for (const [id, version] of [['earn',4],['energy',3]]) test(`current ${id} widens random browse range`, () => {
+  const doc = JSON.parse(fs.readFileSync(path.join(__dirname, `../packs/quietstart.taobao-taojinbi-${id}/${version}.json`), 'utf8'));
+  assert.deepEqual(doc.coinBrowse.swipeSpeedRange, [200,800]);
+  assert.equal(doc.coinBrowse.swipeIntervalMs, 450);
+  assert.ok(doc.usage.includes('127061'));
 });
