@@ -17,9 +17,9 @@
     {
       "id": "quietstart.harmony-star-assistant",
       "name": "鸿蒙星空小助手",
-      "version": 1,
-      "url": "packs/quietstart.harmony-star-assistant/1.json",
-      "notes": "V1；需要支持花园助手与临时胶囊能力的轻启127088或更新构建。"
+      "version": 2,
+      "url": "packs/quietstart.harmony-star-assistant/2.json",
+      "notes": "V2；需轻启1.2.8-beta补丁128015或更新版本。优化宽屏地块识别、连续收种、整轮偷菜与胶囊屏保。"
     },
     {
       "id": "quietstart.movie-free-member-install",
