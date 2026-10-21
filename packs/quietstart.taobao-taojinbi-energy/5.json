@@ -1,0 +1,126 @@
+{
+  "schema": 3,
+  "id": "quietstart.taobao-taojinbi-energy",
+  "name": "淘宝淘金币赚能量任务",
+  "version": 5,
+  "usage": "进入淘金币主页后点「赚能量／去赚能量」，在「做任务赚能量」面板执行。支持合并任务行、浏览15s／15秒时长；主标题为看看、逛、发现、浏览、关注或查看且副标题要求浏览的任务，以及搜索和逛清单任务。默认搜索衣服，读不到时长以25秒兜底，浏览速度每次在200–800随机，短促边缘返回。排除芭芭农场（含巴巴农场写法）、答题、邀请、购买、支付等任务。需包含随机间隔能力的轻启1.2.7(127080)或更新版本；可与赚金币包同时启用，按当前任务面板选择执行。 任务自动返回且累计任务进度增加时可确认完成，避免再次返回退出面板。 能量统计以已确认的任务进度和该任务奖励为准，不借用搜索页混合收益计数。 每次浏览滑动后的间隔在200–800毫秒内随机，不延后奖励识别或到时返回。 同一任务行内出现下单、购买、付款、支付、提交订单或确认订单时均跳过。",
+  "priority": 600,
+  "readyWhen": {
+    "allText": [
+      "做任务赚能量"
+    ]
+  },
+  "appliesTo": [
+    "com.taobao.taobao4hmos"
+  ],
+  "entryAfterClick": "做任务赚能量",
+  "entryClickTexts": [
+    "赚能量",
+    "去赚能量"
+  ],
+  "tasks": [],
+  "coinBrowse": {
+    "panelText": "做任务赚能量",
+    "moreText": "更多专享福利",
+    "expandText": "展开",
+    "expandedText": "收起更多任务",
+    "searchPageText": "搜索有福利",
+    "searchTitle": "搜一搜你心仪的宝贝",
+    "searchQuery": "衣服",
+    "searchButtonText": "搜索",
+    "browseTitles": [
+      "发现精选好物",
+      "浏览心仪好物",
+      "逛逛金币加抵好货",
+      "逛好店赚一大波金币",
+      "查看"
+    ],
+    "keywordPrefix": "看看#",
+    "actionTexts": [
+      "去完成",
+      "逛一逛"
+    ],
+    "earnedTexts": [
+      "能量已到账"
+    ],
+    "earnedPatterns": [
+      "^(?:完成[！!]?|恭喜[，,]?)?[1-9][0-9]*能量已到账[！!。]?$"
+    ],
+    "videoEarnedTitle": "任务已完成",
+    "videoEarnedContinuation": "继续逛逛吧",
+    "quickRewardText": "领取奖励",
+    "reopenTexts": [
+      "赚能量",
+      "去赚能量"
+    ],
+    "cardTitleWords": [
+      "清单"
+    ],
+    "cardExcludeWords": [
+      "金币",
+      "任务",
+      "规则",
+      "换一换",
+      "已得"
+    ],
+    "quickClaimDwellMs": 6500,
+    "browseWords": [
+      "浏览",
+      "逛",
+      "看",
+      "天天签到免费拿IP周边",
+      "查看"
+    ],
+    "excludeWords": [
+      "邀请",
+      "拉人",
+      "好友",
+      "分享",
+      "下单",
+      "购买",
+      "支付",
+      "安装",
+      "下载",
+      "答题",
+      "课堂",
+      "开通",
+      "授权",
+      "绑定",
+      "兑换",
+      "充值",
+      "充话费",
+      "蚂蚁森林",
+      "点击去逛",
+      "芭芭农场",
+      "巴巴农场",
+      "付款",
+      "提交订单",
+      "确认订单"
+    ],
+    "browseDwellMs": 25000,
+    "swipeIntervalMs": 450,
+    "backFrom": [
+      0.015,
+      0.5
+    ],
+    "backTo": [
+      0.3,
+      0.5
+    ],
+    "backSpeed": 2600,
+    "maxBackAttempts": 3,
+    "swipeSpeed": 300,
+    "swipeSpeedRange": [
+      200,
+      800
+    ],
+    "rewardUnit": "能量",
+    "panelProgressText": "当前进度",
+    "swipeIntervalRangeMs": [
+      200,
+      800
+    ]
+  },
+  "minAppVersionCode": 127080,
+  "minAppVersionName": "1.2.7"
+}

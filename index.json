@@ -15,6 +15,13 @@
       "url": "packs/quietstart.cloud-space-50gb-install/2.json"
     },
     {
+      "id": "quietstart.harmony-star-assistant",
+      "name": "鸿蒙星空小助手",
+      "version": 1,
+      "url": "packs/quietstart.harmony-star-assistant/1.json",
+      "notes": "V1；需要支持花园助手与临时胶囊能力的轻启127088或更新构建。"
+    },
+    {
       "id": "quietstart.movie-free-member-install",
       "name": "视频免会员安装任务",
       "version": 1,
@@ -23,8 +30,9 @@
     {
       "id": "quietstart.music-free-member-install",
       "name": "音乐免会员安装任务",
-      "version": 2,
-      "url": "packs/quietstart.music-free-member-install/2.json"
+      "version": 3,
+      "url": "packs/quietstart.music-free-member-install/3.json",
+      "notes": "每项100金币；打开后停留12秒，最多完成10项。"
     },
     {
       "id": "quietstart.qidian-welfare-center",
@@ -54,14 +62,16 @@
     {
       "id": "quietstart.taobao-taojinbi-earn",
       "name": "淘宝淘金币赚金币任务",
-      "version": 5,
-      "url": "packs/quietstart.taobao-taojinbi-earn/5.json"
+      "version": 6,
+      "url": "packs/quietstart.taobao-taojinbi-earn/6.json",
+      "notes": "需要包含随机间隔与整行过滤能力的轻启127080或更新版本；速度和间隔均随机，排除下单等任务。"
     },
     {
       "id": "quietstart.taobao-taojinbi-energy",
       "name": "淘宝淘金币赚能量任务",
-      "version": 4,
-      "url": "packs/quietstart.taobao-taojinbi-energy/4.json"
+      "version": 5,
+      "url": "packs/quietstart.taobao-taojinbi-energy/5.json",
+      "notes": "需要包含随机间隔与整行过滤能力的轻启127080或更新版本；速度和间隔均随机，排除下单等任务。"
     },
     {
       "id": "quietstart.theme-free-gifts",
