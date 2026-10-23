@@ -37,9 +37,8 @@
     {
       "id": "quietstart.qidian-welfare-center",
       "name": "起点读书福利中心任务奖励",
-      "version": 9,
-      "url": "packs/quietstart.qidian-welfare-center/9.json",
-      "notes": "手动验证版：缩短返回手势；v10/v11 用户需手动重新导入。"
+      "version": 10,
+      "url": "packs/quietstart.qidian-welfare-center/10.json"
     },
     {
       "id": "quietstart.qishui-membership-rewards",

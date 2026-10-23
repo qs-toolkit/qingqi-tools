@@ -62,3 +62,8 @@ QUIETSTART_SOURCE_ROOT=/path/to/quietstart node --test tests/taobao-v2.test.cjs
 测试中的活动页面为根据用户截图构造的离线控件夹具，包含入口、任务筛选、浏览计时、返回、进度确认及完成后停止场景，不代表该用户设备的实机验收。
 
 - Pages：仓库 Settings → Pages → Deploy from a branch → `main` / `(root)`。
+
+### 2026-10-23 更新
+
+- [起点读书福利中心任务奖励 v10](packs/quietstart.qidian-welfare-center/10.json)：修复激励任务到第五轮结束、确认弹窗与重复轮次互相干扰的问题，保留其他福利任务和落地页返回处理。需轻启 **1.2.8（128073 或更新版本）**，推荐安装正式版 **128078**。
+- 按维护者要求，线上 V9 递增为 V10，本次以最新配置覆盖历史 V10 文件；V9/V11 文件继续保留。已通过本体参考校验、引擎编译及37项文档编译回归；实际验证范围见本体工作记录，不宣称完整清空每日所有任务。

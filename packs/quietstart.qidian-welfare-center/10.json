@@ -55,10 +55,10 @@
       0.52
     ],
     "backTo": [
-      0.4,
+      0.3,
       0.52
     ],
-    "backSpeed": 800,
+    "backSpeed": 2600,
     "externalReturnText": "起点读书",
     "returnPolicy": "wake-owner",
     "returnAbility": {
@@ -75,7 +75,7 @@
       "schema": 2,
       "id": "quietstart.qidian-welfare-reward",
       "name": "起点读书福利中心广告奖励",
-      "version": 6,
+      "version": 8,
       "priority": 200,
       "appliesTo": [
         "com.qidian.reader"
@@ -87,13 +87,13 @@
       "defaults": {
         "totalMs": 120000,
         "limit": {
-          "maxWidth": 0.5,
+          "maxWidth": 0.8,
           "maxHeight": 0.12,
-          "maxArea": 0.05
+          "maxArea": 0.08
         }
       },
       "repeat": {
-        "maxCycles": 5,
+        "maxCycles": 300,
         "cooldownMs": 500,
         "idleMs": 30000,
         "stopWhen": {
@@ -119,14 +119,49 @@
           },
           "need": {
             "visibleText": [
-              "完成任务得奖励"
+              "激励任务"
             ],
             "absentText": [
               "恭喜获得"
             ],
             "evidence": {
               "text": [
-                "完成任务得奖励"
+                "激励任务"
+              ]
+            }
+          },
+          "do": {
+            "capability": "click"
+          },
+          "expect": {
+            "result": "gone-or-appeared",
+            "settleMs": 10000,
+            "samples": 2,
+            "match": [
+              "天降福利"
+            ],
+            "onScreen": true
+          }
+        },
+        {
+          "find": {
+            "by": "text",
+            "match": [
+              "去浏览"
+            ],
+            "limit": {
+              "maxWidth": 0.8,
+              "maxHeight": 0.12,
+              "maxArea": 0.08
+            }
+          },
+          "need": {
+            "visibleText": [
+              "天降福利"
+            ],
+            "evidence": {
+              "text": [
+                "天降福利"
               ]
             }
           },
@@ -137,6 +172,16 @@
             "result": "gone",
             "settleMs": 10000,
             "samples": 2
+          },
+          "skipWhen": {
+            "visibleText": [
+              "奖励"
+            ],
+            "absentText": [
+              "天降福利",
+              "去浏览"
+            ],
+            "stopRepeat": false
           }
         },
         {
@@ -206,12 +251,13 @@
           },
           "skipWhen": {
             "visibleText": [
-              "完成任务得奖励"
+              "激励任务"
             ],
             "absentText": [
-              "恭喜获得"
+              "恭喜获得",
+              "知道了"
             ],
-            "stopRepeat": true
+            "stopRepeat": false
           }
         }
       ]
@@ -960,5 +1006,7 @@
       ]
     }
   ],
-  "entryAfterClick": "https://h5.if.qidian.com/new/welfareCenter"
+  "entryAfterClick": "https://h5.if.qidian.com/new/welfareCenter",
+  "minAppVersionCode": 128073,
+  "minAppVersionName": "1.2.8"
 }
