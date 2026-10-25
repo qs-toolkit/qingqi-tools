@@ -1,0 +1,2411 @@
+[
+  {
+    "schema": 3,
+    "id": "quietstart.qqmusic-coin-center-gifts",
+    "name": "QQ音乐金币中心·礼物浏览",
+    "version": 1,
+    "minAppVersionCode": 128000,
+    "minAppVersionName": "1.2.8",
+    "usage": "从QQ音乐「我的」页右上角金币，或签到页右上角金币进入。保持在金币中心赚金币页。礼物区最多浏览4次，每次至少15秒；外跳后返回，应用市场拦截返回时唤回QQ音乐。不安装、不兑换。与金币视频配置配套使用；测试时先停用原QQ音乐免会员包。",
+    "appliesTo": [
+      "com.tencent.hm.qqmusic"
+    ],
+    "entryAfterClick": "免费领礼物-鸿蒙",
+    "entryClickTexts": [
+      "赚金币",
+      "看广告后可领取"
+    ],
+    "landingVisit": {
+      "promptText": "浏览15秒",
+      "promptKeywords": [
+        "浏览"
+      ],
+      "maxPendingRetries": 3,
+      "promptRegion": [
+        0.25,
+        0.47,
+        0.98,
+        0.61
+      ],
+      "buttonRegion": [
+        0.45,
+        0.535,
+        0.6,
+        0.545
+      ],
+      "dwellMs": 15000,
+      "chooserTexts": [
+        "选择应用",
+        "选择打开方式",
+        "应用分身",
+        "打开方式",
+        "微信1"
+      ],
+      "confirmContexts": [
+        "是否确认",
+        "确认打开",
+        "即将打开",
+        "是否打开",
+        "想要打开"
+      ],
+      "confirmButton": "确定",
+      "confirmButtons": [
+        "打开"
+      ],
+      "externalOpenPolicy": "open",
+      "cancelButton": "取消",
+      "dismissPoint": [
+        0.5,
+        0.15
+      ],
+      "backFrom": [
+        0.005,
+        0.52
+      ],
+      "backTo": [
+        0.285,
+        0.52
+      ],
+      "backSpeed": 2600,
+      "externalReturnText": "QQ音乐",
+      "returnPolicy": "wake-owner",
+      "returnAbility": {
+        "moduleName": "entry",
+        "abilityName": "EntryAbility"
+      },
+      "earnedTexts": [
+        "今日活动任务已完成",
+        "待领取"
+      ],
+      "landingPages": [
+        {
+          "containerType": "UIExtensionComponent",
+          "allIds": [
+            "app_name",
+            "download_button_text"
+          ],
+          "anyText": [
+            "安装",
+            "打开",
+            "更新"
+          ],
+          "dwellMs": 15000,
+          "returnPolicy": "back-then-wake-owner",
+          "wakeFromBundles": [
+            "com.huawei.hmsapp.appgallery"
+          ]
+        }
+      ]
+    },
+    "tasks": [
+      {
+        "schema": 2,
+        "id": "quietstart.qqmusic-coin-center-entry-top-1",
+        "name": "第1区前恢复金币页顶部1",
+        "version": 1,
+        "priority": 180,
+        "appliesTo": [
+          "com.tencent.hm.qqmusic"
+        ],
+        "when": {
+          "trigger": "app-foreground",
+          "lifetime": "foreground"
+        },
+        "defaults": {
+          "totalMs": 15000,
+          "limit": {
+            "maxWidth": 0.95,
+            "maxHeight": 0.15,
+            "maxArea": 0.12
+          }
+        },
+        "steps": [
+          {
+            "find": {
+              "by": "text",
+              "match": [
+                "金币定位180-0-0"
+              ],
+              "normalise": [
+                {
+                  "pattern": "^返回$",
+                  "replace": "金币定位180-0-0"
+                }
+              ]
+            },
+            "need": {
+              "visibleText": [
+                "每日任务"
+              ],
+              "absentText": [
+                "点击后看",
+                "观看广告+",
+                "可获得奖励"
+              ]
+            },
+            "do": {
+              "capability": "swipe",
+              "from": [
+                0.6,
+                0.42
+              ],
+              "to": [
+                0.6,
+                0.9
+              ],
+              "speed": 2200
+            },
+            "expect": {
+              "result": "appeared",
+              "match": [
+                "免费领礼物-鸿蒙"
+              ],
+              "onScreen": true,
+              "settleMs": 5000,
+              "samples": 2
+            }
+          }
+        ]
+      },
+      {
+        "schema": 2,
+        "id": "quietstart.qqmusic-coin-center-entry-top-2",
+        "name": "第1区前恢复金币页顶部2",
+        "version": 1,
+        "priority": 190,
+        "appliesTo": [
+          "com.tencent.hm.qqmusic"
+        ],
+        "when": {
+          "trigger": "app-foreground",
+          "lifetime": "foreground"
+        },
+        "defaults": {
+          "totalMs": 15000,
+          "limit": {
+            "maxWidth": 0.95,
+            "maxHeight": 0.15,
+            "maxArea": 0.12
+          }
+        },
+        "steps": [
+          {
+            "find": {
+              "by": "text",
+              "match": [
+                "金币定位190-1-0"
+              ],
+              "normalise": [
+                {
+                  "pattern": "^返回$",
+                  "replace": "金币定位190-1-0"
+                }
+              ]
+            },
+            "need": {
+              "visibleText": [
+                "每日任务"
+              ],
+              "absentText": [
+                "点击后看",
+                "观看广告+",
+                "可获得奖励"
+              ]
+            },
+            "do": {
+              "capability": "swipe",
+              "from": [
+                0.6,
+                0.42
+              ],
+              "to": [
+                0.6,
+                0.9
+              ],
+              "speed": 2200
+            },
+            "expect": {
+              "result": "appeared",
+              "match": [
+                "免费领礼物-鸿蒙"
+              ],
+              "onScreen": true,
+              "settleMs": 5000,
+              "samples": 2
+            }
+          }
+        ]
+      },
+      {
+        "schema": 2,
+        "id": "quietstart.qqmusic-coin-center-gift-cycle",
+        "name": "第1区浏览检查（完成后直接跳过）",
+        "version": 1,
+        "priority": 200,
+        "appliesTo": [
+          "com.tencent.hm.qqmusic"
+        ],
+        "when": {
+          "trigger": "app-foreground",
+          "lifetime": "foreground"
+        },
+        "defaults": {
+          "totalMs": 240000,
+          "limit": {
+            "maxWidth": 0.95,
+            "maxHeight": 0.15,
+            "maxArea": 0.12
+          }
+        },
+        "steps": [
+          {
+            "find": {
+              "by": "text",
+              "match": [
+                "免费领礼物-鸿蒙"
+              ]
+            },
+            "need": {
+              "visibleText": [
+                "查看广告任务"
+              ],
+              "absentText": [
+                "点击后看",
+                "恭喜已获得奖励",
+                "领取礼物",
+                "待领取",
+                "今日活动任务已完成",
+                "礼包当日已经达到兑换次数限制",
+                "观看广告+",
+                "看广告后可领取"
+              ]
+            },
+            "do": {
+              "capability": "swipe",
+              "from": [
+                0.96,
+                0.36
+              ],
+              "to": [
+                0.96,
+                0.3612
+              ],
+              "speed": 1000
+            },
+            "expect": {
+              "result": "appeared",
+              "match": [
+                "免费领礼物-鸿蒙"
+              ],
+              "settleMs": 5000,
+              "samples": 2
+            }
+          },
+          {
+            "find": {
+              "by": "text",
+              "match": [
+                "免费领礼物-鸿蒙"
+              ]
+            },
+            "need": {
+              "visibleText": [
+                "查看广告任务"
+              ],
+              "absentText": [
+                "点击后看",
+                "恭喜已获得奖励",
+                "领取礼物",
+                "待领取",
+                "今日活动任务已完成",
+                "礼包当日已经达到兑换次数限制",
+                "观看广告+",
+                "看广告后可领取"
+              ]
+            },
+            "do": {
+              "capability": "swipe",
+              "from": [
+                0.96,
+                0.3612
+              ],
+              "to": [
+                0.96,
+                0.36
+              ],
+              "speed": 1000
+            },
+            "expect": {
+              "result": "appeared",
+              "match": [
+                "免费领礼物-鸿蒙"
+              ],
+              "settleMs": 5000,
+              "samples": 2
+            }
+          }
+        ]
+      }
+    ],
+    "priority": 200
+  },
+  {
+    "schema": 3,
+    "id": "quietstart.qqmusic-coin-center-daily",
+    "name": "QQ音乐金币中心·每日任务",
+    "version": 1,
+    "minAppVersionCode": 128000,
+    "minAppVersionName": "1.2.8",
+    "usage": "金币中心第3区的定时领金币、列表定位和收尾配置，定时任务跳转保持15秒。悬浮宝箱由独立3秒配置处理。与金币中心组合配置一起启用，按1→3→2只处理本次一轮，不等待5分钟刷新。",
+    "appliesTo": [
+      "com.tencent.hm.qqmusic"
+    ],
+    "entryAfterClick": "免费领礼物-鸿蒙",
+    "entryClickTexts": [
+      "赚金币",
+      "看广告后可领取"
+    ],
+    "landingVisit": {
+      "promptText": "广告",
+      "maxPendingRetries": 3,
+      "promptRegion": [
+        0.2,
+        0.35,
+        0.8,
+        0.65
+      ],
+      "buttonRegion": [
+        0.495,
+        0.48,
+        0.525,
+        0.6
+      ],
+      "dwellMs": 15000,
+      "chooserTexts": [
+        "选择应用",
+        "选择打开方式",
+        "应用分身",
+        "打开方式",
+        "微信1"
+      ],
+      "confirmContexts": [
+        "是否确认",
+        "确认打开",
+        "即将打开",
+        "是否打开",
+        "想要打开"
+      ],
+      "confirmButton": "确定",
+      "confirmButtons": [
+        "打开"
+      ],
+      "externalOpenPolicy": "open",
+      "cancelButton": "取消",
+      "dismissPoint": [
+        0.5,
+        0.15
+      ],
+      "backFrom": [
+        0.005,
+        0.52
+      ],
+      "backTo": [
+        0.285,
+        0.52
+      ],
+      "backSpeed": 2600,
+      "externalReturnText": "QQ音乐",
+      "returnPolicy": "navigation",
+      "returnAbility": {
+        "moduleName": "entry",
+        "abilityName": "EntryAbility"
+      },
+      "earnedTexts": [
+        "金币TAB",
+        "恭喜已获得奖励",
+        "恭喜获得奖励",
+        "已观看广告"
+      ],
+      "landingPages": [
+        {
+          "containerType": "UIExtensionComponent",
+          "allIds": [
+            "app_name",
+            "download_button_text"
+          ],
+          "anyText": [
+            "安装",
+            "打开",
+            "更新"
+          ],
+          "dwellMs": 15000,
+          "returnPolicy": "back-then-wake-owner",
+          "wakeFromBundles": [
+            "com.huawei.hmsapp.appgallery"
+          ]
+        }
+      ]
+    },
+    "tasks": [
+      {
+        "schema": 2,
+        "id": "quietstart.qqmusic-coin-center-daily-place",
+        "name": "第3区奖励入口定位",
+        "version": 1,
+        "priority": 280,
+        "appliesTo": [
+          "com.tencent.hm.qqmusic"
+        ],
+        "when": {
+          "trigger": "app-foreground",
+          "lifetime": "foreground"
+        },
+        "defaults": {
+          "totalMs": 240000,
+          "limit": {
+            "maxWidth": 0.95,
+            "maxHeight": 0.15,
+            "maxArea": 0.12
+          }
+        },
+        "steps": [
+          {
+            "find": {
+              "by": "text",
+              "match": [
+                "金币定位280-0-0"
+              ],
+              "normalise": [
+                {
+                  "pattern": "^返回$",
+                  "replace": "金币定位280-0-0"
+                }
+              ]
+            },
+            "need": {
+              "visibleText": [
+                "每日任务"
+              ],
+              "absentText": [
+                "观看广告+",
+                "点击后看"
+              ]
+            },
+            "do": {
+              "capability": "swipe",
+              "from": [
+                0.6,
+                0.85
+              ],
+              "to": [
+                0.6,
+                0.8132
+              ],
+              "speed": 400
+            },
+            "expect": {
+              "result": "appeared",
+              "match": [
+                "金币TAB"
+              ],
+              "samples": 2,
+              "settleMs": 3000
+            }
+          }
+        ]
+      },
+      {
+        "schema": 2,
+        "id": "quietstart.qqmusic-coin-center-find-daily",
+        "name": "向下查找每日任务",
+        "version": 1,
+        "priority": 290,
+        "appliesTo": [
+          "com.tencent.hm.qqmusic"
+        ],
+        "when": {
+          "trigger": "app-foreground",
+          "lifetime": "foreground"
+        },
+        "defaults": {
+          "totalMs": 240000,
+          "limit": {
+            "maxWidth": 0.95,
+            "maxHeight": 0.15,
+            "maxArea": 0.12
+          }
+        },
+        "repeat": {
+          "maxCycles": 8,
+          "cooldownMs": 500,
+          "idleMs": 3000
+        },
+        "steps": [
+          {
+            "find": {
+              "by": "text",
+              "match": [
+                "金币定位290-1-0"
+              ],
+              "limit": {
+                "maxWidth": 0.95,
+                "maxHeight": 0.15,
+                "maxArea": 0.12
+              },
+              "normalise": [
+                {
+                  "pattern": "^返回$",
+                  "replace": "金币定位290-1-0"
+                }
+              ]
+            },
+            "need": {
+              "visibleText": [
+                "每日任务"
+              ],
+              "absentText": [
+                "观看广告+",
+                "看广告后可领取"
+              ],
+              "absentOnScreenText": [
+                "定时领金币"
+              ]
+            },
+            "do": {
+              "capability": "swipe",
+              "from": [
+                0.6,
+                0.87
+              ],
+              "to": [
+                0.6,
+                0.53
+              ],
+              "speed": 1300
+            },
+            "expect": {
+              "result": "appeared",
+              "match": [
+                "金币TAB"
+              ],
+              "settleMs": 2000,
+              "samples": 2
+            }
+          },
+          {
+            "do": {
+              "capability": "wait",
+              "ms": 100
+            }
+          }
+        ]
+      },
+      {
+        "schema": 2,
+        "id": "quietstart.qqmusic-coin-center-timer",
+        "name": "每日任务定时领金币",
+        "version": 1,
+        "priority": 300,
+        "appliesTo": [
+          "com.tencent.hm.qqmusic"
+        ],
+        "when": {
+          "trigger": "app-foreground",
+          "lifetime": "foreground"
+        },
+        "defaults": {
+          "totalMs": 60000,
+          "limit": {
+            "maxWidth": 0.95,
+            "maxHeight": 0.15,
+            "maxArea": 0.12
+          }
+        },
+        "steps": [
+          {
+            "find": {
+              "by": "text",
+              "match": [
+                "领金币"
+              ],
+              "normalise": [
+                {
+                  "pattern": "^(?!领金币$).*$",
+                  "replace": ""
+                }
+              ],
+              "limit": {
+                "maxWidth": 0.24,
+                "maxHeight": 0.055,
+                "maxArea": 0.02
+              },
+              "sameParentText": [
+                "定时领金币 金币 每五分钟可领取",
+                "定时领金币"
+              ]
+            },
+            "need": {
+              "visibleText": [
+                "每日任务"
+              ],
+              "absentText": [
+                "观看广告+",
+                "看广告后可领取",
+                "点击后看"
+              ]
+            },
+            "do": {
+              "capability": "click"
+            },
+            "expect": {
+              "result": "appeared",
+              "match": [
+                "看广告后可领取",
+                "领取成功~",
+                "领取成功"
+              ],
+              "settleMs": 8000,
+              "samples": 2
+            }
+          },
+          {
+            "find": {
+              "by": "text",
+              "match": [
+                "关闭广告"
+              ],
+              "explicit": false,
+              "idHints": [
+                [
+                  "close",
+                  "金币定位300-2-1"
+                ],
+                [
+                  "CloseButton",
+                  "金币定位300-2-1"
+                ],
+                [
+                  "close_text",
+                  "金币定位300-2-1"
+                ]
+              ],
+              "limit": {
+                "maxWidth": 0.12,
+                "maxHeight": 0.08,
+                "maxArea": 0.01
+              }
+            },
+            "need": {
+              "visibleText": [
+                "恭喜已获得奖励",
+                "恭喜获得奖励",
+                "恭喜你已获得奖励",
+                "已观看广告"
+              ],
+              "evidence": {
+                "text": [
+                  "恭喜已获得奖励",
+                  "恭喜获得奖励",
+                  "恭喜你已获得奖励",
+                  "已观看广告"
+                ]
+              }
+            },
+            "do": {
+              "capability": "click"
+            },
+            "expect": {
+              "result": "gone",
+              "settleMs": 15000,
+              "samples": 2
+            },
+            "skipWhen": {
+              "visibleText": [
+                "金币TAB"
+              ],
+              "absentText": [
+                "点击后看",
+                "恭喜已获得奖励",
+                "恭喜获得奖励",
+                "已观看广告"
+              ],
+              "stopRepeat": false
+            }
+          },
+          {
+            "find": {
+              "by": "text",
+              "match": [
+                "金币定位300-2-2"
+              ],
+              "normalise": [
+                {
+                  "pattern": "^关闭$",
+                  "replace": "金币定位300-2-2"
+                }
+              ],
+              "limit": {
+                "maxWidth": 0.24,
+                "maxHeight": 0.1,
+                "maxArea": 0.02
+              }
+            },
+            "need": {
+              "visibleText": [
+                "看广告后可领取"
+              ],
+              "absentText": [
+                "点击后看",
+                "恭喜已获得奖励"
+              ]
+            },
+            "do": {
+              "capability": "click"
+            },
+            "expect": {
+              "result": "gone",
+              "settleMs": 5000,
+              "samples": 2
+            },
+            "skipWhen": {
+              "visibleText": [
+                "金币TAB"
+              ],
+              "absentText": [
+                "看广告后可领取"
+              ],
+              "stopRepeat": false
+            }
+          }
+        ]
+      },
+      {
+        "schema": 2,
+        "id": "quietstart.qqmusic-coin-center-daily-detail-1",
+        "name": "第3区广告详情返回1",
+        "version": 1,
+        "priority": 303,
+        "appliesTo": [
+          "com.tencent.hm.qqmusic"
+        ],
+        "when": {
+          "trigger": "app-foreground",
+          "lifetime": "foreground"
+        },
+        "defaults": {
+          "totalMs": 240000,
+          "limit": {
+            "maxWidth": 0.95,
+            "maxHeight": 0.15,
+            "maxArea": 0.12
+          }
+        },
+        "steps": [
+          {
+            "find": {
+              "by": "text",
+              "match": [
+                "商品详情页"
+              ],
+              "limit": {
+                "maxWidth": 0.95,
+                "maxHeight": 0.15,
+                "maxArea": 0.12
+              }
+            },
+            "need": {
+              "absentText": [
+                "金币TAB"
+              ]
+            },
+            "do": {
+              "capability": "swipe",
+              "from": [
+                0.5,
+                0.02
+              ],
+              "to": [
+                0.5,
+                0.0212
+              ],
+              "speed": 1000
+            },
+            "expect": {
+              "result": "appeared",
+              "match": [
+                "商品详情页"
+              ],
+              "settleMs": 3000,
+              "samples": 2
+            }
+          },
+          {
+            "do": {
+              "capability": "wait",
+              "ms": 15000
+            }
+          },
+          {
+            "find": {
+              "by": "text",
+              "match": [
+                "商品详情页"
+              ],
+              "limit": {
+                "maxWidth": 0.95,
+                "maxHeight": 0.15,
+                "maxArea": 0.12
+              }
+            },
+            "do": {
+              "capability": "back"
+            },
+            "expect": {
+              "result": "appeared",
+              "match": [
+                "金币TAB",
+                "看广告后可领取"
+              ],
+              "settleMs": 8000,
+              "samples": 2
+            }
+          }
+        ]
+      },
+      {
+        "schema": 2,
+        "id": "quietstart.qqmusic-coin-center-daily-sheet-1",
+        "name": "第3区奖励弹窗收尾1",
+        "version": 1,
+        "priority": 304,
+        "appliesTo": [
+          "com.tencent.hm.qqmusic"
+        ],
+        "when": {
+          "trigger": "app-foreground",
+          "lifetime": "foreground"
+        },
+        "defaults": {
+          "totalMs": 240000,
+          "limit": {
+            "maxWidth": 0.95,
+            "maxHeight": 0.15,
+            "maxArea": 0.12
+          }
+        },
+        "steps": [
+          {
+            "find": {
+              "by": "text",
+              "match": [
+                "金币定位304-4-0"
+              ],
+              "normalise": [
+                {
+                  "pattern": "^关闭$",
+                  "replace": "金币定位304-4-0"
+                }
+              ],
+              "limit": {
+                "maxWidth": 0.24,
+                "maxHeight": 0.1,
+                "maxArea": 0.02
+              }
+            },
+            "need": {
+              "visibleText": [
+                "看广告后可领取"
+              ],
+              "absentText": [
+                "点击后看",
+                "恭喜已获得奖励"
+              ]
+            },
+            "do": {
+              "capability": "click"
+            },
+            "expect": {
+              "result": "gone",
+              "settleMs": 5000,
+              "samples": 2
+            }
+          }
+        ]
+      }
+    ],
+    "priority": 300
+  },
+  {
+    "schema": 3,
+    "id": "quietstart.qqmusic-coin-center-chest-popup",
+    "name": "QQ音乐金币中心·宝箱任务",
+    "version": 1,
+    "minAppVersionCode": 128000,
+    "minAppVersionName": "1.2.8",
+    "usage": "第3区悬浮宝箱配套配置。弹窗广告跳转后停留3秒返回，商品详情补充停留也为3秒；完成后收尾并继续最后的视频区。与金币中心组合配置一起启用，只处理本次一轮，不等待5分钟刷新。",
+    "appliesTo": [
+      "com.tencent.hm.qqmusic"
+    ],
+    "entryAfterClick": "免费领礼物-鸿蒙",
+    "entryClickTexts": [
+      "赚金币",
+      "看广告后可领取"
+    ],
+    "landingVisit": {
+      "promptText": "广告",
+      "maxPendingRetries": 3,
+      "promptRegion": [
+        0.2,
+        0.35,
+        0.8,
+        0.65
+      ],
+      "buttonRegion": [
+        0.495,
+        0.48,
+        0.525,
+        0.6
+      ],
+      "dwellMs": 3000,
+      "chooserTexts": [
+        "选择应用",
+        "选择打开方式",
+        "应用分身",
+        "打开方式",
+        "微信1"
+      ],
+      "confirmContexts": [
+        "是否确认",
+        "确认打开",
+        "即将打开",
+        "是否打开",
+        "想要打开"
+      ],
+      "confirmButton": "确定",
+      "confirmButtons": [
+        "打开"
+      ],
+      "externalOpenPolicy": "open",
+      "cancelButton": "取消",
+      "dismissPoint": [
+        0.5,
+        0.15
+      ],
+      "backFrom": [
+        0.005,
+        0.52
+      ],
+      "backTo": [
+        0.285,
+        0.52
+      ],
+      "backSpeed": 2600,
+      "externalReturnText": "QQ音乐",
+      "returnPolicy": "navigation",
+      "returnAbility": {
+        "moduleName": "entry",
+        "abilityName": "EntryAbility"
+      },
+      "earnedTexts": [
+        "金币TAB",
+        "恭喜已获得奖励",
+        "恭喜获得奖励",
+        "已观看广告"
+      ],
+      "landingPages": [
+        {
+          "containerType": "UIExtensionComponent",
+          "allIds": [
+            "app_name",
+            "download_button_text"
+          ],
+          "anyText": [
+            "安装",
+            "打开",
+            "更新"
+          ],
+          "dwellMs": 3000,
+          "returnPolicy": "back-then-wake-owner",
+          "wakeFromBundles": [
+            "com.huawei.hmsapp.appgallery"
+          ]
+        }
+      ]
+    },
+    "tasks": [
+      {
+        "schema": 2,
+        "id": "quietstart.qqmusic-coin-center-chest",
+        "name": "悬浮金币宝箱",
+        "version": 1,
+        "priority": 310,
+        "appliesTo": [
+          "com.tencent.hm.qqmusic"
+        ],
+        "when": {
+          "trigger": "app-foreground",
+          "lifetime": "foreground"
+        },
+        "defaults": {
+          "totalMs": 60000,
+          "limit": {
+            "maxWidth": 0.95,
+            "maxHeight": 0.15,
+            "maxArea": 0.12
+          }
+        },
+        "steps": [
+          {
+            "find": {
+              "by": "text",
+              "match": [
+                "金币定位310-5-0"
+              ],
+              "limit": {
+                "maxWidth": 0.95,
+                "maxHeight": 0.15,
+                "maxArea": 0.12
+              },
+              "explicit": false,
+              "normalise": [
+                {
+                  "pattern": "^返回$",
+                  "replace": "金币定位310-5-0"
+                }
+              ]
+            },
+            "need": {
+              "visibleText": [
+                "每日任务"
+              ],
+              "absentText": [
+                "观看广告+",
+                "看广告后可领取",
+                "点击后看"
+              ],
+              "evidence": {
+                "text": [
+                  "宝箱当前可领取"
+                ],
+                "cta": [
+                  "^领金币$"
+                ]
+              }
+            },
+            "do": {
+              "capability": "swipe",
+              "from": [
+                0.86111,
+                0.88328
+              ],
+              "to": [
+                0.86746,
+                0.88328
+              ],
+              "speed": 200
+            },
+            "expect": {
+              "result": "appeared",
+              "match": [
+                "看广告后可领取",
+                "领取成功~",
+                "领取成功"
+              ],
+              "settleMs": 8000,
+              "samples": 2
+            },
+            "markerEvidenceLabel": "宝箱当前可领取"
+          },
+          {
+            "find": {
+              "by": "text",
+              "match": [
+                "关闭广告"
+              ],
+              "explicit": false,
+              "idHints": [
+                [
+                  "close",
+                  "金币定位310-5-1"
+                ],
+                [
+                  "CloseButton",
+                  "金币定位310-5-1"
+                ],
+                [
+                  "close_text",
+                  "金币定位310-5-1"
+                ]
+              ],
+              "limit": {
+                "maxWidth": 0.12,
+                "maxHeight": 0.08,
+                "maxArea": 0.01
+              }
+            },
+            "need": {
+              "visibleText": [
+                "恭喜已获得奖励",
+                "恭喜获得奖励",
+                "恭喜你已获得奖励",
+                "已观看广告"
+              ],
+              "evidence": {
+                "text": [
+                  "恭喜已获得奖励",
+                  "恭喜获得奖励",
+                  "恭喜你已获得奖励",
+                  "已观看广告"
+                ]
+              }
+            },
+            "do": {
+              "capability": "click"
+            },
+            "expect": {
+              "result": "gone",
+              "settleMs": 15000,
+              "samples": 2
+            },
+            "skipWhen": {
+              "visibleText": [
+                "金币TAB"
+              ],
+              "absentText": [
+                "点击后看",
+                "恭喜已获得奖励",
+                "恭喜获得奖励",
+                "已观看广告"
+              ],
+              "stopRepeat": false
+            }
+          },
+          {
+            "find": {
+              "by": "text",
+              "match": [
+                "金币定位310-5-2"
+              ],
+              "normalise": [
+                {
+                  "pattern": "^关闭$",
+                  "replace": "金币定位310-5-2"
+                }
+              ],
+              "limit": {
+                "maxWidth": 0.24,
+                "maxHeight": 0.1,
+                "maxArea": 0.02
+              }
+            },
+            "need": {
+              "visibleText": [
+                "看广告后可领取"
+              ],
+              "absentText": [
+                "点击后看",
+                "恭喜已获得奖励"
+              ]
+            },
+            "do": {
+              "capability": "click"
+            },
+            "expect": {
+              "result": "gone",
+              "settleMs": 5000,
+              "samples": 2
+            },
+            "skipWhen": {
+              "visibleText": [
+                "金币TAB"
+              ],
+              "absentText": [
+                "看广告后可领取"
+              ],
+              "stopRepeat": false
+            }
+          }
+        ]
+      },
+      {
+        "schema": 2,
+        "id": "quietstart.qqmusic-coin-center-daily-detail-2",
+        "name": "第3区广告详情返回2",
+        "version": 1,
+        "priority": 313,
+        "appliesTo": [
+          "com.tencent.hm.qqmusic"
+        ],
+        "when": {
+          "trigger": "app-foreground",
+          "lifetime": "foreground"
+        },
+        "defaults": {
+          "totalMs": 240000,
+          "limit": {
+            "maxWidth": 0.95,
+            "maxHeight": 0.15,
+            "maxArea": 0.12
+          }
+        },
+        "steps": [
+          {
+            "find": {
+              "by": "text",
+              "match": [
+                "商品详情页"
+              ],
+              "limit": {
+                "maxWidth": 0.95,
+                "maxHeight": 0.15,
+                "maxArea": 0.12
+              }
+            },
+            "need": {
+              "absentText": [
+                "金币TAB"
+              ]
+            },
+            "do": {
+              "capability": "swipe",
+              "from": [
+                0.5,
+                0.02
+              ],
+              "to": [
+                0.5,
+                0.0212
+              ],
+              "speed": 1000
+            },
+            "expect": {
+              "result": "appeared",
+              "match": [
+                "商品详情页"
+              ],
+              "settleMs": 3000,
+              "samples": 2
+            }
+          },
+          {
+            "do": {
+              "capability": "wait",
+              "ms": 3000
+            }
+          },
+          {
+            "find": {
+              "by": "text",
+              "match": [
+                "商品详情页"
+              ],
+              "limit": {
+                "maxWidth": 0.95,
+                "maxHeight": 0.15,
+                "maxArea": 0.12
+              }
+            },
+            "do": {
+              "capability": "back"
+            },
+            "expect": {
+              "result": "appeared",
+              "match": [
+                "金币TAB",
+                "看广告后可领取"
+              ],
+              "settleMs": 8000,
+              "samples": 2
+            }
+          }
+        ]
+      },
+      {
+        "schema": 2,
+        "id": "quietstart.qqmusic-coin-center-daily-sheet-2",
+        "name": "第3区奖励弹窗收尾2",
+        "version": 1,
+        "priority": 314,
+        "appliesTo": [
+          "com.tencent.hm.qqmusic"
+        ],
+        "when": {
+          "trigger": "app-foreground",
+          "lifetime": "foreground"
+        },
+        "defaults": {
+          "totalMs": 240000,
+          "limit": {
+            "maxWidth": 0.95,
+            "maxHeight": 0.15,
+            "maxArea": 0.12
+          }
+        },
+        "steps": [
+          {
+            "find": {
+              "by": "text",
+              "match": [
+                "金币定位314-7-0"
+              ],
+              "normalise": [
+                {
+                  "pattern": "^关闭$",
+                  "replace": "金币定位314-7-0"
+                }
+              ],
+              "limit": {
+                "maxWidth": 0.24,
+                "maxHeight": 0.1,
+                "maxArea": 0.02
+              }
+            },
+            "need": {
+              "visibleText": [
+                "看广告后可领取"
+              ],
+              "absentText": [
+                "点击后看",
+                "恭喜已获得奖励"
+              ]
+            },
+            "do": {
+              "capability": "click"
+            },
+            "expect": {
+              "result": "gone",
+              "settleMs": 5000,
+              "samples": 2
+            }
+          }
+        ]
+      }
+    ],
+    "priority": 310
+  },
+  {
+    "schema": 3,
+    "id": "quietstart.qqmusic-coin-center-chest-native",
+    "name": "QQ音乐金币中心·宝箱视频跳转",
+    "version": 1,
+    "minAppVersionCode": 128000,
+    "minAppVersionName": "1.2.8",
+    "usage": "第3区悬浮宝箱的原生视频配套配置：详情跳转停留3秒，读到奖励完成提示后关闭广告。与金币中心组合配置一起启用。",
+    "appliesTo": [
+      "com.tencent.hm.qqmusic"
+    ],
+    "entryAfterClick": "免费领礼物-鸿蒙",
+    "entryClickTexts": [
+      "赚金币",
+      "看广告后可领取"
+    ],
+    "landingVisit": {
+      "promptText": "可获得奖励",
+      "promptKeywords": [
+        "点击"
+      ],
+      "maxPendingRetries": 3,
+      "promptRegion": [
+        0.02,
+        0.03,
+        0.96,
+        0.3
+      ],
+      "buttonRegion": [
+        0.05,
+        0.73,
+        0.95,
+        0.95
+      ],
+      "dwellMs": 3000,
+      "chooserTexts": [
+        "选择应用",
+        "选择打开方式",
+        "应用分身",
+        "打开方式",
+        "微信1"
+      ],
+      "confirmContexts": [
+        "是否确认",
+        "确认打开",
+        "即将打开",
+        "是否打开",
+        "想要打开"
+      ],
+      "confirmButton": "确定",
+      "confirmButtons": [
+        "打开"
+      ],
+      "externalOpenPolicy": "open",
+      "cancelButton": "取消",
+      "dismissPoint": [
+        0.5,
+        0.15
+      ],
+      "backFrom": [
+        0.005,
+        0.52
+      ],
+      "backTo": [
+        0.285,
+        0.52
+      ],
+      "backSpeed": 2600,
+      "externalReturnText": "QQ音乐",
+      "returnPolicy": "navigation",
+      "returnAbility": {
+        "moduleName": "entry",
+        "abilityName": "EntryAbility"
+      },
+      "earnedTexts": [
+        "恭喜已获得奖励",
+        "恭喜获得奖励",
+        "恭喜你已获得奖励",
+        "金币TAB"
+      ],
+      "landingPages": [
+        {
+          "containerType": "UIExtensionComponent",
+          "allIds": [
+            "app_name",
+            "download_button_text"
+          ],
+          "anyText": [
+            "安装",
+            "打开",
+            "更新"
+          ],
+          "dwellMs": 3000,
+          "returnPolicy": "back-then-wake-owner",
+          "wakeFromBundles": [
+            "com.huawei.hmsapp.appgallery"
+          ]
+        }
+      ]
+    },
+    "tasks": [
+      {
+        "schema": 2,
+        "id": "quietstart.qqmusic-coin-center-daily-native-2",
+        "name": "第3区弹窗视频任务2",
+        "version": 1,
+        "priority": 312,
+        "appliesTo": [
+          "com.tencent.hm.qqmusic"
+        ],
+        "when": {
+          "trigger": "app-foreground",
+          "lifetime": "foreground"
+        },
+        "defaults": {
+          "totalMs": 240000,
+          "limit": {
+            "maxWidth": 0.95,
+            "maxHeight": 0.15,
+            "maxArea": 0.12
+          }
+        },
+        "steps": [
+          {
+            "find": {
+              "by": "text",
+              "match": [
+                "金币视频已入场"
+              ],
+              "normalise": [
+                {
+                  "pattern": "^查看详情$",
+                  "replace": "金币视频已入场"
+                }
+              ],
+              "limit": {
+                "maxWidth": 0.95,
+                "maxHeight": 0.1,
+                "maxArea": 0.12
+              }
+            },
+            "need": {
+              "visibleText": [
+                "可获得奖励",
+                "恭喜已获得奖励",
+                "已观看广告"
+              ]
+            },
+            "do": {
+              "capability": "swipe",
+              "from": [
+                0.96,
+                0.36
+              ],
+              "to": [
+                0.96,
+                0.35
+              ],
+              "speed": 1000
+            },
+            "expect": {
+              "result": "appeared",
+              "match": [
+                "查看详情"
+              ],
+              "settleMs": 3000,
+              "samples": 2
+            }
+          },
+          {
+            "find": {
+              "by": "text",
+              "match": [
+                "关闭广告"
+              ],
+              "explicit": false,
+              "idHints": [
+                [
+                  "close",
+                  "金币定位312-5-1"
+                ],
+                [
+                  "CloseButton",
+                  "金币定位312-5-1"
+                ],
+                [
+                  "close_text",
+                  "金币定位312-5-1"
+                ]
+              ],
+              "limit": {
+                "maxWidth": 0.12,
+                "maxHeight": 0.08,
+                "maxArea": 0.01
+              }
+            },
+            "need": {
+              "visibleText": [
+                "恭喜已获得奖励",
+                "恭喜获得奖励",
+                "恭喜你已获得奖励",
+                "已观看广告"
+              ],
+              "evidence": {
+                "text": [
+                  "恭喜已获得奖励",
+                  "恭喜获得奖励",
+                  "恭喜你已获得奖励",
+                  "已观看广告"
+                ]
+              }
+            },
+            "do": {
+              "capability": "click"
+            },
+            "expect": {
+              "result": "gone",
+              "settleMs": 15000,
+              "samples": 2
+            },
+            "skipWhen": {
+              "visibleText": [
+                "金币TAB"
+              ],
+              "absentText": [
+                "点击后看",
+                "恭喜已获得奖励",
+                "恭喜获得奖励",
+                "已观看广告"
+              ],
+              "stopRepeat": false
+            }
+          },
+          {
+            "find": {
+              "by": "text",
+              "match": [
+                "金币定位312-5-2"
+              ],
+              "normalise": [
+                {
+                  "pattern": "^关闭$",
+                  "replace": "金币定位312-5-2"
+                }
+              ],
+              "limit": {
+                "maxWidth": 0.24,
+                "maxHeight": 0.1,
+                "maxArea": 0.02
+              }
+            },
+            "need": {
+              "visibleText": [
+                "看广告后可领取"
+              ],
+              "absentText": [
+                "点击后看",
+                "恭喜已获得奖励"
+              ]
+            },
+            "do": {
+              "capability": "click"
+            },
+            "expect": {
+              "result": "gone",
+              "settleMs": 5000,
+              "samples": 2
+            },
+            "skipWhen": {
+              "visibleText": [
+                "金币TAB"
+              ],
+              "absentText": [
+                "看广告后可领取"
+              ],
+              "stopRepeat": false
+            }
+          }
+        ]
+      }
+    ],
+    "priority": 312
+  },
+  {
+    "schema": 3,
+    "id": "quietstart.qqmusic-coin-center-video",
+    "name": "QQ音乐金币中心·视频金币",
+    "version": 1,
+    "minAppVersionCode": 128000,
+    "minAppVersionName": "1.2.8",
+    "usage": "将金币中心组合配置一并启用，按1礼物、3每日定时金币和宝箱、2视频执行。视频区详情跳转保持15秒；首次进入需宝箱已进入本轮倒计时且奖励弹窗已收尾。视频开始后持续续做，不因每日任务5分钟刷新重新执行前两段。",
+    "appliesTo": [
+      "com.tencent.hm.qqmusic"
+    ],
+    "entryAfterClick": "免费领礼物-鸿蒙",
+    "entryClickTexts": [
+      "赚金币",
+      "看广告后可领取"
+    ],
+    "landingVisit": {
+      "promptText": "可获得奖励",
+      "promptKeywords": [
+        "点击"
+      ],
+      "maxPendingRetries": 3,
+      "promptRegion": [
+        0.02,
+        0.03,
+        0.96,
+        0.3
+      ],
+      "buttonRegion": [
+        0.05,
+        0.73,
+        0.95,
+        0.95
+      ],
+      "dwellMs": 15000,
+      "chooserTexts": [
+        "选择应用",
+        "选择打开方式",
+        "应用分身",
+        "打开方式",
+        "微信1"
+      ],
+      "confirmContexts": [
+        "是否确认",
+        "确认打开",
+        "即将打开",
+        "是否打开",
+        "想要打开"
+      ],
+      "confirmButton": "确定",
+      "confirmButtons": [
+        "打开"
+      ],
+      "externalOpenPolicy": "open",
+      "cancelButton": "取消",
+      "dismissPoint": [
+        0.5,
+        0.15
+      ],
+      "backFrom": [
+        0.005,
+        0.52
+      ],
+      "backTo": [
+        0.285,
+        0.52
+      ],
+      "backSpeed": 2600,
+      "externalReturnText": "QQ音乐",
+      "returnPolicy": "navigation",
+      "returnAbility": {
+        "moduleName": "entry",
+        "abilityName": "EntryAbility"
+      },
+      "earnedTexts": [
+        "恭喜已获得奖励",
+        "恭喜获得奖励",
+        "恭喜你已获得奖励",
+        "金币TAB"
+      ],
+      "landingPages": [
+        {
+          "containerType": "UIExtensionComponent",
+          "allIds": [
+            "app_name",
+            "download_button_text"
+          ],
+          "anyText": [
+            "安装",
+            "打开",
+            "更新"
+          ],
+          "dwellMs": 15000,
+          "returnPolicy": "back-then-wake-owner",
+          "wakeFromBundles": [
+            "com.huawei.hmsapp.appgallery"
+          ]
+        }
+      ]
+    },
+    "tasks": [
+      {
+        "schema": 2,
+        "id": "quietstart.qqmusic-coin-center-video-top-1",
+        "name": "视频区前恢复列表顶部1",
+        "version": 1,
+        "priority": 380,
+        "appliesTo": [
+          "com.tencent.hm.qqmusic"
+        ],
+        "when": {
+          "trigger": "app-foreground",
+          "lifetime": "foreground"
+        },
+        "defaults": {
+          "totalMs": 15000,
+          "limit": {
+            "maxWidth": 0.95,
+            "maxHeight": 0.15,
+            "maxArea": 0.12
+          }
+        },
+        "steps": [
+          {
+            "find": {
+              "by": "text",
+              "match": [
+                "金币定位380-0-0"
+              ],
+              "normalise": [
+                {
+                  "pattern": "^返回$",
+                  "replace": "金币定位380-0-0"
+                }
+              ]
+            },
+            "need": {
+              "visibleText": [
+                "每日任务"
+              ],
+              "absentText": [
+                "点击后看",
+                "观看广告+",
+                "可获得奖励"
+              ]
+            },
+            "do": {
+              "capability": "swipe",
+              "from": [
+                0.6,
+                0.42
+              ],
+              "to": [
+                0.6,
+                0.9
+              ],
+              "speed": 2200
+            },
+            "expect": {
+              "result": "appeared",
+              "match": [
+                "看视频领金币"
+              ],
+              "onScreen": true,
+              "settleMs": 5000,
+              "samples": 2
+            }
+          }
+        ]
+      },
+      {
+        "schema": 2,
+        "id": "quietstart.qqmusic-coin-center-video-top-2",
+        "name": "视频区前恢复列表顶部2",
+        "version": 1,
+        "priority": 390,
+        "appliesTo": [
+          "com.tencent.hm.qqmusic"
+        ],
+        "when": {
+          "trigger": "app-foreground",
+          "lifetime": "foreground"
+        },
+        "defaults": {
+          "totalMs": 15000,
+          "limit": {
+            "maxWidth": 0.95,
+            "maxHeight": 0.15,
+            "maxArea": 0.12
+          }
+        },
+        "steps": [
+          {
+            "find": {
+              "by": "text",
+              "match": [
+                "金币定位390-1-0"
+              ],
+              "normalise": [
+                {
+                  "pattern": "^返回$",
+                  "replace": "金币定位390-1-0"
+                }
+              ]
+            },
+            "need": {
+              "visibleText": [
+                "每日任务"
+              ],
+              "absentText": [
+                "点击后看",
+                "观看广告+",
+                "可获得奖励"
+              ]
+            },
+            "do": {
+              "capability": "swipe",
+              "from": [
+                0.6,
+                0.42
+              ],
+              "to": [
+                0.6,
+                0.9
+              ],
+              "speed": 2200
+            },
+            "expect": {
+              "result": "appeared",
+              "match": [
+                "看视频领金币"
+              ],
+              "onScreen": true,
+              "settleMs": 5000,
+              "samples": 2
+            }
+          }
+        ]
+      },
+      {
+        "schema": 2,
+        "id": "quietstart.qqmusic-coin-center-video-start",
+        "name": "第三段收尾后首次开始视频",
+        "version": 1,
+        "priority": 400,
+        "appliesTo": [
+          "com.tencent.hm.qqmusic"
+        ],
+        "when": {
+          "trigger": "app-foreground",
+          "lifetime": "foreground"
+        },
+        "defaults": {
+          "totalMs": 240000,
+          "limit": {
+            "maxWidth": 0.95,
+            "maxHeight": 0.15,
+            "maxArea": 0.12
+          }
+        },
+        "steps": [
+          {
+            "find": {
+              "by": "text",
+              "match": [
+                "宝箱本轮冷却"
+              ],
+              "normalise": [
+                {
+                  "pattern": "^\\d{2}:\\d{2}$",
+                  "replace": "宝箱本轮冷却"
+                }
+              ],
+              "sameParentText": [
+                "box_timer.235a7cd0f"
+              ],
+              "limit": {
+                "maxWidth": 0.12,
+                "maxHeight": 0.06,
+                "maxArea": 0.01
+              }
+            },
+            "need": {
+              "visibleText": [
+                "看视频领金币"
+              ],
+              "absentText": [
+                "恭喜已获得奖励",
+                "恭喜获得奖励",
+                "观看广告+",
+                "看广告后可领取",
+                "领取成功",
+                "已观看广告"
+              ],
+              "evidence": {
+                "text": [
+                  "看视频领金币"
+                ]
+              }
+            },
+            "do": {
+              "capability": "swipe",
+              "from": [
+                0.84206,
+                0.66826
+              ],
+              "to": [
+                0.84841,
+                0.66826
+              ],
+              "speed": 200
+            },
+            "expect": {
+              "result": "appeared",
+              "match": [
+                "点击后看",
+                "可获得奖励",
+                "恭喜已获得奖励",
+                "查看详情"
+              ],
+              "settleMs": 12000,
+              "samples": 2
+            }
+          }
+        ]
+      },
+      {
+        "schema": 2,
+        "id": "quietstart.qqmusic-coin-center-video-cycle",
+        "name": "金币区视频15秒续看",
+        "version": 1,
+        "priority": 410,
+        "appliesTo": [
+          "com.tencent.hm.qqmusic"
+        ],
+        "when": {
+          "trigger": "app-foreground",
+          "lifetime": "foreground"
+        },
+        "defaults": {
+          "totalMs": 240000,
+          "limit": {
+            "maxWidth": 0.95,
+            "maxHeight": 0.15,
+            "maxArea": 0.12
+          }
+        },
+        "repeat": {
+          "maxCycles": 300,
+          "cooldownMs": 500,
+          "idleMs": 12000
+        },
+        "steps": [
+          {
+            "find": {
+              "by": "text",
+              "match": [
+                "金币视频已入场"
+              ],
+              "normalise": [
+                {
+                  "pattern": "^查看详情$",
+                  "replace": "金币视频已入场"
+                }
+              ],
+              "limit": {
+                "maxWidth": 0.95,
+                "maxHeight": 0.1,
+                "maxArea": 0.12
+              }
+            },
+            "need": {
+              "visibleText": [
+                "可获得奖励"
+              ]
+            },
+            "do": {
+              "capability": "swipe",
+              "from": [
+                0.96,
+                0.36
+              ],
+              "to": [
+                0.96,
+                0.35
+              ],
+              "speed": 1000
+            },
+            "expect": {
+              "result": "appeared",
+              "match": [
+                "查看详情"
+              ],
+              "settleMs": 3000,
+              "samples": 2
+            }
+          },
+          {
+            "find": {
+              "by": "text",
+              "match": [
+                "关闭广告"
+              ],
+              "explicit": false,
+              "idHints": [
+                [
+                  "close",
+                  "金币定位410-3-1"
+                ],
+                [
+                  "CloseButton",
+                  "金币定位410-3-1"
+                ],
+                [
+                  "close_text",
+                  "金币定位410-3-1"
+                ]
+              ],
+              "limit": {
+                "maxWidth": 0.12,
+                "maxHeight": 0.08,
+                "maxArea": 0.01
+              }
+            },
+            "need": {
+              "visibleText": [
+                "恭喜已获得奖励",
+                "恭喜获得奖励",
+                "恭喜你已获得奖励",
+                "已观看广告"
+              ],
+              "evidence": {
+                "text": [
+                  "恭喜已获得奖励",
+                  "恭喜获得奖励",
+                  "恭喜你已获得奖励",
+                  "已观看广告"
+                ]
+              }
+            },
+            "do": {
+              "capability": "click"
+            },
+            "expect": {
+              "result": "gone",
+              "settleMs": 15000,
+              "samples": 2
+            },
+            "skipWhen": {
+              "visibleText": [
+                "金币TAB"
+              ],
+              "absentText": [
+                "点击后看",
+                "恭喜已获得奖励",
+                "恭喜获得奖励",
+                "已观看广告"
+              ],
+              "stopRepeat": false
+            }
+          },
+          {
+            "find": {
+              "by": "text",
+              "match": [
+                "金币定位410-3-2"
+              ],
+              "normalise": [
+                {
+                  "pattern": "^关闭$",
+                  "replace": "金币定位410-3-2"
+                }
+              ],
+              "limit": {
+                "maxWidth": 0.24,
+                "maxHeight": 0.1,
+                "maxArea": 0.02
+              }
+            },
+            "need": {
+              "visibleText": [
+                "看广告后可领取"
+              ],
+              "absentText": [
+                "点击后看",
+                "恭喜已获得奖励"
+              ]
+            },
+            "do": {
+              "capability": "click"
+            },
+            "expect": {
+              "result": "gone",
+              "settleMs": 5000,
+              "samples": 2
+            },
+            "skipWhen": {
+              "visibleText": [
+                "金币TAB"
+              ],
+              "absentText": [
+                "看广告后可领取"
+              ],
+              "stopRepeat": false
+            }
+          },
+          {
+            "find": {
+              "by": "text",
+              "match": [
+                "看视频领金币"
+              ],
+              "limit": {
+                "maxWidth": 0.95,
+                "maxHeight": 0.09,
+                "maxArea": 0.08
+              }
+            },
+            "need": {
+              "visibleText": [
+                "看视频领金币"
+              ],
+              "absentText": [
+                "恭喜已获得奖励",
+                "恭喜获得奖励",
+                "观看广告+",
+                "看广告后可领取"
+              ],
+              "evidence": {
+                "text": [
+                  "看视频领金币"
+                ]
+              }
+            },
+            "do": {
+              "capability": "swipe",
+              "from": [
+                0.84206,
+                0.66826
+              ],
+              "to": [
+                0.84841,
+                0.66826
+              ],
+              "speed": 200
+            },
+            "expect": {
+              "result": "appeared",
+              "match": [
+                "点击后看",
+                "可获得奖励",
+                "恭喜已获得奖励",
+                "查看详情"
+              ],
+              "settleMs": 12000,
+              "samples": 2
+            }
+          }
+        ]
+      },
+      {
+        "schema": 2,
+        "id": "quietstart.qqmusic-coin-center-daily-native-1",
+        "name": "第3区弹窗视频任务1",
+        "version": 1,
+        "priority": 302,
+        "appliesTo": [
+          "com.tencent.hm.qqmusic"
+        ],
+        "when": {
+          "trigger": "app-foreground",
+          "lifetime": "foreground"
+        },
+        "defaults": {
+          "totalMs": 240000,
+          "limit": {
+            "maxWidth": 0.95,
+            "maxHeight": 0.15,
+            "maxArea": 0.12
+          }
+        },
+        "steps": [
+          {
+            "find": {
+              "by": "text",
+              "match": [
+                "金币视频已入场"
+              ],
+              "normalise": [
+                {
+                  "pattern": "^查看详情$",
+                  "replace": "金币视频已入场"
+                }
+              ],
+              "limit": {
+                "maxWidth": 0.95,
+                "maxHeight": 0.1,
+                "maxArea": 0.12
+              }
+            },
+            "need": {
+              "visibleText": [
+                "可获得奖励",
+                "恭喜已获得奖励",
+                "已观看广告"
+              ]
+            },
+            "do": {
+              "capability": "swipe",
+              "from": [
+                0.96,
+                0.36
+              ],
+              "to": [
+                0.96,
+                0.35
+              ],
+              "speed": 1000
+            },
+            "expect": {
+              "result": "appeared",
+              "match": [
+                "查看详情"
+              ],
+              "settleMs": 3000,
+              "samples": 2
+            }
+          },
+          {
+            "find": {
+              "by": "text",
+              "match": [
+                "关闭广告"
+              ],
+              "explicit": false,
+              "idHints": [
+                [
+                  "close",
+                  "金币定位302-4-1"
+                ],
+                [
+                  "CloseButton",
+                  "金币定位302-4-1"
+                ],
+                [
+                  "close_text",
+                  "金币定位302-4-1"
+                ]
+              ],
+              "limit": {
+                "maxWidth": 0.12,
+                "maxHeight": 0.08,
+                "maxArea": 0.01
+              }
+            },
+            "need": {
+              "visibleText": [
+                "恭喜已获得奖励",
+                "恭喜获得奖励",
+                "恭喜你已获得奖励",
+                "已观看广告"
+              ],
+              "evidence": {
+                "text": [
+                  "恭喜已获得奖励",
+                  "恭喜获得奖励",
+                  "恭喜你已获得奖励",
+                  "已观看广告"
+                ]
+              }
+            },
+            "do": {
+              "capability": "click"
+            },
+            "expect": {
+              "result": "gone",
+              "settleMs": 15000,
+              "samples": 2
+            },
+            "skipWhen": {
+              "visibleText": [
+                "金币TAB"
+              ],
+              "absentText": [
+                "点击后看",
+                "恭喜已获得奖励",
+                "恭喜获得奖励",
+                "已观看广告"
+              ],
+              "stopRepeat": false
+            }
+          },
+          {
+            "find": {
+              "by": "text",
+              "match": [
+                "金币定位302-4-2"
+              ],
+              "normalise": [
+                {
+                  "pattern": "^关闭$",
+                  "replace": "金币定位302-4-2"
+                }
+              ],
+              "limit": {
+                "maxWidth": 0.24,
+                "maxHeight": 0.1,
+                "maxArea": 0.02
+              }
+            },
+            "need": {
+              "visibleText": [
+                "看广告后可领取"
+              ],
+              "absentText": [
+                "点击后看",
+                "恭喜已获得奖励"
+              ]
+            },
+            "do": {
+              "capability": "click"
+            },
+            "expect": {
+              "result": "gone",
+              "settleMs": 5000,
+              "samples": 2
+            },
+            "skipWhen": {
+              "visibleText": [
+                "金币TAB"
+              ],
+              "absentText": [
+                "看广告后可领取"
+              ],
+              "stopRepeat": false
+            }
+          }
+        ]
+      }
+    ],
+    "priority": 400
+  }
+]

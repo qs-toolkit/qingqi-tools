@@ -67,3 +67,16 @@ QUIETSTART_SOURCE_ROOT=/path/to/quietstart node --test tests/taobao-v2.test.cjs
 
 - [起点读书福利中心任务奖励 v10](packs/quietstart.qidian-welfare-center/10.json)：修复激励任务到第五轮结束、确认弹窗与重复轮次互相干扰的问题，保留其他福利任务和落地页返回处理。需轻启 **1.2.8（128073 或更新版本）**，推荐安装正式版 **128078**。
 - 按维护者要求，线上 V9 递增为 V10，本次以最新配置覆盖历史 V10 文件；V9/V11 文件继续保留。已通过本体参考校验、引擎编译及37项文档编译回归；实际验证范围见本体工作记录，不宣称完整清空每日所有任务。
+
+### QQ音乐金币中心任务 V1（2026-10-25）
+
+[下载 QQ音乐金币中心任务 V1](bundles/qqmusic-coin-center/1.json)。该文件仅包含金币中心的 5 个配套配置，一次导入并全部启用；「QQ音乐免会员视频任务」仍为独立包。也可通过仓库订阅清单导入金币中心这 5 项。使用金币中心配置前，请停用「QQ音乐免会员视频任务」，两者目前择一启用。
+
+从 QQ 音乐「我的」页右上角金币入口，或「我的」页日历图标进入签到页后再点右上角金币，进入金币中心的「赚金币」页。整体按 **1 礼物 → 3 每日任务与宝箱 → 2 视频** 处理本次可做任务，完成后结束，不等待五分钟刷新。
+
+- [礼物浏览](packs/quietstart.qqmusic-coin-center-gifts/1.json)：最多浏览 4 次，每次 15 秒；完成后跳过，保留「待领取」，不兑换礼物。
+- [每日任务](packs/quietstart.qqmusic-coin-center-daily/1.json)：向下查找定时领金币，弹窗任务跳转停留 15 秒。
+- [宝箱任务](packs/quietstart.qqmusic-coin-center-chest-popup/1.json)、[宝箱视频跳转](packs/quietstart.qqmusic-coin-center-chest-native/1.json)：悬浮宝箱及其弹窗任务处理一轮，跳转停留 3 秒，商品详情补充等待也为 3 秒。
+- [视频金币](packs/quietstart.qqmusic-coin-center-video/1.json)：最后连续处理视频区，每次跳转停留 15 秒，奖励完成后关闭广告及奖励弹窗，继续当前可用任务。
+
+包正文要求轻启 1.2.8（128000 或更新构建）。验证环境为 Pura 70 Pro、轻启 1.2.8（128153）：15 秒基线由用户实机反馈成功；宝箱 3 秒调整已通过配置校验并导入设备，本次未重新跑广告计时验证。本次发布只更新工具包配置。
