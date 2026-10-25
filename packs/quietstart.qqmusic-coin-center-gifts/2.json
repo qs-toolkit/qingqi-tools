@@ -1,0 +1,350 @@
+{
+  "schema": 3,
+  "id": "quietstart.qqmusic-coin-center-gifts",
+  "name": "QQ音乐金币中心·礼物浏览",
+  "version": 2,
+  "minAppVersionCode": 128000,
+  "minAppVersionName": "1.2.8",
+  "usage": "【使用前必读】请先关闭「QQ音乐免会员视频任务」工具包，否则会与金币任务冲突。配套启用全部金币中心配置，按1→3→2处理当前一轮。礼物最多浏览4次，每次15秒；完成后跳过，保留待领取，不安装、不兑换。",
+  "appliesTo": [
+    "com.tencent.hm.qqmusic"
+  ],
+  "entryAfterClick": "免费领礼物-鸿蒙",
+  "entryClickTexts": [
+    "赚金币",
+    "看广告后可领取"
+  ],
+  "landingVisit": {
+    "promptText": "浏览15秒",
+    "promptKeywords": [
+      "浏览"
+    ],
+    "maxPendingRetries": 3,
+    "promptRegion": [
+      0.25,
+      0.47,
+      0.98,
+      0.61
+    ],
+    "buttonRegion": [
+      0.45,
+      0.535,
+      0.6,
+      0.545
+    ],
+    "dwellMs": 15000,
+    "chooserTexts": [
+      "选择应用",
+      "选择打开方式",
+      "应用分身",
+      "打开方式",
+      "微信1"
+    ],
+    "confirmContexts": [
+      "是否确认",
+      "确认打开",
+      "即将打开",
+      "是否打开",
+      "想要打开"
+    ],
+    "confirmButton": "确定",
+    "confirmButtons": [
+      "打开"
+    ],
+    "externalOpenPolicy": "open",
+    "cancelButton": "取消",
+    "dismissPoint": [
+      0.5,
+      0.15
+    ],
+    "backFrom": [
+      0.005,
+      0.52
+    ],
+    "backTo": [
+      0.285,
+      0.52
+    ],
+    "backSpeed": 2600,
+    "externalReturnText": "QQ音乐",
+    "returnPolicy": "wake-owner",
+    "returnAbility": {
+      "moduleName": "entry",
+      "abilityName": "EntryAbility"
+    },
+    "earnedTexts": [
+      "今日活动任务已完成",
+      "待领取"
+    ],
+    "landingPages": [
+      {
+        "containerType": "UIExtensionComponent",
+        "allIds": [
+          "app_name",
+          "download_button_text"
+        ],
+        "anyText": [
+          "安装",
+          "打开",
+          "更新"
+        ],
+        "dwellMs": 15000,
+        "returnPolicy": "back-then-wake-owner",
+        "wakeFromBundles": [
+          "com.huawei.hmsapp.appgallery"
+        ]
+      }
+    ]
+  },
+  "tasks": [
+    {
+      "schema": 2,
+      "id": "quietstart.qqmusic-coin-center-entry-top-1",
+      "name": "第1区前恢复金币页顶部1",
+      "version": 1,
+      "priority": 180,
+      "appliesTo": [
+        "com.tencent.hm.qqmusic"
+      ],
+      "when": {
+        "trigger": "app-foreground",
+        "lifetime": "foreground"
+      },
+      "defaults": {
+        "totalMs": 15000,
+        "limit": {
+          "maxWidth": 0.95,
+          "maxHeight": 0.15,
+          "maxArea": 0.12
+        }
+      },
+      "steps": [
+        {
+          "find": {
+            "by": "text",
+            "match": [
+              "金币定位180-0-0"
+            ],
+            "normalise": [
+              {
+                "pattern": "^返回$",
+                "replace": "金币定位180-0-0"
+              }
+            ]
+          },
+          "need": {
+            "visibleText": [
+              "每日任务"
+            ],
+            "absentText": [
+              "点击后看",
+              "观看广告+",
+              "可获得奖励"
+            ]
+          },
+          "do": {
+            "capability": "swipe",
+            "from": [
+              0.6,
+              0.42
+            ],
+            "to": [
+              0.6,
+              0.9
+            ],
+            "speed": 2200
+          },
+          "expect": {
+            "result": "appeared",
+            "match": [
+              "免费领礼物-鸿蒙"
+            ],
+            "onScreen": true,
+            "settleMs": 5000,
+            "samples": 2
+          }
+        }
+      ]
+    },
+    {
+      "schema": 2,
+      "id": "quietstart.qqmusic-coin-center-entry-top-2",
+      "name": "第1区前恢复金币页顶部2",
+      "version": 1,
+      "priority": 190,
+      "appliesTo": [
+        "com.tencent.hm.qqmusic"
+      ],
+      "when": {
+        "trigger": "app-foreground",
+        "lifetime": "foreground"
+      },
+      "defaults": {
+        "totalMs": 15000,
+        "limit": {
+          "maxWidth": 0.95,
+          "maxHeight": 0.15,
+          "maxArea": 0.12
+        }
+      },
+      "steps": [
+        {
+          "find": {
+            "by": "text",
+            "match": [
+              "金币定位190-1-0"
+            ],
+            "normalise": [
+              {
+                "pattern": "^返回$",
+                "replace": "金币定位190-1-0"
+              }
+            ]
+          },
+          "need": {
+            "visibleText": [
+              "每日任务"
+            ],
+            "absentText": [
+              "点击后看",
+              "观看广告+",
+              "可获得奖励"
+            ]
+          },
+          "do": {
+            "capability": "swipe",
+            "from": [
+              0.6,
+              0.42
+            ],
+            "to": [
+              0.6,
+              0.9
+            ],
+            "speed": 2200
+          },
+          "expect": {
+            "result": "appeared",
+            "match": [
+              "免费领礼物-鸿蒙"
+            ],
+            "onScreen": true,
+            "settleMs": 5000,
+            "samples": 2
+          }
+        }
+      ]
+    },
+    {
+      "schema": 2,
+      "id": "quietstart.qqmusic-coin-center-gift-cycle",
+      "name": "第1区浏览检查（完成后直接跳过）",
+      "version": 1,
+      "priority": 200,
+      "appliesTo": [
+        "com.tencent.hm.qqmusic"
+      ],
+      "when": {
+        "trigger": "app-foreground",
+        "lifetime": "foreground"
+      },
+      "defaults": {
+        "totalMs": 240000,
+        "limit": {
+          "maxWidth": 0.95,
+          "maxHeight": 0.15,
+          "maxArea": 0.12
+        }
+      },
+      "steps": [
+        {
+          "find": {
+            "by": "text",
+            "match": [
+              "免费领礼物-鸿蒙"
+            ]
+          },
+          "need": {
+            "visibleText": [
+              "查看广告任务"
+            ],
+            "absentText": [
+              "点击后看",
+              "恭喜已获得奖励",
+              "领取礼物",
+              "待领取",
+              "今日活动任务已完成",
+              "礼包当日已经达到兑换次数限制",
+              "观看广告+",
+              "看广告后可领取"
+            ]
+          },
+          "do": {
+            "capability": "swipe",
+            "from": [
+              0.96,
+              0.36
+            ],
+            "to": [
+              0.96,
+              0.3612
+            ],
+            "speed": 1000
+          },
+          "expect": {
+            "result": "appeared",
+            "match": [
+              "免费领礼物-鸿蒙"
+            ],
+            "settleMs": 5000,
+            "samples": 2
+          }
+        },
+        {
+          "find": {
+            "by": "text",
+            "match": [
+              "免费领礼物-鸿蒙"
+            ]
+          },
+          "need": {
+            "visibleText": [
+              "查看广告任务"
+            ],
+            "absentText": [
+              "点击后看",
+              "恭喜已获得奖励",
+              "领取礼物",
+              "待领取",
+              "今日活动任务已完成",
+              "礼包当日已经达到兑换次数限制",
+              "观看广告+",
+              "看广告后可领取"
+            ]
+          },
+          "do": {
+            "capability": "swipe",
+            "from": [
+              0.96,
+              0.3612
+            ],
+            "to": [
+              0.96,
+              0.36
+            ],
+            "speed": 1000
+          },
+          "expect": {
+            "result": "appeared",
+            "match": [
+              "免费领礼物-鸿蒙"
+            ],
+            "settleMs": 5000,
+            "samples": 2
+          }
+        }
+      ]
+    }
+  ],
+  "priority": 200
+}

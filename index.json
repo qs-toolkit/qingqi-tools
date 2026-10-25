@@ -49,37 +49,37 @@
     {
       "id": "quietstart.qqmusic-coin-center-chest-native",
       "name": "QQ音乐金币中心·宝箱视频跳转",
-      "version": 1,
-      "url": "packs/quietstart.qqmusic-coin-center-chest-native/1.json",
-      "notes": "金币中心V1配套；宝箱原生视频详情跳转停留3秒。"
+      "version": 2,
+      "url": "packs/quietstart.qqmusic-coin-center-chest-native/2.json",
+      "notes": "请先关闭QQ音乐免会员视频任务工具包，否则会冲突。金币中心V2配套；宝箱3秒，其余15秒，按1→3→2执行当前一轮。"
     },
     {
       "id": "quietstart.qqmusic-coin-center-chest-popup",
       "name": "QQ音乐金币中心·宝箱任务",
-      "version": 1,
-      "url": "packs/quietstart.qqmusic-coin-center-chest-popup/1.json",
-      "notes": "金币中心V1配套；悬浮宝箱弹窗跳转后停留3秒返回。"
+      "version": 2,
+      "url": "packs/quietstart.qqmusic-coin-center-chest-popup/2.json",
+      "notes": "请先关闭QQ音乐免会员视频任务工具包，否则会冲突。金币中心V2配套；宝箱3秒，其余15秒，按1→3→2执行当前一轮。"
     },
     {
       "id": "quietstart.qqmusic-coin-center-daily",
       "name": "QQ音乐金币中心·每日任务",
-      "version": 1,
-      "url": "packs/quietstart.qqmusic-coin-center-daily/1.json",
-      "notes": "金币中心V1配套；定时领金币跳转15秒，只处理本次一轮，不等待五分钟刷新。"
+      "version": 2,
+      "url": "packs/quietstart.qqmusic-coin-center-daily/2.json",
+      "notes": "请先关闭QQ音乐免会员视频任务工具包，否则会冲突。金币中心V2配套；宝箱3秒，其余15秒，按1→3→2执行当前一轮。"
     },
     {
       "id": "quietstart.qqmusic-coin-center-gifts",
       "name": "QQ音乐金币中心·礼物浏览",
-      "version": 1,
-      "url": "packs/quietstart.qqmusic-coin-center-gifts/1.json",
-      "notes": "金币中心V1配套；礼物浏览15秒。请启用全部金币中心配置，并停用QQ音乐免会员视频任务。"
+      "version": 2,
+      "url": "packs/quietstart.qqmusic-coin-center-gifts/2.json",
+      "notes": "请先关闭QQ音乐免会员视频任务工具包，否则会冲突。金币中心V2配套；宝箱3秒，其余15秒，按1→3→2执行当前一轮。"
     },
     {
       "id": "quietstart.qqmusic-coin-center-video",
       "name": "QQ音乐金币中心·视频金币",
-      "version": 1,
-      "url": "packs/quietstart.qqmusic-coin-center-video/1.json",
-      "notes": "金币中心V1配套；最后处理视频区，跳转15秒；整体顺序1→3→2。"
+      "version": 2,
+      "url": "packs/quietstart.qqmusic-coin-center-video/2.json",
+      "notes": "请先关闭QQ音乐免会员视频任务工具包，否则会冲突。金币中心V2配套；宝箱3秒，其余15秒，按1→3→2执行当前一轮。"
     },
     {
       "id": "quietstart.qqmusic-free-listen-video",
