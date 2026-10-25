@@ -84,47 +84,5 @@
       "version": 5,
       "url": "packs/quietstart.theme-free-gifts/5.json"
     }
-  ],
-  "retiredPacks": [
-    {
-      "id": "quietstart.qqmusic-coin-center-chest-native",
-      "name": "QQ音乐金币中心·宝箱视频跳转",
-      "version": 2,
-      "url": "packs/quietstart.qqmusic-coin-center-chest-native/2.json",
-      "notes": "请先关闭QQ音乐免会员视频任务工具包，否则会冲突。金币中心V2配套；宝箱3秒，其余15秒，按1→3→2执行当前一轮。",
-      "replacedBy": "quietstart.qqmusic-coin-center"
-    },
-    {
-      "id": "quietstart.qqmusic-coin-center-chest-popup",
-      "name": "QQ音乐金币中心·宝箱任务",
-      "version": 2,
-      "url": "packs/quietstart.qqmusic-coin-center-chest-popup/2.json",
-      "notes": "请先关闭QQ音乐免会员视频任务工具包，否则会冲突。金币中心V2配套；宝箱3秒，其余15秒，按1→3→2执行当前一轮。",
-      "replacedBy": "quietstart.qqmusic-coin-center"
-    },
-    {
-      "id": "quietstart.qqmusic-coin-center-daily",
-      "name": "QQ音乐金币中心·每日任务",
-      "version": 2,
-      "url": "packs/quietstart.qqmusic-coin-center-daily/2.json",
-      "notes": "请先关闭QQ音乐免会员视频任务工具包，否则会冲突。金币中心V2配套；宝箱3秒，其余15秒，按1→3→2执行当前一轮。",
-      "replacedBy": "quietstart.qqmusic-coin-center"
-    },
-    {
-      "id": "quietstart.qqmusic-coin-center-gifts",
-      "name": "QQ音乐金币中心·礼物浏览",
-      "version": 2,
-      "url": "packs/quietstart.qqmusic-coin-center-gifts/2.json",
-      "notes": "请先关闭QQ音乐免会员视频任务工具包，否则会冲突。金币中心V2配套；宝箱3秒，其余15秒，按1→3→2执行当前一轮。",
-      "replacedBy": "quietstart.qqmusic-coin-center"
-    },
-    {
-      "id": "quietstart.qqmusic-coin-center-video",
-      "name": "QQ音乐金币中心·视频金币",
-      "version": 2,
-      "url": "packs/quietstart.qqmusic-coin-center-video/2.json",
-      "notes": "请先关闭QQ音乐免会员视频任务工具包，否则会冲突。金币中心V2配套；宝箱3秒，其余15秒，按1→3→2执行当前一轮。",
-      "replacedBy": "quietstart.qqmusic-coin-center"
-    }
   ]
 }

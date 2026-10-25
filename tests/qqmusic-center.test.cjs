@@ -1,10 +1,11 @@
 const test=require('node:test'),assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path');
 const root=path.join(__dirname,'..'),read=p=>JSON.parse(fs.readFileSync(path.join(root,p),'utf8'));
 const coin=read('packs/quietstart.qqmusic-coin-center/4.json'),member=read('packs/quietstart.qqmusic-free-listen-video/5.json');
-test('coin subscription returns one actual toolkit and archives its former companions',()=>{
+test('coin subscription contains one toolkit and removes its former companions',()=>{
  const index=read('index.json');assert.equal(Array.isArray(read('bundles/qqmusic-coin-center/1.json')),false);
  assert.equal(index.packs.filter(p=>p.id.startsWith('quietstart.qqmusic-coin-center')).length,1);
- assert.equal(index.retiredPacks.filter(p=>p.replacedBy===coin.id).length,5);
+ assert.ok(!index.retiredPacks);
+ for(const suffix of ['chest-native','chest-popup','daily','gifts','video']) assert.ok(!fs.existsSync(path.join(root,'packs/quietstart.qqmusic-coin-center-'+suffix)));
  assert.equal(coin.minAppVersionCode,128184);
 });
 test('the business order is gifts, timed work, then videos with safe resume checkpoints',()=>{
