@@ -71,6 +71,17 @@ function check() {
     }
     versions.delete(entry.id);
   }
+  if (index.retiredPacks !== undefined) {
+    if (!Array.isArray(index.retiredPacks)) fail('retiredPacks 必须是数组');
+    const active = new Set(index.packs.map(entry => entry.id));
+    const retired = new Set();
+    for (const entry of index.retiredPacks) {
+      const pack = versions.get(entry.id)?.get(entry.version);
+      if (!pack || retired.has(entry.id) || active.has(entry.id) || !active.has(entry.replacedBy) ||
+          entry.name !== pack.name || entry.url !== packUrl(pack)) fail('无效的历史工具包归档：' + entry.id);
+      retired.add(entry.id); versions.delete(entry.id);
+    }
+  }
   if (versions.size) fail(`工具包尚未加入清单：${[...versions.keys()].join(', ')}`);
   console.log(`校验通过：${index.packs.length} 个工具包，版本文件和清单一致`);
   return index;
