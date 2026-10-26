@@ -1,0 +1,223 @@
+{
+  "schema": 4,
+  "kind": "feed-filter",
+  "id": "quietstart.wechat-assist",
+  "name": "绿泡泡辅助",
+  "version": 1,
+  "usage": "每次打开选图页时自动勾选原图一次；聊天页按所选范围自动转换尚未转写的语音，可分别设置关闭、对方、己方或双方；没有内联入口时长按语音并选择转文字。发送图片仍由用户操作。仅使用原生控件，未提供定位的功能不启用。",
+  "feedFilter": {
+    "apps": [
+      {
+        "name": "绿泡泡辅助",
+        "bundleName": "com.tencent.wechat",
+        "targetVersionCode": 8394275,
+        "versionName": "8.0.22.35",
+        "pagePath": "pages/WechatAppPage",
+        "scrollEventType": "Scroll",
+        "eventSource": "window-input",
+        "inputQuietMs": 40,
+        "tabLabel": "微信",
+        "evidence": "Pura70 Pro HBN-AL00 API26 绿泡泡 8.0.22.35 聊天页/选图页原生抓取；脱敏结构见 docs/wechat-assist-20261026.md，原始材料仅本机私存",
+        "rules": [
+          {
+            "key": "assist-original-0",
+            "name": "自动勾选原图",
+            "pagePaths": [
+              "pages/WechatAppPage"
+            ],
+            "matches": [
+              "@Row[id=\"check_origin\"][clickable=true] > Text[text=\"原图\"]"
+            ],
+            "excludes": [],
+            "after": [],
+            "uniqueTarget": true,
+            "activationSelector": "@Row[id=\"check_origin\"][clickable=true] > Text[text=\"原图\"]",
+            "cooldownMs": 1000,
+            "maximum": 1,
+            "verifyOutcome": false,
+            "readScope": "picker",
+            "maximumKey": "assist-original-0",
+            "directOnce": true
+          },
+          {
+            "key": "assist-voice-long-press",
+            "name": "长按未转写语音",
+            "pagePaths": [
+              "pages/WechatAppPage"
+            ],
+            "matches": [
+              "Stack[longClickable=true] Row[clickable=true]"
+            ],
+            "excludes": [
+              "Text[text=\"转文字\"][clickable=true]"
+            ],
+            "after": [],
+            "uniqueTarget": true,
+            "activationSelector": "[id^=\"msg_voice_\"]",
+            "cooldownMs": 1000,
+            "maximum": 1,
+            "verifyOutcome": true,
+            "readScope": "chat",
+            "scopeSelector": "Column[id^=\"msg_voice_\"]",
+            "gesture": "long-press",
+            "outcomeReadScope": "window",
+            "satisfiedAny": [
+              "Column[id^=\"msg_voice_\"] Column[text=\"\"][clickable=false][longClickable=true]"
+            ],
+            "maximumKey": "assist-voice-menu",
+            "scopeOrder": "bottom-up",
+            "satisfiedScopeSelector": "Column[id^=\"msg_voice_\"]",
+            "appearedSelector": "@Column[clickable=true] Text[text=\"转文字\"]"
+          },
+          {
+            "key": "assist-voice-menu-confirm",
+            "name": "选择语音转文字",
+            "pagePaths": [
+              "pages/WechatAppPage"
+            ],
+            "matches": [
+              "@Column[clickable=true] Text[text=\"转文字\"]"
+            ],
+            "excludes": [],
+            "after": [
+              "assist-voice-long-press"
+            ],
+            "readScope": "window",
+            "uniqueTarget": true,
+            "cooldownMs": 0,
+            "verifyOutcome": true,
+            "verifySource": true,
+            "outcomeReadScope": "window",
+            "absentSelector": "@Column[clickable=true] Text[text=\"转文字\"]",
+            "outcomeRetries": 2,
+            "outcomeRetryMs": 1200
+          },
+          {
+            "key": "assist-voice-menu",
+            "name": "未转写语音转为文字",
+            "pagePaths": [
+              "pages/WechatAppPage"
+            ],
+            "matches": [
+              "Text[text=\"转文字\"][clickable=true]"
+            ],
+            "excludes": [],
+            "after": [],
+            "uniqueTarget": true,
+            "activationSelector": "[id^=\"msg_voice_\"]",
+            "cooldownMs": 1000,
+            "maximum": 1,
+            "verifyOutcome": true,
+            "readScope": "chat",
+            "scopeSelector": "Column[id^=\"msg_voice_\"]",
+            "appearedSelector": "Column[id^=\"msg_voice_\"] Column[text=\"\"][clickable=false][longClickable=true]",
+            "satisfiedAny": [
+              "Column[id^=\"msg_voice_\"] Column[text=\"\"][clickable=false][longClickable=true]"
+            ],
+            "satisfiedScopeSelector": "Column[id^=\"msg_voice_\"]",
+            "outcomeRetries": 2,
+            "outcomeRetryMs": 1200,
+            "scopeOrder": "bottom-up"
+          }
+        ],
+        "helperRegions": [
+          {
+            "key": "chat",
+            "id": "chat_list",
+            "type": "__Common__"
+          },
+          {
+            "key": "picker",
+            "id": "check_origin",
+            "type": "Row"
+          }
+        ],
+        "helperBatch": {
+          "sourceKeys": [
+            "assist-voice-long-press",
+            "assist-voice-menu"
+          ],
+          "contextKey": "assist-voice-menu-confirm",
+          "directMenu": true,
+          "holdMs": 600,
+          "menuLayouts": [
+            {
+              "key": "peer",
+              "selector": "Stack[clickable=true][longClickable=true] + Column > Row > @Column[id^=\"msg_voice_\"]",
+              "anchorX": "start"
+            },
+            {
+              "key": "self",
+              "selector": "@Column[id^=\"msg_voice_\"] <n Row <n Column + Stack[clickable=true][longClickable=true]",
+              "anchorX": "end"
+            }
+          ]
+        },
+        "ruleGroups": [
+          {
+            "key": "original-image",
+            "name": "自动勾选原图",
+            "description": "每次打开选图操作自动勾选一次，下次打开再触发。",
+            "ruleKeys": [
+              "assist-original-0"
+            ],
+            "choices": [
+              {
+                "key": "off",
+                "name": "关闭",
+                "enabled": false
+              },
+              {
+                "key": "on",
+                "name": "启用",
+                "enabled": true
+              }
+            ],
+            "defaultChoice": "on"
+          },
+          {
+            "key": "voice-to-text",
+            "name": "语音转文字",
+            "description": "跳过已转写语音，从下往上处理。",
+            "ruleKeys": [
+              "assist-voice-long-press",
+              "assist-voice-menu-confirm",
+              "assist-voice-menu"
+            ],
+            "choices": [
+              {
+                "key": "off",
+                "name": "关闭",
+                "enabled": false
+              },
+              {
+                "key": "peer",
+                "name": "对方",
+                "enabled": true,
+                "activationSelector": "Stack[clickable=true][longClickable=true] + Column > Row > @Column[id^=\"msg_voice_\"]"
+              },
+              {
+                "key": "self",
+                "name": "己方",
+                "enabled": true,
+                "activationSelector": "@Column[id^=\"msg_voice_\"] <n Row <n Column + Stack[clickable=true][longClickable=true]"
+              },
+              {
+                "key": "both",
+                "name": "双方",
+                "enabled": true,
+                "activationSelector": "[id^=\"msg_voice_\"]"
+              }
+            ],
+            "defaultChoice": "peer"
+          }
+        ],
+        "pagePaths": [
+          "pages/WechatAppPage"
+        ]
+      }
+    ]
+  },
+  "minAppVersionCode": 129001,
+  "minAppVersionName": "1.2.9-beta（129001）"
+}

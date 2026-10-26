@@ -49,8 +49,9 @@
     {
       "id": "quietstart.qqmusic-coin-center",
       "name": "QQ音乐金币中心",
-      "version": 4,
-      "url": "packs/quietstart.qqmusic-coin-center/4.json"
+      "version": 6,
+      "url": "packs/quietstart.qqmusic-coin-center/6.json",
+      "notes": "V6；需 128249 或更新版本。支持两个金币入口、1→3→2 顺序、礼物完成识别、应用分身、新旧广告和误入兑换页恢复。"
     },
     {
       "id": "quietstart.qqmusic-free-listen-video",
@@ -83,6 +84,13 @@
       "name": "主题免费领好礼三段任务",
       "version": 5,
       "url": "packs/quietstart.theme-free-gifts/5.json"
+    },
+    {
+      "id": "quietstart.wechat-assist",
+      "name": "绿泡泡辅助",
+      "version": 1,
+      "url": "packs/quietstart.wechat-assist/1.json",
+      "notes": "V1；需 1.2.9-beta（129001）或更新版本。自动勾选原图与语音转文字；当前按绿泡泡 8.0.22.35 原生结构适配。"
     }
   ]
 }
