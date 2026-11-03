@@ -11,8 +11,8 @@
     {
       "id": "quietstart.cloud-space-50gb-install",
       "name": "云盘免费领50GB安装任务",
-      "version": 2,
-      "url": "packs/quietstart.cloud-space-50gb-install/2.json"
+      "version": 4,
+      "url": "packs/quietstart.cloud-space-50gb-install/4.json"
     },
     {
       "id": "quietstart.harmony-star-assistant",

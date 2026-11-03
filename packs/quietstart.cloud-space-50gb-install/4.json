@@ -1,0 +1,47 @@
+{
+  "schema": 3,
+  "id": "quietstart.cloud-space-50gb-install",
+  "name": "云盘免费领50GB安装任务",
+  "version": 4,
+  "usage": "在系统设置的「云空间」或「云盘」亲手进入「免费领 50 GB 云空间」活动页后执行。适配「已打开：N 个」新版页面，使用轻启1.2.8已有的分段安装能力；每次进入最多完成30项，不按页面历史累计数量停止，已有完成数量不会抵扣本次次数。依次安装、关闭应用市场安装页、回到活动页点击「打开」，停留5秒后唤回活动页，确认完成后仅清理本次唯一确认的新装应用。无任务时遍历列表，连续换一换3次仍无任务便结束。不点击「立即领取」或「兑换」，权益由用户自行领取。",
+  "appliesTo": [
+    "com.huawei.hmos.settings"
+  ],
+  "entryAfterClick": "已打开：",
+  "tasks": [],
+  "minAppVersionCode": 128080,
+  "minAppVersionName": "1.2.8",
+  "rewardStages": {
+    "pageText": "免费领 50 GB 云空间",
+    "returnModuleName": "phone_settings",
+    "returnAbilityName": "com.huawei.hmos.settings.MainAbility",
+    "scrollSpeed": 800,
+    "listScrollX": 0.55,
+    "pageScrollX": 0.015,
+    "scrollTop": 0.34,
+    "scrollBottom": 0.86,
+    "stages": [
+      {
+        "kind": "install",
+        "title": "每个应用安装完成后，需回到此页面点击“打开”并浏览 5s",
+        "actionText": "安装",
+        "openText": "打开",
+        "doneText": "已打开",
+        "refreshText": "换一换",
+        "maxTasks": 30,
+        "maxRefreshes": 3,
+        "dwellMs": 5000,
+        "marketText": "应用市场",
+        "marketNameId": "app_name",
+        "marketActionId": "download_button_text",
+        "marketCloseRegion": [
+          0.83,
+          0.02,
+          0.99,
+          0.11
+        ],
+        "cleanupInstalled": true
+      }
+    ]
+  }
+}
