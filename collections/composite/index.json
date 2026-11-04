@@ -73,6 +73,24 @@
               "config-layout.v1"
             ]
           }
+        },
+        {
+          "version": 10,
+          "url": "packs/kugou-concept-daily-checkin/10.json",
+          "sha256": "ad2f72e7d9ea4d189d4db6dd70fd4a803a10a1c5261a8ec9a81cdc6625e3c61e",
+          "minAppVersionCode": 129161,
+          "requires": {
+            "hostApi": {
+              "major": 1,
+              "minMinor": 0
+            },
+            "minPlatformApi": 26,
+            "features": [
+              "task-intent.v1",
+              "config.v1",
+              "config-layout.v1"
+            ]
+          }
         }
       ]
     },
@@ -134,6 +152,24 @@
           "version": 7,
           "url": "packs/quietstart.cloud-space-50gb-install/7.json",
           "sha256": "14b2a38bbe1bbef7d6230ed019d8077c2efefd1343645c54fcd6a269ffe492a0",
+          "minAppVersionCode": 129161,
+          "requires": {
+            "hostApi": {
+              "major": 1,
+              "minMinor": 0
+            },
+            "minPlatformApi": 26,
+            "features": [
+              "task-intent.v1",
+              "config.v1",
+              "config-layout.v1"
+            ]
+          }
+        },
+        {
+          "version": 8,
+          "url": "packs/quietstart.cloud-space-50gb-install/8.json",
+          "sha256": "41a38ea8c1eecbabb3e4bf8ab81c126b4e8f3fe8897b08ac485096b2de67cd6c",
           "minAppVersionCode": 129161,
           "requires": {
             "hostApi": {
@@ -352,6 +388,24 @@
               "config-layout.v1"
             ]
           }
+        },
+        {
+          "version": 7,
+          "url": "packs/quietstart.movie-free-member-install/7.json",
+          "sha256": "d7a966ab7dd4a3a66228822d0b1182eebb82ea51e93d2734863de6102b9b43af",
+          "minAppVersionCode": 129161,
+          "requires": {
+            "hostApi": {
+              "major": 1,
+              "minMinor": 0
+            },
+            "minPlatformApi": 26,
+            "features": [
+              "task-intent.v1",
+              "config.v1",
+              "config-layout.v1"
+            ]
+          }
         }
       ]
     },
@@ -413,6 +467,24 @@
           "version": 8,
           "url": "packs/quietstart.music-free-member-install/8.json",
           "sha256": "09a454a9f8df17c12d938f5881d64ab395ac7379b04fc5d0719fc929310fd0d2",
+          "minAppVersionCode": 129161,
+          "requires": {
+            "hostApi": {
+              "major": 1,
+              "minMinor": 0
+            },
+            "minPlatformApi": 26,
+            "features": [
+              "task-intent.v1",
+              "config.v1",
+              "config-layout.v1"
+            ]
+          }
+        },
+        {
+          "version": 9,
+          "url": "packs/quietstart.music-free-member-install/9.json",
+          "sha256": "41b09e7e07c28aed105fb130ecf15d2c3aabc5a0d12f1189b73fa7293b0f3573",
           "minAppVersionCode": 129161,
           "requires": {
             "hostApi": {
@@ -500,6 +572,24 @@
               "config-layout.v1"
             ]
           }
+        },
+        {
+          "version": 27,
+          "url": "packs/quietstart.qidian-welfare-center/27.json",
+          "sha256": "f86416ffe9a7d608ffa71b2dbf50529b978accaf7cdc83c3101278a998e7dbfa",
+          "minAppVersionCode": 129161,
+          "requires": {
+            "hostApi": {
+              "major": 1,
+              "minMinor": 0
+            },
+            "minPlatformApi": 26,
+            "features": [
+              "task-intent.v1",
+              "config.v1",
+              "config-layout.v1"
+            ]
+          }
         }
       ]
     },
@@ -561,6 +651,24 @@
           "version": 9,
           "url": "packs/quietstart.qishui-membership-rewards/9.json",
           "sha256": "9465de5d82a8a331d911239914838303ab84ffd866675a069582794f89c6bc23",
+          "minAppVersionCode": 129161,
+          "requires": {
+            "hostApi": {
+              "major": 1,
+              "minMinor": 0
+            },
+            "minPlatformApi": 26,
+            "features": [
+              "task-intent.v1",
+              "config.v1",
+              "config-layout.v1"
+            ]
+          }
+        },
+        {
+          "version": 10,
+          "url": "packs/quietstart.qishui-membership-rewards/10.json",
+          "sha256": "3108b1bc4e6644bad06473c115575cd4e7f40e04131ef89e93b43ffaf6b48712",
           "minAppVersionCode": 129161,
           "requires": {
             "hostApi": {
@@ -667,6 +775,25 @@
               "query.snapshot-refs.v1"
             ]
           }
+        },
+        {
+          "version": 34,
+          "url": "packs/quietstart.qqmusic-coin-center/34.json",
+          "sha256": "306e8c09535b66e727a9ccff6a3d5e69e0dbacc906755d58956796834cc40a9c",
+          "minAppVersionCode": 129161,
+          "requires": {
+            "hostApi": {
+              "major": 1,
+              "minMinor": 0
+            },
+            "minPlatformApi": 26,
+            "features": [
+              "task-intent.v1",
+              "config.v1",
+              "config-layout.v1",
+              "query.snapshot-refs.v1"
+            ]
+          }
         }
       ]
     },
@@ -728,6 +855,24 @@
           "version": 13,
           "url": "packs/quietstart.qqmusic-free-listen-video/13.json",
           "sha256": "152cf30d00f0d2f1778bccb614a79058da82da4d74d43ef5b75ddf6fe32cfa20",
+          "minAppVersionCode": 129161,
+          "requires": {
+            "hostApi": {
+              "major": 1,
+              "minMinor": 0
+            },
+            "minPlatformApi": 26,
+            "features": [
+              "task-intent.v1",
+              "config.v1",
+              "config-layout.v1"
+            ]
+          }
+        },
+        {
+          "version": 14,
+          "url": "packs/quietstart.qqmusic-free-listen-video/14.json",
+          "sha256": "366d1d4d1c2d531b1008d9f0e093143dfc12b4eb24046090180472cc772f4b27",
           "minAppVersionCode": 129161,
           "requires": {
             "hostApi": {
@@ -820,6 +965,25 @@
           "version": 16,
           "url": "packs/quietstart.taobao-taojinbi-earn/16.json",
           "sha256": "e8d723deb2b8aa48871909026cfb06cfa61ef22481bdf79c757cf9eee69b2078",
+          "minAppVersionCode": 129161,
+          "requires": {
+            "hostApi": {
+              "major": 1,
+              "minMinor": 0
+            },
+            "minPlatformApi": 26,
+            "features": [
+              "task-intent.v1",
+              "config.v1",
+              "config-layout.v1",
+              "input.keyboard-dismiss.v1"
+            ]
+          }
+        },
+        {
+          "version": 17,
+          "url": "packs/quietstart.taobao-taojinbi-earn/17.json",
+          "sha256": "71ac6524eaa5d890c72fa384e9277856d7703732d940d70bf9f56c4d0339ee0f",
           "minAppVersionCode": 129161,
           "requires": {
             "hostApi": {
@@ -927,6 +1091,25 @@
               "input.keyboard-dismiss.v1"
             ]
           }
+        },
+        {
+          "version": 16,
+          "url": "packs/quietstart.taobao-taojinbi-energy/16.json",
+          "sha256": "7e75485ee26f608b82f5f6ffa12c892e6911ef13c57a84d07bf1592964ddd392",
+          "minAppVersionCode": 129161,
+          "requires": {
+            "hostApi": {
+              "major": 1,
+              "minMinor": 0
+            },
+            "minPlatformApi": 26,
+            "features": [
+              "task-intent.v1",
+              "config.v1",
+              "config-layout.v1",
+              "input.keyboard-dismiss.v1"
+            ]
+          }
         }
       ]
     },
@@ -988,6 +1171,24 @@
           "version": 10,
           "url": "packs/quietstart.theme-free-gifts/10.json",
           "sha256": "388fa129025feedc9551830bb385a446055d891359c667c604b0990370d3031f",
+          "minAppVersionCode": 129161,
+          "requires": {
+            "hostApi": {
+              "major": 1,
+              "minMinor": 0
+            },
+            "minPlatformApi": 26,
+            "features": [
+              "task-intent.v1",
+              "config.v1",
+              "config-layout.v1"
+            ]
+          }
+        },
+        {
+          "version": 11,
+          "url": "packs/quietstart.theme-free-gifts/11.json",
+          "sha256": "72963ce46588614fc87c989b901d9211298ce3f93528d2910cf26197deee5615",
           "minAppVersionCode": 129161,
           "requires": {
             "hostApi": {
