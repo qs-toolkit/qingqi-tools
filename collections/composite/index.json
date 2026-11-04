@@ -1004,6 +1004,25 @@
               "query.snapshot-refs.v1"
             ]
           }
+        },
+        {
+          "version": 46,
+          "url": "packs/quietstart.qqmusic-coin-center/46.json",
+          "sha256": "62594f9d9a0e0d6a4ab7662e0b320a0674e9a2189ab87c9d624d955b8a958e9a",
+          "minAppVersionCode": 129175,
+          "requires": {
+            "hostApi": {
+              "major": 1,
+              "minMinor": 0
+            },
+            "minPlatformApi": 26,
+            "features": [
+              "task-intent.v1",
+              "config.v1",
+              "config-layout.v1",
+              "query.snapshot-refs.v1"
+            ]
+          }
         }
       ]
     },
@@ -1101,6 +1120,24 @@
           "version": 15,
           "url": "packs/quietstart.qqmusic-free-listen-video/15.json",
           "sha256": "c3dec588795e643c57addb18d231293ec96f674b28a3885e4b3f78bce74f73b3",
+          "minAppVersionCode": 129161,
+          "requires": {
+            "hostApi": {
+              "major": 1,
+              "minMinor": 0
+            },
+            "minPlatformApi": 26,
+            "features": [
+              "task-intent.v1",
+              "config.v1",
+              "config-layout.v1"
+            ]
+          }
+        },
+        {
+          "version": 16,
+          "url": "packs/quietstart.qqmusic-free-listen-video/16.json",
+          "sha256": "19b045ccc9737a163b33a55749fd2262fe43acac83aae794758f168ed841115c",
           "minAppVersionCode": 129161,
           "requires": {
             "hostApi": {
