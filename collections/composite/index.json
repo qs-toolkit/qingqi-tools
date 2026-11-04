@@ -1155,6 +1155,26 @@
               "query.snapshot-refs.v2"
             ]
           }
+        },
+        {
+          "version": 57,
+          "url": "packs/quietstart.qqmusic-coin-center/57.json",
+          "sha256": "b8a5d73a8919eef00aaa1c4cf658f85476ecab3eacfa41ae057d84e0015014a1",
+          "minAppVersionCode": 129179,
+          "requires": {
+            "hostApi": {
+              "major": 1,
+              "minMinor": 0
+            },
+            "minPlatformApi": 26,
+            "features": [
+              "task-intent.v1",
+              "config.v1",
+              "config-layout.v1",
+              "query.snapshot-refs.v1",
+              "query.snapshot-refs.v2"
+            ]
+          }
         }
       ]
     },
