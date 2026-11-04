@@ -819,6 +819,25 @@
               "query.snapshot-refs.v1"
             ]
           }
+        },
+        {
+          "version": 39,
+          "url": "packs/quietstart.qqmusic-coin-center/39.json",
+          "sha256": "fbf445cbcec75abadcf7ff936cadf674b440f9b6cf9fa6ebe7761fa14a46d99a",
+          "minAppVersionCode": 129161,
+          "requires": {
+            "hostApi": {
+              "major": 1,
+              "minMinor": 0
+            },
+            "minPlatformApi": 26,
+            "features": [
+              "task-intent.v1",
+              "config.v1",
+              "config-layout.v1",
+              "query.snapshot-refs.v1"
+            ]
+          }
         }
       ]
     },
@@ -1023,6 +1042,25 @@
               "input.keyboard-dismiss.v1"
             ]
           }
+        },
+        {
+          "version": 19,
+          "url": "packs/quietstart.taobao-taojinbi-earn/19.json",
+          "sha256": "9d9fc35748a98ca8090d7e9d0bbe85e9b082d789e9b4734547ef9c494163461e",
+          "minAppVersionCode": 129161,
+          "requires": {
+            "hostApi": {
+              "major": 1,
+              "minMinor": 0
+            },
+            "minPlatformApi": 26,
+            "features": [
+              "task-intent.v1",
+              "config.v1",
+              "config-layout.v1",
+              "input.keyboard-dismiss.v1"
+            ]
+          }
         }
       ]
     },
@@ -1121,6 +1159,25 @@
           "version": 16,
           "url": "packs/quietstart.taobao-taojinbi-energy/16.json",
           "sha256": "7e75485ee26f608b82f5f6ffa12c892e6911ef13c57a84d07bf1592964ddd392",
+          "minAppVersionCode": 129161,
+          "requires": {
+            "hostApi": {
+              "major": 1,
+              "minMinor": 0
+            },
+            "minPlatformApi": 26,
+            "features": [
+              "task-intent.v1",
+              "config.v1",
+              "config-layout.v1",
+              "input.keyboard-dismiss.v1"
+            ]
+          }
+        },
+        {
+          "version": 18,
+          "url": "packs/quietstart.taobao-taojinbi-energy/18.json",
+          "sha256": "a2f263e5c98581b0533e1b7654845e674d3c5728a2f9fd836819d37a204848c4",
           "minAppVersionCode": 129161,
           "requires": {
             "hostApi": {
