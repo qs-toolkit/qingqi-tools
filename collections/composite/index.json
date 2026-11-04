@@ -1624,6 +1624,25 @@
               "input.keyboard-dismiss.v1"
             ]
           }
+        },
+        {
+          "version": 22,
+          "url": "packs/quietstart.taobao-taojinbi-earn/22.json",
+          "sha256": "3d2ae404c94a9ee219bbd21b914e06ce25b69b7c6c0736179fa3c445f024e888",
+          "minAppVersionCode": 129187,
+          "requires": {
+            "hostApi": {
+              "major": 1,
+              "minMinor": 0
+            },
+            "minPlatformApi": 26,
+            "features": [
+              "task-intent.v1",
+              "config.v1",
+              "config-layout.v1",
+              "input.keyboard-dismiss.v1"
+            ]
+          }
         }
       ]
     },
@@ -1780,6 +1799,25 @@
           "url": "packs/quietstart.taobao-taojinbi-energy/20.json",
           "sha256": "9a7b59839cbd47cfdd0c8901d699f8a88592e6df68c41a9602b8d7878f6140e1",
           "minAppVersionCode": 129161,
+          "requires": {
+            "hostApi": {
+              "major": 1,
+              "minMinor": 0
+            },
+            "minPlatformApi": 26,
+            "features": [
+              "task-intent.v1",
+              "config.v1",
+              "config-layout.v1",
+              "input.keyboard-dismiss.v1"
+            ]
+          }
+        },
+        {
+          "version": 21,
+          "url": "packs/quietstart.taobao-taojinbi-energy/21.json",
+          "sha256": "d5ac31092acd11b0196f90fad4cbda770f4312c4ad448abadfda00dc1a3d8dcd",
+          "minAppVersionCode": 129187,
           "requires": {
             "hostApi": {
               "major": 1,
