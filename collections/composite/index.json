@@ -183,6 +183,25 @@
               "config-layout.v1"
             ]
           }
+        },
+        {
+          "version": 10,
+          "url": "packs/quietstart.cloud-space-50gb-install/10.json",
+          "sha256": "4b813f12585a740130491edf33a89caac907c6b2e77467a8cd4767f8a7b23569",
+          "minAppVersionCode": 129175,
+          "requires": {
+            "hostApi": {
+              "major": 1,
+              "minMinor": 0
+            },
+            "minPlatformApi": 26,
+            "features": [
+              "task-intent.v1",
+              "config.v1",
+              "config-layout.v1",
+              "query.content-scope.v1"
+            ]
+          }
         }
       ]
     },
@@ -825,6 +844,25 @@
           "url": "packs/quietstart.qqmusic-coin-center/39.json",
           "sha256": "fbf445cbcec75abadcf7ff936cadf674b440f9b6cf9fa6ebe7761fa14a46d99a",
           "minAppVersionCode": 129161,
+          "requires": {
+            "hostApi": {
+              "major": 1,
+              "minMinor": 0
+            },
+            "minPlatformApi": 26,
+            "features": [
+              "task-intent.v1",
+              "config.v1",
+              "config-layout.v1",
+              "query.snapshot-refs.v1"
+            ]
+          }
+        },
+        {
+          "version": 43,
+          "url": "packs/quietstart.qqmusic-coin-center/43.json",
+          "sha256": "1ab9c1b973b1e089b46d43dfec2ae4467e5f589fa8067c886864416ab4bc6fb0",
+          "minAppVersionCode": 129175,
           "requires": {
             "hostApi": {
               "major": 1,
