@@ -238,6 +238,31 @@
               "task-actor-context.v1"
             ]
           }
+        },
+        {
+          "version": 30,
+          "url": "packs/quietstart.harmony-star-assistant/30.json",
+          "sha256": "d39f7beda0eeefcee81a5092e4c739ffb1130d4c9fd7a62a465daf67f7893744",
+          "minAppVersionCode": 129161,
+          "requires": {
+            "hostApi": {
+              "major": 1,
+              "minMinor": 0
+            },
+            "minPlatformApi": 26,
+            "features": [
+              "task-actor.v1",
+              "config.v1",
+              "config-labels.v1",
+              "config-layout.v1",
+              "presentation-styles.v1",
+              "task-actor-codec.v1",
+              "task-actor-vision.v1",
+              "task-actor-image-template.v1",
+              "task-actor-image-components.v1",
+              "task-actor-context.v1"
+            ]
+          }
         }
       ]
     },

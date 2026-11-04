@@ -88,7 +88,7 @@ Pura 70 Pro / HarmonyOS 7.0 / 128184 实机已确认：金币与免会员包同�
 
 ### 复合工具包合集（2026-11-04）
 
-新增[独立复合合集](collections/composite/README.md)，收录 11 个已迁移任务包、星空与金铲铲助手，共13个工具、64份签名版本。轻启 **129121 或更新版本**会自动选择当前版本可用的最新工具，不兼容的工具不列为可选项；新参数版支持用户设置持久保存，更新不覆盖。
+新增[独立复合合集](collections/composite/README.md)，收录 11 个已迁移任务包、星空与金铲铲助手，共13个工具、65份签名版本。轻启 **129121 或更新版本**会自动选择当前版本可用的最新工具，不兼容的工具不列为可选项；新参数版支持用户设置持久保存，更新不覆盖。
 
 ```
 https://raw.githubusercontent.com/qs-toolkit/qingqi-tools/main/collections/composite/index.json
