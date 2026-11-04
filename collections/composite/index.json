@@ -799,6 +799,25 @@
               "query.snapshot-refs.v2"
             ]
           }
+        },
+        {
+          "version": 30,
+          "url": "packs/quietstart.qidian-welfare-center/30.json",
+          "sha256": "c1d3c89cee8c9134d08aafac79955f59ac74a3bf67a38f8b95b95806e4f31120",
+          "minAppVersionCode": 129179,
+          "requires": {
+            "hostApi": {
+              "major": 1,
+              "minMinor": 0
+            },
+            "minPlatformApi": 26,
+            "features": [
+              "task-intent.v1",
+              "config.v1",
+              "config-layout.v1",
+              "query.snapshot-refs.v2"
+            ]
+          }
         }
       ]
     },
@@ -1680,6 +1699,24 @@
           "version": 12,
           "url": "packs/quietstart.theme-free-gifts/12.json",
           "sha256": "02df40601bf5191e51aa2f8f9b72d69b8670beb1db6c4986160b6ffa6efa7ed3",
+          "minAppVersionCode": 129161,
+          "requires": {
+            "hostApi": {
+              "major": 1,
+              "minMinor": 0
+            },
+            "minPlatformApi": 26,
+            "features": [
+              "task-intent.v1",
+              "config.v1",
+              "config-layout.v1"
+            ]
+          }
+        },
+        {
+          "version": 13,
+          "url": "packs/quietstart.theme-free-gifts/13.json",
+          "sha256": "d806f61b60b81cdd30cea6bf1f10cf11b1ba0c61859b93a598a74fecc3fd5098",
           "minAppVersionCode": 129161,
           "requires": {
             "hostApi": {
