@@ -780,6 +780,25 @@
               "config-layout.v1"
             ]
           }
+        },
+        {
+          "version": 29,
+          "url": "packs/quietstart.qidian-welfare-center/29.json",
+          "sha256": "87b00631876486e16b2af8a22b06b07bf662f5ae7bd2ce15754fe442d16fb54a",
+          "minAppVersionCode": 129179,
+          "requires": {
+            "hostApi": {
+              "major": 1,
+              "minMinor": 0
+            },
+            "minPlatformApi": 26,
+            "features": [
+              "task-intent.v1",
+              "config.v1",
+              "config-layout.v1",
+              "query.snapshot-refs.v2"
+            ]
+          }
         }
       ]
     },
@@ -1097,6 +1116,26 @@
               "query.snapshot-refs.v1"
             ]
           }
+        },
+        {
+          "version": 56,
+          "url": "packs/quietstart.qqmusic-coin-center/56.json",
+          "sha256": "1165da2182d1ffce5dd6417e625b9bbd2026d38e557dfee363d0bdd8bd574233",
+          "minAppVersionCode": 129179,
+          "requires": {
+            "hostApi": {
+              "major": 1,
+              "minMinor": 0
+            },
+            "minPlatformApi": 26,
+            "features": [
+              "task-intent.v1",
+              "config.v1",
+              "config-layout.v1",
+              "query.snapshot-refs.v1",
+              "query.snapshot-refs.v2"
+            ]
+          }
         }
       ]
     },
@@ -1223,6 +1262,25 @@
               "task-intent.v1",
               "config.v1",
               "config-layout.v1"
+            ]
+          }
+        },
+        {
+          "version": 17,
+          "url": "packs/quietstart.qqmusic-free-listen-video/17.json",
+          "sha256": "dafa8f4c7dc46d280183b103beb42fc7018fce8cb733113992b4f56eef1992ef",
+          "minAppVersionCode": 129179,
+          "requires": {
+            "hostApi": {
+              "major": 1,
+              "minMinor": 0
+            },
+            "minPlatformApi": 26,
+            "features": [
+              "task-intent.v1",
+              "config.v1",
+              "config-layout.v1",
+              "query.snapshot-refs.v2"
             ]
           }
         }
