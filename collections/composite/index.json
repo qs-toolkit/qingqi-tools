@@ -892,6 +892,26 @@
               "query.snapshot-refs.v2"
             ]
           }
+        },
+        {
+          "version": 32,
+          "url": "packs/quietstart.qidian-welfare-center/32.json",
+          "sha256": "15d05765e8d4a49346bf298c83e99f9303de9dfcf04a736a541a510a9e6abf01",
+          "minAppVersionCode": 129189,
+          "requires": {
+            "hostApi": {
+              "major": 1,
+              "minMinor": 0
+            },
+            "minPlatformApi": 26,
+            "features": [
+              "task-intent.v1",
+              "config.v1",
+              "config-layout.v1",
+              "query.snapshot-refs.v2",
+              "action-visit-receipts.v1"
+            ]
+          }
         }
       ]
     },
@@ -1289,6 +1309,27 @@
               "query.snapshot-refs.v2"
             ]
           }
+        },
+        {
+          "version": 61,
+          "url": "packs/quietstart.qqmusic-coin-center/61.json",
+          "sha256": "3aa41c32f45e0387ccc82894f86a3567fb4cc843e95cd6e5ef43b6eb22386b7d",
+          "minAppVersionCode": 129189,
+          "requires": {
+            "hostApi": {
+              "major": 1,
+              "minMinor": 0
+            },
+            "minPlatformApi": 26,
+            "features": [
+              "task-intent.v1",
+              "config.v1",
+              "config-layout.v1",
+              "query.snapshot-refs.v1",
+              "query.snapshot-refs.v2",
+              "action-visit-receipts.v1"
+            ]
+          }
         }
       ]
     },
@@ -1453,6 +1494,26 @@
               "config.v1",
               "config-layout.v1",
               "query.snapshot-refs.v2"
+            ]
+          }
+        },
+        {
+          "version": 19,
+          "url": "packs/quietstart.qqmusic-free-listen-video/19.json",
+          "sha256": "a74a40fa5090e7f994d1f5c2fb1e98b731e5488b25a58344f78f59f04a44773f",
+          "minAppVersionCode": 129189,
+          "requires": {
+            "hostApi": {
+              "major": 1,
+              "minMinor": 0
+            },
+            "minPlatformApi": 26,
+            "features": [
+              "task-intent.v1",
+              "config.v1",
+              "config-layout.v1",
+              "query.snapshot-refs.v2",
+              "action-visit-receipts.v1"
             ]
           }
         }
