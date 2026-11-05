@@ -2355,24 +2355,6 @@
           }
         },
         {
-          "version": 10,
-          "url": "packs/quietstart.theme-free-gifts/10.json",
-          "sha256": "388fa129025feedc9551830bb385a446055d891359c667c604b0990370d3031f",
-          "minAppVersionCode": 129161,
-          "requires": {
-            "hostApi": {
-              "major": 1,
-              "minMinor": 0
-            },
-            "minPlatformApi": 26,
-            "features": [
-              "task-intent.v1",
-              "config.v1",
-              "config-layout.v1"
-            ]
-          }
-        },
-        {
           "version": 11,
           "url": "packs/quietstart.theme-free-gifts/11.json",
           "sha256": "72963ce46588614fc87c989b901d9211298ce3f93528d2910cf26197deee5615",
@@ -2466,6 +2448,27 @@
           "version": 18,
           "url": "packs/quietstart.theme-free-gifts/18.json",
           "sha256": "87609867801f18a536e8729e01cbc8d07eec2bddabfd7815e0f316ba922a5fab",
+          "minAppVersionCode": 129202,
+          "requires": {
+            "hostApi": {
+              "major": 1,
+              "minMinor": 0
+            },
+            "minPlatformApi": 26,
+            "features": [
+              "task-intent.v1",
+              "config.v1",
+              "config-layout.v1",
+              "query.snapshot-refs.v2",
+              "input.select.v1",
+              "input.select-bound.v1"
+            ]
+          }
+        },
+        {
+          "version": 20,
+          "url": "packs/quietstart.theme-free-gifts/20.json",
+          "sha256": "a0ac96c7260a08b5b88929e187b1ce3c999214f91f10bf1fd4a9c3af11fe6055",
           "minAppVersionCode": 129202,
           "requires": {
             "hostApi": {
