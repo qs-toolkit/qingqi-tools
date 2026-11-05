@@ -298,6 +298,30 @@
               "query.content-scope.v1"
             ]
           }
+        },
+        {
+          "version": 17,
+          "url": "packs/quietstart.cloud-space-50gb-install/17.json",
+          "sha256": "652c61204a73a1d7fe6da6c0829c9d2831a4ba0cb16617143bb2a80cf049c86d",
+          "minAppVersionCode": 129202,
+          "requires": {
+            "hostApi": {
+              "major": 1,
+              "minMinor": 0
+            },
+            "minPlatformApi": 26,
+            "features": [
+              "task-intent.v1",
+              "config.v1",
+              "config-layout.v1",
+              "query.snapshot-refs.v1",
+              "query.snapshot-refs.v2",
+              "query.event-scene.v1",
+              "query.content-scope.v1",
+              "input.select.v1",
+              "input.select-bound.v1"
+            ]
+          }
         }
       ]
     },
@@ -620,6 +644,29 @@
               "query.event-scene.v1"
             ]
           }
+        },
+        {
+          "version": 14,
+          "url": "packs/quietstart.movie-free-member-install/14.json",
+          "sha256": "e3328b1f9c8bcc67f8f9a2615ec4a2ab4f02972bfbf95e372c56c1263ba3b316",
+          "minAppVersionCode": 129202,
+          "requires": {
+            "hostApi": {
+              "major": 1,
+              "minMinor": 0
+            },
+            "minPlatformApi": 26,
+            "features": [
+              "task-intent.v1",
+              "config.v1",
+              "config-layout.v1",
+              "query.snapshot-refs.v1",
+              "query.snapshot-refs.v2",
+              "query.event-scene.v1",
+              "input.select.v1",
+              "input.select-bound.v1"
+            ]
+          }
         }
       ]
     },
@@ -784,6 +831,29 @@
               "config-layout.v1",
               "query.snapshot-refs.v1",
               "query.event-scene.v1"
+            ]
+          }
+        },
+        {
+          "version": 16,
+          "url": "packs/quietstart.music-free-member-install/16.json",
+          "sha256": "adc107a3fa5ae9a3cbe3b04d5a8e848c71c6a8bef11777607d00fba87ddc5669",
+          "minAppVersionCode": 129202,
+          "requires": {
+            "hostApi": {
+              "major": 1,
+              "minMinor": 0
+            },
+            "minPlatformApi": 26,
+            "features": [
+              "task-intent.v1",
+              "config.v1",
+              "config-layout.v1",
+              "query.snapshot-refs.v1",
+              "query.snapshot-refs.v2",
+              "query.event-scene.v1",
+              "input.select.v1",
+              "input.select-bound.v1"
             ]
           }
         }
@@ -2354,6 +2424,27 @@
               "task-intent.v1",
               "config.v1",
               "config-layout.v1"
+            ]
+          }
+        },
+        {
+          "version": 18,
+          "url": "packs/quietstart.theme-free-gifts/18.json",
+          "sha256": "87609867801f18a536e8729e01cbc8d07eec2bddabfd7815e0f316ba922a5fab",
+          "minAppVersionCode": 129202,
+          "requires": {
+            "hostApi": {
+              "major": 1,
+              "minMinor": 0
+            },
+            "minPlatformApi": 26,
+            "features": [
+              "task-intent.v1",
+              "config.v1",
+              "config-layout.v1",
+              "query.snapshot-refs.v2",
+              "input.select.v1",
+              "input.select-bound.v1"
             ]
           }
         }
