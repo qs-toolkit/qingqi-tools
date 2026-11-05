@@ -933,6 +933,28 @@
               "action-visit-receipts.v1"
             ]
           }
+        },
+        {
+          "version": 34,
+          "url": "packs/quietstart.qidian-welfare-center/34.json",
+          "sha256": "59dbc325c238a9062d2010f34440f378c28f94085d39a1e633b1d60d6a30b7fe",
+          "minAppVersionCode": 129200,
+          "requires": {
+            "hostApi": {
+              "major": 1,
+              "minMinor": 0
+            },
+            "minPlatformApi": 26,
+            "features": [
+              "task-intent.v1",
+              "config.v1",
+              "config-layout.v1",
+              "query.snapshot-refs.v2",
+              "query.event-scene.v1",
+              "action-visit-receipts.v1",
+              "input.select.v1"
+            ]
+          }
         }
       ]
     },
@@ -1625,6 +1647,28 @@
               "query.snapshot-refs.v2",
               "query.event-scene.v1",
               "action-visit-receipts.v1"
+            ]
+          }
+        },
+        {
+          "version": 21,
+          "url": "packs/quietstart.qqmusic-free-listen-video/21.json",
+          "sha256": "e2f1e978f14080252064132e94e6ac5c6e469e6c35e1e11026e53f426fa83cc5",
+          "minAppVersionCode": 129200,
+          "requires": {
+            "hostApi": {
+              "major": 1,
+              "minMinor": 0
+            },
+            "minPlatformApi": 26,
+            "features": [
+              "task-intent.v1",
+              "config.v1",
+              "config-layout.v1",
+              "query.snapshot-refs.v2",
+              "query.event-scene.v1",
+              "action-visit-receipts.v1",
+              "input.select.v1"
             ]
           }
         }
