@@ -57,24 +57,6 @@
           }
         },
         {
-          "version": 9,
-          "url": "packs/kugou-concept-daily-checkin/9.json",
-          "sha256": "002030932fcddb072d3f42eb02f7f9864d2d37363f54e15527e2a510a933891a",
-          "minAppVersionCode": 129161,
-          "requires": {
-            "hostApi": {
-              "major": 1,
-              "minMinor": 0
-            },
-            "minPlatformApi": 26,
-            "features": [
-              "task-intent.v1",
-              "config.v1",
-              "config-layout.v1"
-            ]
-          }
-        },
-        {
           "version": 10,
           "url": "packs/kugou-concept-daily-checkin/10.json",
           "sha256": "ad2f72e7d9ea4d189d4db6dd70fd4a803a10a1c5261a8ec9a81cdc6625e3c61e",
@@ -107,6 +89,26 @@
               "task-intent.v1",
               "config.v1",
               "config-layout.v1"
+            ]
+          }
+        },
+        {
+          "version": 12,
+          "url": "packs/kugou-concept-daily-checkin/12.json",
+          "sha256": "6b3765cbfef79b9cf6d1925f389afac52c801e5c36737ee0f26306cdf08328eb",
+          "minAppVersionCode": 129202,
+          "requires": {
+            "hostApi": {
+              "major": 1,
+              "minMinor": 0
+            },
+            "minPlatformApi": 26,
+            "features": [
+              "task-intent.v1",
+              "config.v1",
+              "config-layout.v1",
+              "query.snapshot-refs.v2",
+              "input.select.v1"
             ]
           }
         }
