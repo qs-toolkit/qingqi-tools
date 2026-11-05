@@ -466,6 +466,25 @@
               "config-layout.v1"
             ]
           }
+        },
+        {
+          "version": 5,
+          "url": "packs/quietstart.jcc-assistant/5.json",
+          "sha256": "a489c1bd257ab95fabb709becf861659c0a42808b01f4b556218af7ef25bca28",
+          "minAppVersionCode": 129161,
+          "requires": {
+            "hostApi": {
+              "major": 1,
+              "minMinor": 0
+            },
+            "minPlatformApi": 26,
+            "features": [
+              "companion.v1",
+              "companion-foreground.v1",
+              "config.v1",
+              "config-layout.v1"
+            ]
+          }
         }
       ]
     },
@@ -2351,24 +2370,6 @@
             "features": [
               "task-intent.v1",
               "config.v1"
-            ]
-          }
-        },
-        {
-          "version": 11,
-          "url": "packs/quietstart.theme-free-gifts/11.json",
-          "sha256": "72963ce46588614fc87c989b901d9211298ce3f93528d2910cf26197deee5615",
-          "minAppVersionCode": 129161,
-          "requires": {
-            "hostApi": {
-              "major": 1,
-              "minMinor": 0
-            },
-            "minPlatformApi": 26,
-            "features": [
-              "task-intent.v1",
-              "config.v1",
-              "config-layout.v1"
             ]
           }
         },
