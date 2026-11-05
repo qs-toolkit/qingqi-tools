@@ -1330,6 +1330,28 @@
               "action-visit-receipts.v1"
             ]
           }
+        },
+        {
+          "version": 62,
+          "url": "packs/quietstart.qqmusic-coin-center/62.json",
+          "sha256": "34fa1c681c4221b000ecdd0894a490fa77d959569a5ac8f82f339733621429ba",
+          "minAppVersionCode": 129192,
+          "requires": {
+            "hostApi": {
+              "major": 1,
+              "minMinor": 0
+            },
+            "minPlatformApi": 26,
+            "features": [
+              "task-intent.v1",
+              "config.v1",
+              "config-layout.v1",
+              "query.snapshot-refs.v1",
+              "query.snapshot-refs.v2",
+              "action-visit-receipts.v1",
+              "input.query-tap.v1"
+            ]
+          }
         }
       ]
     },
