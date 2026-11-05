@@ -1178,24 +1178,6 @@
           }
         },
         {
-          "version": 9,
-          "url": "packs/quietstart.qishui-membership-rewards/9.json",
-          "sha256": "9465de5d82a8a331d911239914838303ab84ffd866675a069582794f89c6bc23",
-          "minAppVersionCode": 129161,
-          "requires": {
-            "hostApi": {
-              "major": 1,
-              "minMinor": 0
-            },
-            "minPlatformApi": 26,
-            "features": [
-              "task-intent.v1",
-              "config.v1",
-              "config-layout.v1"
-            ]
-          }
-        },
-        {
           "version": 10,
           "url": "packs/quietstart.qishui-membership-rewards/10.json",
           "sha256": "3108b1bc4e6644bad06473c115575cd4e7f40e04131ef89e93b43ffaf6b48712",
@@ -1228,6 +1210,25 @@
               "task-intent.v1",
               "config.v1",
               "config-layout.v1"
+            ]
+          }
+        },
+        {
+          "version": 12,
+          "url": "packs/quietstart.qishui-membership-rewards/12.json",
+          "sha256": "18725680a1790a4ece78625a3b8639115f2b94dff04f9cee6a6299da9d01d2ed",
+          "minAppVersionCode": 129203,
+          "requires": {
+            "hostApi": {
+              "major": 1,
+              "minMinor": 0
+            },
+            "minPlatformApi": 26,
+            "features": [
+              "task-intent.v1",
+              "config.v1",
+              "config-layout.v1",
+              "query.ocr-frame-reuse.v1"
             ]
           }
         }
