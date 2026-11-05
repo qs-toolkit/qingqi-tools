@@ -912,6 +912,27 @@
               "action-visit-receipts.v1"
             ]
           }
+        },
+        {
+          "version": 33,
+          "url": "packs/quietstart.qidian-welfare-center/33.json",
+          "sha256": "0a7168c82738f2e332388e0ddcf87bbe8dae37931402ce59baab1601ceb709b9",
+          "minAppVersionCode": 129196,
+          "requires": {
+            "hostApi": {
+              "major": 1,
+              "minMinor": 0
+            },
+            "minPlatformApi": 26,
+            "features": [
+              "task-intent.v1",
+              "config.v1",
+              "config-layout.v1",
+              "query.snapshot-refs.v2",
+              "query.event-scene.v1",
+              "action-visit-receipts.v1"
+            ]
+          }
         }
       ]
     },
@@ -1352,6 +1373,29 @@
               "input.query-tap.v1"
             ]
           }
+        },
+        {
+          "version": 63,
+          "url": "packs/quietstart.qqmusic-coin-center/63.json",
+          "sha256": "f1777f860537d060ae81bf7192b5bad815952d18f30191e899080ac39cca1e76",
+          "minAppVersionCode": 129196,
+          "requires": {
+            "hostApi": {
+              "major": 1,
+              "minMinor": 0
+            },
+            "minPlatformApi": 26,
+            "features": [
+              "task-intent.v1",
+              "config.v1",
+              "config-layout.v1",
+              "query.snapshot-refs.v1",
+              "query.snapshot-refs.v2",
+              "query.event-scene.v1",
+              "action-visit-receipts.v1",
+              "input.query-tap.v1"
+            ]
+          }
         }
       ]
     },
@@ -1535,6 +1579,27 @@
               "config.v1",
               "config-layout.v1",
               "query.snapshot-refs.v2",
+              "action-visit-receipts.v1"
+            ]
+          }
+        },
+        {
+          "version": 20,
+          "url": "packs/quietstart.qqmusic-free-listen-video/20.json",
+          "sha256": "77a26c6cac1b17d3bd0720f91dac5dea9320a72f5028d07a8962e743d80638d9",
+          "minAppVersionCode": 129196,
+          "requires": {
+            "hostApi": {
+              "major": 1,
+              "minMinor": 0
+            },
+            "minPlatformApi": 26,
+            "features": [
+              "task-intent.v1",
+              "config.v1",
+              "config-layout.v1",
+              "query.snapshot-refs.v2",
+              "query.event-scene.v1",
               "action-visit-receipts.v1"
             ]
           }
