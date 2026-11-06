@@ -240,7 +240,7 @@
         {
           "version": 1,
           "url": "packs/quietstart.qqmusic-coin-center/1.json",
-          "sha256": "5a15c9358e7867c6971e64fb94bdf179e91ad8a2bc792d08a0bc9eee41460542",
+          "sha256": "75145e3abdb0b23532276993ec52524d0445ba33718bbbb124c7887adc06a6c9",
           "minAppVersionCode": 129264,
           "requires": {
             "hostApi": {
