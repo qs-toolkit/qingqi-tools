@@ -1,0 +1,378 @@
+{
+  "schema": 2,
+  "name": "轻启综合工具包 V1 远程验收",
+  "packs": [
+    {
+      "id": "kugou-concept-daily-checkin",
+      "name": "酷狗概念版每日签到",
+      "releases": [
+        {
+          "version": 1,
+          "url": "packs/kugou-concept-daily-checkin/1.json",
+          "sha256": "d72c8221a923e0070fae1407884d40e05e0cfc1648ba0db04aff730a01efb68c",
+          "minAppVersionCode": 129202,
+          "requires": {
+            "hostApi": {
+              "major": 1,
+              "minMinor": 0
+            },
+            "minPlatformApi": 26,
+            "features": [
+              "task-intent.v1",
+              "config.v1",
+              "config-layout.v1",
+              "query.snapshot-refs.v2",
+              "input.select.v1"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "quietstart.cloud-space-50gb-install",
+      "name": "云盘免费领50GB安装任务",
+      "releases": [
+        {
+          "version": 1,
+          "url": "packs/quietstart.cloud-space-50gb-install/1.json",
+          "sha256": "9cccfcfbefb629dba8bbf2939f58360cd3a9fd9a713e74a444e567c28f34422a",
+          "minAppVersionCode": 129202,
+          "requires": {
+            "hostApi": {
+              "major": 1,
+              "minMinor": 0
+            },
+            "minPlatformApi": 26,
+            "features": [
+              "task-intent.v1",
+              "config.v1",
+              "config-layout.v1",
+              "query.snapshot-refs.v1",
+              "query.snapshot-refs.v2",
+              "query.event-scene.v1",
+              "query.content-scope.v1",
+              "input.select.v1",
+              "input.select-bound.v1"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "quietstart.harmony-star-assistant",
+      "name": "鸿蒙星空小助手",
+      "releases": [
+        {
+          "version": 1,
+          "url": "packs/quietstart.harmony-star-assistant/1.json",
+          "sha256": "19e674ba0adf99524a432f4abc8d0d8c0e66092cf3a70529786a329d7dc4da7c",
+          "minAppVersionCode": 129161,
+          "requires": {
+            "hostApi": {
+              "major": 1,
+              "minMinor": 0
+            },
+            "minPlatformApi": 26,
+            "features": [
+              "task-actor.v1",
+              "config.v1",
+              "config-labels.v1",
+              "config-layout.v1",
+              "presentation-styles.v1",
+              "task-actor-codec.v1",
+              "task-actor-vision.v1",
+              "task-actor-image-template.v1",
+              "task-actor-image-components.v1",
+              "task-actor-context.v1"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "quietstart.jcc-assistant",
+      "name": "金铲铲助手",
+      "releases": [
+        {
+          "version": 1,
+          "url": "packs/quietstart.jcc-assistant/1.json",
+          "sha256": "0ceb127e711e3af26ebdc94a5319359e2439a60857bcf3810d39aa732cd6c754",
+          "minAppVersionCode": 129161,
+          "requires": {
+            "hostApi": {
+              "major": 1,
+              "minMinor": 0
+            },
+            "minPlatformApi": 26,
+            "features": [
+              "companion.v1",
+              "companion-foreground.v1",
+              "config.v1",
+              "config-layout.v1"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "quietstart.movie-free-member-install",
+      "name": "视频免会员安装任务",
+      "releases": [
+        {
+          "version": 1,
+          "url": "packs/quietstart.movie-free-member-install/1.json",
+          "sha256": "59168993aaacd173882b8605a78f8cd3cb3f6cae69867567487a8bae79763fd9",
+          "minAppVersionCode": 129202,
+          "requires": {
+            "hostApi": {
+              "major": 1,
+              "minMinor": 0
+            },
+            "minPlatformApi": 26,
+            "features": [
+              "task-intent.v1",
+              "config.v1",
+              "config-layout.v1",
+              "query.snapshot-refs.v1",
+              "query.snapshot-refs.v2",
+              "query.event-scene.v1",
+              "input.select.v1",
+              "input.select-bound.v1"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "quietstart.music-free-member-install",
+      "name": "音乐免会员安装任务",
+      "releases": [
+        {
+          "version": 1,
+          "url": "packs/quietstart.music-free-member-install/1.json",
+          "sha256": "b3ff7a6f0bfe5d680012867e1823ae767999b8cb00bfd5b697cb645b9f493e2c",
+          "minAppVersionCode": 129202,
+          "requires": {
+            "hostApi": {
+              "major": 1,
+              "minMinor": 0
+            },
+            "minPlatformApi": 26,
+            "features": [
+              "task-intent.v1",
+              "config.v1",
+              "config-layout.v1",
+              "query.snapshot-refs.v1",
+              "query.snapshot-refs.v2",
+              "query.event-scene.v1",
+              "input.select.v1",
+              "input.select-bound.v1"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "quietstart.qidian-welfare-center",
+      "name": "起点读书福利中心任务奖励",
+      "releases": [
+        {
+          "version": 1,
+          "url": "packs/quietstart.qidian-welfare-center/1.json",
+          "sha256": "ca9b10d293dfe920a8d4fa75e33f0790a513c9b8829aa8f69e6a5b3ab5d69618",
+          "minAppVersionCode": 129253,
+          "requires": {
+            "hostApi": {
+              "major": 1,
+              "minMinor": 0
+            },
+            "minPlatformApi": 26,
+            "features": [
+              "task-intent.v1",
+              "config.v1",
+              "config-layout.v1",
+              "query.snapshot-refs.v2",
+              "query.event-scene.v1",
+              "action-visit-receipts.v1",
+              "input.select.v1",
+              "input.select-target.v1"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "quietstart.qishui-membership-rewards",
+      "name": "汽水音乐免费畅听广告奖励",
+      "releases": [
+        {
+          "version": 1,
+          "url": "packs/quietstart.qishui-membership-rewards/1.json",
+          "sha256": "059f0f6ee1e6ead6279e88c665dfc3f8529955b10ce3c8ff7a784ec11e99b331",
+          "minAppVersionCode": 129247,
+          "requires": {
+            "hostApi": {
+              "major": 1,
+              "minMinor": 0
+            },
+            "minPlatformApi": 26,
+            "features": [
+              "task-intent.v1",
+              "config.v1",
+              "config-layout.v1",
+              "query.snapshot-refs.v2",
+              "query.ocr-frame-reuse.v1",
+              "input.select.v1",
+              "input.select-visual.v1"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "quietstart.qqmusic-coin-center",
+      "name": "QQ音乐金币中心",
+      "releases": [
+        {
+          "version": 1,
+          "url": "packs/quietstart.qqmusic-coin-center/1.json",
+          "sha256": "37a01efdbb0970d2335e2f7408756d7a2dd4b02bc8c0a942f56506fadab569a3",
+          "minAppVersionCode": 129254,
+          "requires": {
+            "hostApi": {
+              "major": 1,
+              "minMinor": 0
+            },
+            "minPlatformApi": 26,
+            "features": [
+              "task-intent.v1",
+              "config.v1",
+              "config-layout.v1",
+              "query.snapshot-refs.v1",
+              "query.snapshot-refs.v2",
+              "query.event-scene.v1",
+              "action-visit-receipts.v1",
+              "input.query-tap.v1",
+              "input.select.v1",
+              "input.select-visit.v1",
+              "input.select-target.v1",
+              "input.select-confirmation.v1"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "quietstart.qqmusic-free-listen-video",
+      "name": "QQ音乐免会员视频任务",
+      "releases": [
+        {
+          "version": 1,
+          "url": "packs/quietstart.qqmusic-free-listen-video/1.json",
+          "sha256": "74681453867a6e9a72dcf8f2388c62c4b4709f993ae60e1d60ba5c5bd36ead92",
+          "minAppVersionCode": 129256,
+          "requires": {
+            "hostApi": {
+              "major": 1,
+              "minMinor": 0
+            },
+            "minPlatformApi": 26,
+            "features": [
+              "task-intent.v1",
+              "config.v1",
+              "config-layout.v1",
+              "query.snapshot-refs.v2",
+              "query.event-scene.v1",
+              "action-visit-receipts.v1",
+              "input.select.v1",
+              "input.select-visit.v1",
+              "input.select-chooser.v1"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "quietstart.taobao-taojinbi-earn",
+      "name": "淘宝淘金币赚金币任务",
+      "releases": [
+        {
+          "version": 1,
+          "url": "packs/quietstart.taobao-taojinbi-earn/1.json",
+          "sha256": "8aaba5bd829ae25aeeadffdf7cac4801ed93ee0b710473811ade901d5737d693",
+          "minAppVersionCode": 129200,
+          "requires": {
+            "hostApi": {
+              "major": 1,
+              "minMinor": 0
+            },
+            "minPlatformApi": 26,
+            "features": [
+              "task-intent.v1",
+              "config.v1",
+              "config-layout.v1",
+              "input.keyboard-dismiss.v1",
+              "query.snapshot-refs.v2",
+              "input.select.v1"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "quietstart.taobao-taojinbi-energy",
+      "name": "淘宝淘金币赚能量任务",
+      "releases": [
+        {
+          "version": 1,
+          "url": "packs/quietstart.taobao-taojinbi-energy/1.json",
+          "sha256": "4e255acbf23710438d6d2d20c693ac4c93412f8ad24d4a048ac4739c0552190c",
+          "minAppVersionCode": 129200,
+          "requires": {
+            "hostApi": {
+              "major": 1,
+              "minMinor": 0
+            },
+            "minPlatformApi": 26,
+            "features": [
+              "task-intent.v1",
+              "config.v1",
+              "config-layout.v1",
+              "input.keyboard-dismiss.v1",
+              "query.snapshot-refs.v2",
+              "input.select.v1"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "quietstart.theme-free-gifts",
+      "name": "主题免费领好礼三段任务",
+      "releases": [
+        {
+          "version": 1,
+          "url": "packs/quietstart.theme-free-gifts/1.json",
+          "sha256": "9529001dc75f44066925e5b028e43a40fd18167726bcb044fc062fcf21054fbf",
+          "minAppVersionCode": 129249,
+          "requires": {
+            "hostApi": {
+              "major": 1,
+              "minMinor": 0
+            },
+            "minPlatformApi": 26,
+            "features": [
+              "task-intent.v1",
+              "config.v1",
+              "config-layout.v1",
+              "query.snapshot-refs.v2",
+              "input.select.v1",
+              "input.select-bound.v1",
+              "input.select-visual.v1"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}
