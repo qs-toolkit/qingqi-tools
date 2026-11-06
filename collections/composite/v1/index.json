@@ -65,7 +65,7 @@
         {
           "version": 1,
           "url": "packs/quietstart.harmony-star-assistant/1.json",
-          "sha256": "d3f563f847dbd3980815e90f4497dedd9366184247080bbc63f0fadc62ca0dce",
+          "sha256": "dfc629747f1f234bae9a54d31635616688a8b080f8d24144596d0ae2c50805bc",
           "minAppVersionCode": 129161,
           "requires": {
             "hostApi": {
@@ -179,7 +179,7 @@
         {
           "version": 1,
           "url": "packs/quietstart.qidian-welfare-center/1.json",
-          "sha256": "7d329946fe3ec5a5b144af2a019730982b6a5059b94f3b518715a1e289c4898f",
+          "sha256": "5bff467fb076f8fe657a8030e12917e58d24c854b87556070d6e1a99b5de37c4",
           "minAppVersionCode": 129261,
           "requires": {
             "hostApi": {
