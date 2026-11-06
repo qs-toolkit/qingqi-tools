@@ -236,8 +236,8 @@
         {
           "version": 1,
           "url": "packs/quietstart.qqmusic-coin-center/1.json",
-          "sha256": "37a01efdbb0970d2335e2f7408756d7a2dd4b02bc8c0a942f56506fadab569a3",
-          "minAppVersionCode": 129254,
+          "sha256": "0176dd57f948ae22b2429336cd5d06db37437898c01c1055b794f187d0bb38a1",
+          "minAppVersionCode": 129264,
           "requires": {
             "hostApi": {
               "major": 1,
@@ -256,7 +256,8 @@
               "input.select.v1",
               "input.select-visit.v1",
               "input.select-target.v1",
-              "input.select-confirmation.v1"
+              "input.select-confirmation.v1",
+              "input.select-visit-container.v1"
             ]
           }
         }
@@ -269,8 +270,8 @@
         {
           "version": 1,
           "url": "packs/quietstart.qqmusic-free-listen-video/1.json",
-          "sha256": "74681453867a6e9a72dcf8f2388c62c4b4709f993ae60e1d60ba5c5bd36ead92",
-          "minAppVersionCode": 129256,
+          "sha256": "681883a11fe8e4d513a8879370e7edcf918970a98cda7a54e00bf98d465aaf30",
+          "minAppVersionCode": 129261,
           "requires": {
             "hostApi": {
               "major": 1,
@@ -286,6 +287,7 @@
               "action-visit-receipts.v1",
               "input.select.v1",
               "input.select-visit.v1",
+              "input.select-confirmation.v1",
               "input.select-chooser.v1"
             ]
           }
