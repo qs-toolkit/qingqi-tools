@@ -35,8 +35,8 @@
         {
           "version": 1,
           "url": "packs/quietstart.cloud-space-50gb-install/1.json",
-          "sha256": "9cccfcfbefb629dba8bbf2939f58360cd3a9fd9a713e74a444e567c28f34422a",
-          "minAppVersionCode": 129202,
+          "sha256": "abc29f2b51a4de3a05331463778ddf839ca6f0c5f64b4101813856c10388b22c",
+          "minAppVersionCode": 129261,
           "requires": {
             "hostApi": {
               "major": 1,
@@ -121,8 +121,8 @@
         {
           "version": 1,
           "url": "packs/quietstart.movie-free-member-install/1.json",
-          "sha256": "59168993aaacd173882b8605a78f8cd3cb3f6cae69867567487a8bae79763fd9",
-          "minAppVersionCode": 129202,
+          "sha256": "a23be9d6cb2e5341dfdaef8d90d7176c0baea4b6b6b499902bb995c656ab2b1d",
+          "minAppVersionCode": 129261,
           "requires": {
             "hostApi": {
               "major": 1,
@@ -150,8 +150,8 @@
         {
           "version": 1,
           "url": "packs/quietstart.music-free-member-install/1.json",
-          "sha256": "b3ff7a6f0bfe5d680012867e1823ae767999b8cb00bfd5b697cb645b9f493e2c",
-          "minAppVersionCode": 129202,
+          "sha256": "48d07ad45ddfd7d624028835eafad736aa08a2649e4ba7bb6352e9a36eb458d9",
+          "minAppVersionCode": 129261,
           "requires": {
             "hostApi": {
               "major": 1,
@@ -179,8 +179,8 @@
         {
           "version": 1,
           "url": "packs/quietstart.qidian-welfare-center/1.json",
-          "sha256": "ca9b10d293dfe920a8d4fa75e33f0790a513c9b8829aa8f69e6a5b3ab5d69618",
-          "minAppVersionCode": 129253,
+          "sha256": "05b6ee0be5570227b9a61391cdb7ba7042a7f99ad0f196491d474852d684333f",
+          "minAppVersionCode": 129261,
           "requires": {
             "hostApi": {
               "major": 1,
@@ -195,7 +195,11 @@
               "query.event-scene.v1",
               "action-visit-receipts.v1",
               "input.select.v1",
-              "input.select-target.v1"
+              "input.select-visit.v1",
+              "input.select-target.v1",
+              "input.select-chooser.v1",
+              "input.select-visit-target.v1",
+              "ui.task-capsule.v1"
             ]
           }
         }
@@ -355,8 +359,8 @@
         {
           "version": 1,
           "url": "packs/quietstart.theme-free-gifts/1.json",
-          "sha256": "9529001dc75f44066925e5b028e43a40fd18167726bcb044fc062fcf21054fbf",
-          "minAppVersionCode": 129249,
+          "sha256": "67d7d47958471d99623c220c8609f687b1bd5a3618d37c5325855aff6149eb98",
+          "minAppVersionCode": 129261,
           "requires": {
             "hostApi": {
               "major": 1,
