@@ -305,7 +305,7 @@
         {
           "version": 1,
           "url": "packs/quietstart.taobao-taojinbi-earn/1.json",
-          "sha256": "3842a8ef61c6c55430606586d3c36327e6c9f411ba8a3ab549d8dc67836ea6c6",
+          "sha256": "d14e6564b96cc8c00d96237a67538a7bb894603d0d9f892ecb2ff6d6af8ca3f1",
           "minAppVersionCode": 129200,
           "requires": {
             "hostApi": {
