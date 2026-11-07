@@ -179,7 +179,7 @@
         {
           "version": 1,
           "url": "packs/quietstart.qidian-welfare-center/1.json",
-          "sha256": "dc872ceaf2ea9b5c2cd8cdbe29c1593f96cbcfc39a92245c41e09274a121e3a6",
+          "sha256": "0d2d616e457de73584ff5be7aba29ddb13e4d3988b2295c8fac835b8ac159fc6",
           "minAppVersionCode": 129261,
           "requires": {
             "hostApi": {
@@ -240,7 +240,7 @@
         {
           "version": 1,
           "url": "packs/quietstart.qqmusic-coin-center/1.json",
-          "sha256": "75145e3abdb0b23532276993ec52524d0445ba33718bbbb124c7887adc06a6c9",
+          "sha256": "04933766c0e2c5dbbc676ecbbcf41ca39c41d476ca3e90d561f272a83df1c054",
           "minAppVersionCode": 129264,
           "requires": {
             "hostApi": {
@@ -274,7 +274,7 @@
         {
           "version": 1,
           "url": "packs/quietstart.qqmusic-free-listen-video/1.json",
-          "sha256": "667096054f5185997db498e3deaba7580d475786ed61a2ce2d0461c4a2fff464",
+          "sha256": "4a40ef13e56e8a3863a40370774d8c6914d875914b622b0befbe6277438c69a8",
           "minAppVersionCode": 129261,
           "requires": {
             "hostApi": {
