@@ -185,7 +185,7 @@
         {
           "version": 1,
           "url": "packs/quietstart.qidian-welfare-center/1.json",
-          "sha256": "20d8ef353dab2b25beb52c887f3c7e2f694878d309d485befbbcc895596fcd59",
+          "sha256": "a7a5abe269bf8be22714939986edaebea0dc94ab3d3eba53f8892aec151be91a",
           "minAppVersionCode": 129261,
           "requires": {
             "hostApi": {
@@ -280,7 +280,7 @@
         {
           "version": 1,
           "url": "packs/quietstart.qqmusic-free-listen-video/1.json",
-          "sha256": "de0269efbc4f53f847d8cece0b0ecf27bf647c575f5c0b904d019d8901e2e7c7",
+          "sha256": "30972bbedab383a08c085aa331c59640a3e0633bc575d370a7780e8a5f5b2884",
           "minAppVersionCode": 129261,
           "requires": {
             "hostApi": {
