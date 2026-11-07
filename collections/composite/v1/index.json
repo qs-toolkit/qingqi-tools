@@ -274,7 +274,7 @@
         {
           "version": 1,
           "url": "packs/quietstart.qqmusic-free-listen-video/1.json",
-          "sha256": "f9fd9451c0e1ae917a2d80380c75d60fe944720f607af0383694a16eed3eacd9",
+          "sha256": "23955045bec2c2f7d4062b509fbd467661895af8236bdda5d701b718a078f931",
           "minAppVersionCode": 129261,
           "requires": {
             "hostApi": {
@@ -291,8 +291,10 @@
               "action-visit-receipts.v1",
               "input.select.v1",
               "input.select-visit.v1",
+              "input.select-target.v1",
               "input.select-confirmation.v1",
-              "input.select-chooser.v1"
+              "input.select-chooser.v1",
+              "input.select-visit-target.v1"
             ]
           }
         }
