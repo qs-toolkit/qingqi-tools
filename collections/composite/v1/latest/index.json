@@ -99,7 +99,7 @@
         {
           "version": 1,
           "url": "packs/quietstart.jcc-assistant/1.json",
-          "sha256": "862ebea376347b26b314ec4a335e3da5378fa65aaad4bc88c974d88af37546d6",
+          "sha256": "26d7be418b0083f448f5c53dd83f30c90262e339908401d28dfeae6b8e32e871",
           "minAppVersionCode": 129161,
           "requires": {
             "hostApi": {
