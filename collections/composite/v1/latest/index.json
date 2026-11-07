@@ -9,7 +9,7 @@
         {
           "version": 1,
           "url": "packs/kugou-concept-daily-checkin/1.json",
-          "sha256": "b54ec08fbc58428233f7837477d6bdae991fb65807515ae9f85699104ede73a9",
+          "sha256": "c3a587b9bd9945a0fc8b4abdcdf1ffaf540e251a688ba5de367a1886a6c0933a",
           "minAppVersionCode": 129399,
           "requires": {
             "hostApi": {
