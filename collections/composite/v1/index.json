@@ -240,7 +240,7 @@
         {
           "version": 1,
           "url": "packs/quietstart.qqmusic-coin-center/1.json",
-          "sha256": "04933766c0e2c5dbbc676ecbbcf41ca39c41d476ca3e90d561f272a83df1c054",
+          "sha256": "2337ef0ace150519c05561db9569f24445bf6708882a894afffac4a33bc9270d",
           "minAppVersionCode": 129264,
           "requires": {
             "hostApi": {
@@ -305,7 +305,7 @@
         {
           "version": 1,
           "url": "packs/quietstart.taobao-taojinbi-earn/1.json",
-          "sha256": "8ad1ac19a64eadad5a3a1d9848698696aa9bf83d886e5863a784d0eb21b5fb2c",
+          "sha256": "43afb834123231ba02e4fcad7a0741b2d70e97fc23958c4ca0cfa3b864024615",
           "minAppVersionCode": 129200,
           "requires": {
             "hostApi": {
@@ -332,7 +332,7 @@
         {
           "version": 1,
           "url": "packs/quietstart.taobao-taojinbi-energy/1.json",
-          "sha256": "5fb137475e6de106ce9f1c3ecd54fa8e4a61480c637acb5793b8ab2580a16335",
+          "sha256": "184a4d83f0703a273dd0bb5c74f0e932f1414107efaade5bd89dc773036d7d83",
           "minAppVersionCode": 129200,
           "requires": {
             "hostApi": {
