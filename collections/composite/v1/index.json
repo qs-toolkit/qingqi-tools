@@ -362,7 +362,7 @@
         {
           "version": 1,
           "url": "packs/quietstart.theme-free-gifts/1.json",
-          "sha256": "143326f0dd240ac658e2805616b785c88506fc3fe36e45f1e7a9563e3d89fba5",
+          "sha256": "53b644c0e9b43e9fe467c1319a9999e68b1857e1a615edc3be23a56a2ca9ee16",
           "minAppVersionCode": 129261,
           "requires": {
             "hostApi": {
