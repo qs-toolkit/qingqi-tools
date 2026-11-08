@@ -246,7 +246,7 @@
         {
           "version": 1,
           "url": "packs/quietstart.qqmusic-coin-center/1.json",
-          "sha256": "bc21449dfdf0854f4130e5ec2758794cc3dc361c4da001d307c8f8617630865a",
+          "sha256": "5d105f34029eef54183601dbb1644cf6bebae18c957070e103aeffb8f8a99699",
           "minAppVersionCode": 129264,
           "requires": {
             "hostApi": {
@@ -280,7 +280,7 @@
         {
           "version": 1,
           "url": "packs/quietstart.qqmusic-free-listen-video/1.json",
-          "sha256": "de5b2660081bc17bc63790336e2002ccd3a5f37d7991e89d99dd868aff0a08ef",
+          "sha256": "c5476d53894f4eb9b0dab80cc8566c689227e37aaf436a74b87891dafa83c04b",
           "minAppVersionCode": 129261,
           "requires": {
             "hostApi": {
