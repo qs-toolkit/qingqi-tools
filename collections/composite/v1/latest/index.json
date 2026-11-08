@@ -9,7 +9,7 @@
         {
           "version": 1,
           "url": "packs/kugou-concept-daily-checkin/1.json",
-          "sha256": "bc6b3de5331b4c721d285ae8c51e07b381eaa5e9ba786206c5f63a8108e038a5",
+          "sha256": "750fb5cd91d53ec4a214ad484c50abf49cdf536b011179250e55056e091515ff",
           "minAppVersionCode": 129399,
           "requires": {
             "hostApi": {
@@ -22,6 +22,7 @@
               "config.v1",
               "config-layout.v1",
               "query.snapshot-refs.v2",
+              "input.query-tap.v1",
               "input.select.v1",
               "input.select-visual.v1",
               "input.select-visual-skip.v1"
