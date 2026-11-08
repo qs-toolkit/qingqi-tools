@@ -185,7 +185,7 @@
         {
           "version": 1,
           "url": "packs/quietstart.qidian-welfare-center/1.json",
-          "sha256": "4f99c210e814501255750b9320fa3c2e9337d348eceae9c9494c8abed1ab0aea",
+          "sha256": "330307505c8e28b3393f16975d3f3ae519c8507a3fb901f06f03eea2d5327beb",
           "minAppVersionCode": 129261,
           "requires": {
             "hostApi": {
