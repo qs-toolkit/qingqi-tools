@@ -313,7 +313,7 @@
         {
           "version": 1,
           "url": "packs/quietstart.taobao-taojinbi-earn/1.json",
-          "sha256": "d2326eaee16c45a7baab58bd18a61fe666ece610280904663bc42293312043fb",
+          "sha256": "bb08c0040a62dde7c16ee400da874677ad47462c5e2c174bda04b8546ac956e3",
           "minAppVersionCode": 129271,
           "requires": {
             "hostApi": {
@@ -341,7 +341,7 @@
         {
           "version": 1,
           "url": "packs/quietstart.taobao-taojinbi-energy/1.json",
-          "sha256": "764f66d054b0dba10fb8b49f300e5e786a263f378a27ccfc3c71a1ba622b7b92",
+          "sha256": "b8527d7f6475307298769de22c55c05c1f0bbdcbe1566e46843aa26b4dd6cce3",
           "minAppVersionCode": 129200,
           "requires": {
             "hostApi": {
