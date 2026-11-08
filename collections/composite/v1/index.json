@@ -212,7 +212,7 @@
         {
           "version": 1,
           "url": "packs/quietstart.qishui-membership-rewards/1.json",
-          "sha256": "96afa40f8e2fcd23116150c3aad384b8d0dbfadc01540f1d10b0acf0c4a9f14a",
+          "sha256": "8d3b542734540b84e4d57e3f579c749db0a4230f8f69aea07082441c5d6b3994",
           "minAppVersionCode": 129247,
           "requires": {
             "hostApi": {
