@@ -68,7 +68,7 @@
         {
           "version": 1,
           "url": "packs/quietstart.harmony-star-assistant/1.json",
-          "sha256": "0ae71b269d06a0be661c4ec7ba6463c7615c255f79473ad9a73b1171b4b3bad0",
+          "sha256": "de3538d1096bc063de620b2a33e0d78d63505a25f22bd5f830e1637fe95f1536",
           "minAppVersionCode": 129161,
           "requires": {
             "hostApi": {
