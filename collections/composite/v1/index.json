@@ -36,7 +36,7 @@
         {
           "version": 1,
           "url": "packs/quietstart.cloud-space-50gb-install/1.json",
-          "sha256": "9a3e542d9cb63a80b8c00f4020bce2ab47c1677c8b0c0d2e06dee6657326ce43",
+          "sha256": "67c211455598e602b39b4d551b799d68a6b3708d85efbc6358a64948cdeec3b6",
           "minAppVersionCode": 129261,
           "requires": {
             "hostApi": {
@@ -122,7 +122,7 @@
         {
           "version": 1,
           "url": "packs/quietstart.movie-free-member-install/1.json",
-          "sha256": "022f6e0df45ff108eeac31d38bf34cc8e3814d7688a2444fb683026af41bd390",
+          "sha256": "ff4a3748c7c4ffaceacbc5e60d08e519fb67f49ad042a63c5abd474098ab0bc3",
           "minAppVersionCode": 129261,
           "requires": {
             "hostApi": {
@@ -151,7 +151,7 @@
         {
           "version": 1,
           "url": "packs/quietstart.music-free-member-install/1.json",
-          "sha256": "1950b33b6ef88f2a59a14412861405b7b95742aff49db69ef7f98fd0fc0b55f8",
+          "sha256": "61866523562a1c3f0a7c92dbf067e29a6c33c6b8b16d9ba6a0a3d72745a714f6",
           "minAppVersionCode": 129261,
           "requires": {
             "hostApi": {
