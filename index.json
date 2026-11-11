@@ -24,8 +24,8 @@
     {
       "id": "quietstart.movie-free-member-install",
       "name": "视频免会员安装任务",
-      "version": 1,
-      "url": "packs/quietstart.movie-free-member-install/1.json"
+      "version": 2,
+      "url": "packs/quietstart.movie-free-member-install/2.json"
     },
     {
       "id": "quietstart.music-free-member-install",
