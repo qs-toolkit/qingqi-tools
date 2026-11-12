@@ -308,6 +308,28 @@
       ]
     },
     {
+      "id": "quietstart.splash-ad",
+      "name": "跳过开屏广告",
+      "releases": [
+        {
+          "version": 1,
+          "url": "packs/quietstart.splash-ad/1.json",
+          "sha256": "fb670418cd12338e1c9841ff1a8c19e936da951d89b4ba61f98dbe414281f684",
+          "minAppVersionCode": 129470,
+          "requires": {
+            "hostApi": {
+              "major": 1,
+              "minMinor": 0
+            },
+            "minPlatformApi": 26,
+            "features": [
+              "declarative-task.v1"
+            ]
+          }
+        }
+      ]
+    },
+    {
       "id": "quietstart.taobao-taojinbi-earn",
       "name": "淘宝淘金币赚金币任务",
       "releases": [

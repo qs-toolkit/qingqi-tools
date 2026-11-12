@@ -22,8 +22,13 @@ function checkCollection(directory) {
       ensure(envelope.schema === 5 && envelope.kind === 'quietstart-toolkit-text' && Array.isArray(envelope.files), 'signed-carrier-required');
       for (const file of envelope.files) { ensure(file && typeof file.path === 'string' && typeof file.text === 'string' && !files.has(file.path), 'duplicate-payload'); files.set(file.path, file.text); }
       const list = files.get('files.json'), signature = JSON.parse(files.get('signature.json'));
-      const rows = JSON.parse(list), expected = ['LICENSES.txt', 'main.mjs', 'manifest.json', 'migrate.mjs', 'policy.json', 'rules.json'];
+      const manifest = JSON.parse(files.get('manifest.json'));
+      const declarative = manifest.profile === 'declarative-task/1';
+      const rows = JSON.parse(list), expected = declarative ? ['LICENSES.txt', 'manifest.json', 'rules.json'] :
+        ['LICENSES.txt', 'main.mjs', 'manifest.json', 'migrate.mjs', 'policy.json', 'rules.json'];
       if (files.has('config.json')) expected.push('config.json'); expected.sort();
+      if (declarative) ensure(manifest.entries.rules === 'rules.json' &&
+        Object.keys(manifest.entries).sort().join('|') === (files.has('config.json') ? 'config|rules' : 'rules'), 'invalid-declarative-entries');
       ensure(files.size === expected.length + 2 && Array.isArray(rows) && rows.length === expected.length, 'unexpected-payload-set');
       for (const [i, row] of rows.entries()) {
         ensure(row.path === expected[i] && files.has(row.path), 'invalid-signed-file-order'); const payload = files.get(row.path);
@@ -33,7 +38,7 @@ function checkCollection(directory) {
       ensure(signature.algorithm === 'ECDSA-P256-SHA256' && publicKey.asymmetricKeyType === 'ec' && publicKey.asymmetricKeyDetails?.namedCurve === 'prime256v1' &&
         crypto.verify('sha256', Buffer.from('quietstart-toolkit/v1\n' + list), publicKey, Buffer.from(signature.signature, 'base64')), 'invalid-publisher-signature');
       publishers.add(sha(der));
-      const manifest = JSON.parse(files.get('manifest.json')), rules = JSON.parse(files.get('rules.json'));
+      const rules = JSON.parse(files.get('rules.json'));
       ensure(manifest.id === pack.id && manifest.version === release.version && rules.id === pack.id && rules.version === release.version && manifest.publisher.keyId === signature.keyId, 'release-identity-mismatch');
       ensure(manifest.minAppVersionCode === release.minAppVersionCode && manifest.maxAppVersionCode === release.maxAppVersionCode && canonical(manifest.requires) === canonical(release.requires), 'release-compatibility-mismatch');
       if (files.has('config.json')) {
