@@ -26,9 +26,15 @@ function checkCollection(directory) {
       const declarative = manifest.profile === 'declarative-task/1';
       const rows = JSON.parse(list), expected = declarative ? ['LICENSES.txt', 'manifest.json', 'rules.json'] :
         ['LICENSES.txt', 'main.mjs', 'manifest.json', 'migrate.mjs', 'policy.json', 'rules.json'];
+      const policy = declarative && manifest.entries.script === 'main.mjs';
+      if (policy) {
+        ensure(files.has('main.mjs'), 'invalid-declarative-entries');
+        ensure(manifest.minAppVersionCode >= 129531 && manifest.requires.features.includes('rules.policy-script.v1'), 'invalid-declarative-policy');
+        expected.push('main.mjs');
+      }
       if (files.has('config.json')) expected.push('config.json'); expected.sort();
       if (declarative) ensure(manifest.entries.rules === 'rules.json' &&
-        Object.keys(manifest.entries).sort().join('|') === (files.has('config.json') ? 'config|rules' : 'rules'), 'invalid-declarative-entries');
+        Object.keys(manifest.entries).sort().join('|') === ['rules', ...(files.has('config.json') ? ['config'] : []), ...(policy ? ['script'] : [])].sort().join('|'), 'invalid-declarative-entries');
       ensure(files.size === expected.length + 2 && Array.isArray(rows) && rows.length === expected.length, 'unexpected-payload-set');
       for (const [i, row] of rows.entries()) {
         ensure(row.path === expected[i] && files.has(row.path), 'invalid-signed-file-order'); const payload = files.get(row.path);

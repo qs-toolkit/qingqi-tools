@@ -19,8 +19,8 @@ function fixture(t, edit) {
 test('signed declarative package is admitted without placeholder JavaScript', t => {
   assert.equal(source.files.some(f => f.path.endsWith('.mjs')), false);
   assert.equal(checkCollection(fixture(t)).packages, 1);
-  assert.equal(checkCollection(base).packages, 14);
-  assert.equal(checkCollection(path.join(base, 'latest')).packages, 14);
+  assert.equal(checkCollection(base).packages, 15);
+  assert.equal(checkCollection(path.join(base, 'latest')).packages, 15);
 });
 test('changed rule bytes fail even when outer collection digest is updated', t => {
   const folder = fixture(t, envelope => { envelope.files.find(f => f.path === 'rules.json').text += ' '; });
@@ -34,4 +34,13 @@ test('declarative carrier rejects undeclared script payloads and entry points', 
     manifest.entries.script = 'main.mjs'; row.text = JSON.stringify(manifest);
   });
   assert.throws(() => checkCollection(entry), /invalid-declarative-entries/);
+});
+
+test('declared selector-policy script has a real signed payload and a compatible host floor', t => {
+ const file=path.join(base,'packs/quietstart.wechat-assist/1.json'), pack=JSON.parse(fs.readFileSync(path.join(base,'index.json'))).packs.find(p=>p.id==='quietstart.wechat-assist');
+ const folder=fs.mkdtempSync(path.join(os.tmpdir(),'quietstart-policy-'));t.after(()=>fs.rmSync(folder,{recursive:true,force:true}));
+ fs.mkdirSync(path.dirname(path.join(folder,pack.releases[0].url)),{recursive:true});fs.copyFileSync(file,path.join(folder,pack.releases[0].url));fs.writeFileSync(path.join(folder,'index.json'),JSON.stringify({schema:2,packs:[pack]}));assert.equal(checkCollection(folder).packages,1);
+ for(const change of [m=>m.minAppVersionCode=129530,m=>m.requires.features=m.requires.features.filter(f=>f!=='rules.policy-script.v1')]){
+  const e=JSON.parse(fs.readFileSync(file)),m=e.files.find(f=>f.path==='manifest.json');const d=JSON.parse(m.text);change(d);m.text=JSON.stringify(d);const text=JSON.stringify(e);fs.writeFileSync(path.join(folder,pack.releases[0].url),text);pack.releases[0].sha256=crypto.createHash('sha256').update(text).digest('hex');fs.writeFileSync(path.join(folder,'index.json'),JSON.stringify({schema:2,packs:[pack]}));assert.throws(()=>checkCollection(folder),/invalid-declarative-policy/);
+ }
 });
