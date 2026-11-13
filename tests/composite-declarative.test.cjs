@@ -44,3 +44,11 @@ test('declared selector-policy script has a real signed payload and a compatible
   const e=JSON.parse(fs.readFileSync(file)),m=e.files.find(f=>f.path==='manifest.json');const d=JSON.parse(m.text);change(d);m.text=JSON.stringify(d);const text=JSON.stringify(e);fs.writeFileSync(path.join(folder,pack.releases[0].url),text);pack.releases[0].sha256=crypto.createHash('sha256').update(text).digest('hex');fs.writeFileSync(path.join(folder,'index.json'),JSON.stringify({schema:2,packs:[pack]}));assert.throws(()=>checkCollection(folder),/invalid-declarative-policy/);
  }
 });
+
+test('single press primitive declares its compatible engine feature and floor',t=>{
+ const file=path.join(base,'packs/quietstart.wechat-assist/1.json'),pack=JSON.parse(fs.readFileSync(path.join(base,'index.json'))).packs.find(p=>p.id==='quietstart.wechat-assist');
+ const folder=fs.mkdtempSync(path.join(os.tmpdir(),'quietstart-press-'));t.after(()=>fs.rmSync(folder,{recursive:true,force:true}));fs.mkdirSync(path.dirname(path.join(folder,pack.releases[0].url)),{recursive:true});
+ for(const change of [m=>m.minAppVersionCode=129534,m=>m.requires.features=m.requires.features.filter(f=>f!=='rules.long-press-duration.v1')]){
+ const e=JSON.parse(fs.readFileSync(file)),m=e.files.find(f=>f.path==='manifest.json'),d=JSON.parse(m.text);change(d);m.text=JSON.stringify(d);const text=JSON.stringify(e);fs.writeFileSync(path.join(folder,pack.releases[0].url),text);pack.releases[0].sha256=crypto.createHash('sha256').update(text).digest('hex');fs.writeFileSync(path.join(folder,'index.json'),JSON.stringify({schema:2,packs:[pack]}));assert.throws(()=>checkCollection(folder),/invalid-declarative-press/);
+ }
+});

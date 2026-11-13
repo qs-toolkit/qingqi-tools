@@ -33,6 +33,8 @@ function checkCollection(directory) {
         expected.push('main.mjs');
       }
       if (files.has('config.json')) expected.push('config.json'); expected.sort();
+      const explicitPress = declarative && JSON.parse(files.get('rules.json')).feedFilter?.apps?.some(app => app.rules?.some(rule => rule.pressMs !== undefined));
+      if (explicitPress) ensure(policy && manifest.minAppVersionCode >= 129535 && manifest.requires.features.includes('rules.long-press-duration.v1'), 'invalid-declarative-press');
       if (declarative) ensure(manifest.entries.rules === 'rules.json' &&
         Object.keys(manifest.entries).sort().join('|') === ['rules', ...(files.has('config.json') ? ['config'] : []), ...(policy ? ['script'] : [])].sort().join('|'), 'invalid-declarative-entries');
       ensure(files.size === expected.length + 2 && Array.isArray(rows) && rows.length === expected.length, 'unexpected-payload-set');

@@ -421,8 +421,8 @@
         {
           "version": 1,
           "url": "packs/quietstart.wechat-assist/1.json",
-          "sha256": "3b8e210f9547a8ddc46c0eea78ad2ea67e40a79a75c08b2f9a65963bd35a5a3d",
-          "minAppVersionCode": 129531,
+          "sha256": "88e6b2a9c97f6a4d520dd7f773967387d2e37aea467c86c5e07d731fdf43073a",
+          "minAppVersionCode": 129535,
           "requires": {
             "hostApi": {
               "major": 1,
@@ -431,7 +431,8 @@
             "minPlatformApi": 26,
             "features": [
               "declarative-task.v1",
-              "rules.policy-script.v1"
+              "rules.policy-script.v1",
+              "rules.long-press-duration.v1"
             ]
           }
         }
