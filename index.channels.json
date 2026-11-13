@@ -1,0 +1,10 @@
+{
+  "schema": 1,
+  "kind": "quietstart-toolkit-channels",
+  "channels": [
+    {
+      "minAppVersionCode": 130004,
+      "url": "collections/composite/v1/index.json"
+    }
+  ]
+}
