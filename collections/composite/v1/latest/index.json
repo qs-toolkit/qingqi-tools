@@ -1,15 +1,15 @@
 {
   "schema": 2,
-  "name": "轻启综合工具包 V1（新版轻启）",
+  "name": "轻启综合工具包（新版轻启）",
   "packs": [
     {
       "id": "kugou-concept-daily-checkin",
       "name": "酷狗概念版每日签到",
       "releases": [
         {
-          "version": 1,
-          "url": "packs/kugou-concept-daily-checkin/1.json",
-          "sha256": "79bb3e47ef6815d54427b7d660a3322ea55034ad5b65173cec5a52ec03211efb",
+          "version": 4,
+          "url": "packs/kugou-concept-daily-checkin/4.json",
+          "sha256": "21f159f66b1598782496216cc76dd970d288659081e794c2c18b0944ab44c3f6",
           "minAppVersionCode": 129399,
           "requires": {
             "hostApi": {
@@ -36,9 +36,9 @@
       "name": "云盘免费领50GB安装任务",
       "releases": [
         {
-          "version": 1,
-          "url": "packs/quietstart.cloud-space-50gb-install/1.json",
-          "sha256": "1f166f022f8baeca8f29037080cfa707264a4a88431be970d80f00cf0effacdf",
+          "version": 5,
+          "url": "packs/quietstart.cloud-space-50gb-install/5.json",
+          "sha256": "66fb80c49f25d020652ea9fdb3e703411fa2ee96e82e075ceba295e25ea46bb1",
           "minAppVersionCode": 129394,
           "requires": {
             "hostApi": {
@@ -67,9 +67,9 @@
       "name": "鸿蒙星空小助手",
       "releases": [
         {
-          "version": 1,
-          "url": "packs/quietstart.harmony-star-assistant/1.json",
-          "sha256": "697697a724b98508bdce9fca0d15df04dd059666e1aedf5e38cd1608f390455d",
+          "version": 3,
+          "url": "packs/quietstart.harmony-star-assistant/3.json",
+          "sha256": "fddb48acf61e01654088951578f764e860b8f1258fc3665a6aad7e62e04f9a73",
           "minAppVersionCode": 129161,
           "requires": {
             "hostApi": {
@@ -98,9 +98,9 @@
       "name": "视频免会员安装任务",
       "releases": [
         {
-          "version": 1,
-          "url": "packs/quietstart.movie-free-member-install/1.json",
-          "sha256": "623ac200482dac5813cbe033974e650119b7ca33cfe31de13d3edd0efb86c38d",
+          "version": 3,
+          "url": "packs/quietstart.movie-free-member-install/3.json",
+          "sha256": "080e5550751ae4741fada3dadbdcb4d7e9f5ec6db7b6d8b3ef537ed53d957901",
           "minAppVersionCode": 129401,
           "requires": {
             "hostApi": {
@@ -129,9 +129,9 @@
       "name": "音乐免会员安装任务",
       "releases": [
         {
-          "version": 1,
-          "url": "packs/quietstart.music-free-member-install/1.json",
-          "sha256": "49b8bd392b91efb8b7d58506510d76640ac5c1ee60b6837459ed8c15511224e1",
+          "version": 4,
+          "url": "packs/quietstart.music-free-member-install/4.json",
+          "sha256": "6ed22f034d691e9df17d29d767120118a04fb8b96778846bad0cc4e50e529e85",
           "minAppVersionCode": 129394,
           "requires": {
             "hostApi": {
@@ -159,9 +159,9 @@
       "name": "起点读书福利中心任务奖励",
       "releases": [
         {
-          "version": 1,
-          "url": "packs/quietstart.qidian-welfare-center/1.json",
-          "sha256": "9b913eb2921c11f40ed615c6ada5779e0b51c2449f81e1ae96b14d817a484ab5",
+          "version": 11,
+          "url": "packs/quietstart.qidian-welfare-center/11.json",
+          "sha256": "2feea65e65a27231d912a20ad53a69245706a4b6eb32da378f69410a8fcba816",
           "minAppVersionCode": 129261,
           "requires": {
             "hostApi": {
@@ -192,9 +192,9 @@
       "name": "汽水音乐免费畅听广告奖励",
       "releases": [
         {
-          "version": 1,
-          "url": "packs/quietstart.qishui-membership-rewards/1.json",
-          "sha256": "ddd88879e97c38ff05ff2e57535ccf29091f5d3a00217a4180cd832805f4563e",
+          "version": 4,
+          "url": "packs/quietstart.qishui-membership-rewards/4.json",
+          "sha256": "e199619dd61c5b7264bc9cd28f573c6bf1764a689c446991314cedc69b5611b4",
           "minAppVersionCode": 129247,
           "requires": {
             "hostApi": {
@@ -220,9 +220,9 @@
       "name": "QQ音乐金币中心",
       "releases": [
         {
-          "version": 1,
-          "url": "packs/quietstart.qqmusic-coin-center/1.json",
-          "sha256": "5d105f34029eef54183601dbb1644cf6bebae18c957070e103aeffb8f8a99699",
+          "version": 7,
+          "url": "packs/quietstart.qqmusic-coin-center/7.json",
+          "sha256": "36879a776f5378645ae6016dcf4dc8e936762bf8e8da8f281590f6431d4db2da",
           "minAppVersionCode": 129264,
           "requires": {
             "hostApi": {
@@ -254,9 +254,9 @@
       "name": "QQ音乐免会员视频任务",
       "releases": [
         {
-          "version": 1,
-          "url": "packs/quietstart.qqmusic-free-listen-video/1.json",
-          "sha256": "c5476d53894f4eb9b0dab80cc8566c689227e37aaf436a74b87891dafa83c04b",
+          "version": 6,
+          "url": "packs/quietstart.qqmusic-free-listen-video/6.json",
+          "sha256": "edc43bad6b9af9e3b8d46a174273288b0adee3d3d0092a5d0b1898917b99deef",
           "minAppVersionCode": 129261,
           "requires": {
             "hostApi": {
@@ -287,9 +287,9 @@
       "name": "跳过开屏广告",
       "releases": [
         {
-          "version": 1,
-          "url": "packs/quietstart.splash-ad/1.json",
-          "sha256": "73d3b359c10b10630756c8ce29d961b6a6f95bed3fd87aa448a9be747d3bbb08",
+          "version": 7,
+          "url": "packs/quietstart.splash-ad/7.json",
+          "sha256": "84abcd668b2c4f2591507100532e8ab01726f63b7c78fe65a11d24acd1ef9516",
           "minAppVersionCode": 129527,
           "requires": {
             "hostApi": {
@@ -309,9 +309,9 @@
       "name": "淘宝淘金币赚金币任务",
       "releases": [
         {
-          "version": 1,
-          "url": "packs/quietstart.taobao-taojinbi-earn/1.json",
-          "sha256": "6a575d2988633a1ae4c78c5c738ff448caf2fab299a9aec8587acbc0dd2ce2e1",
+          "version": 7,
+          "url": "packs/quietstart.taobao-taojinbi-earn/7.json",
+          "sha256": "20a5811ba575a07175245e8f32eac0b2033fdb52093a754e20d40a1bcf4c8ec9",
           "minAppVersionCode": 129271,
           "requires": {
             "hostApi": {
@@ -337,9 +337,9 @@
       "name": "淘宝淘金币赚能量任务",
       "releases": [
         {
-          "version": 1,
-          "url": "packs/quietstart.taobao-taojinbi-energy/1.json",
-          "sha256": "434b81df143e7a218399a8d4d692c986d010f889c0d06031588ea86c332a430b",
+          "version": 6,
+          "url": "packs/quietstart.taobao-taojinbi-energy/6.json",
+          "sha256": "4cd9c2aa123eafe4db9f7f621ff7772ea1ac36923fe68967fbab8183162549d9",
           "minAppVersionCode": 129200,
           "requires": {
             "hostApi": {
@@ -364,9 +364,9 @@
       "name": "主题免费领好礼三段任务",
       "releases": [
         {
-          "version": 1,
-          "url": "packs/quietstart.theme-free-gifts/1.json",
-          "sha256": "2f194d95388a2a7c7e49de62c8f874883dbcfec9f7674787ba328d6e89e0181d",
+          "version": 6,
+          "url": "packs/quietstart.theme-free-gifts/6.json",
+          "sha256": "65199c7037f88c413da1a08589298471bd84c7cfe52150947b617e1fb766d6b5",
           "minAppVersionCode": 129398,
           "requires": {
             "hostApi": {
@@ -394,9 +394,9 @@
       "name": "绿泡泡辅助",
       "releases": [
         {
-          "version": 1,
-          "url": "packs/quietstart.wechat-assist/1.json",
-          "sha256": "386588592d92a15d7a805ffa7eb44b19279d15316eb1d6f2a7c094104d502487",
+          "version": 2,
+          "url": "packs/quietstart.wechat-assist/2.json",
+          "sha256": "d7a541006d8d9b0adb6fb0e49e0a1edf032fb3d8ae465e8a100651869a55ef32",
           "minAppVersionCode": 129555,
           "requires": {
             "hostApi": {

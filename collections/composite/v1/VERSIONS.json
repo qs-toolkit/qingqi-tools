@@ -1,0 +1,123 @@
+{
+  "schema": 1,
+  "strategy": "single-config-current-index-plus-one",
+  "date": "2026-11-13",
+  "channels": [
+    "collections/composite/v1",
+    "collections/composite/v1/latest"
+  ],
+  "packs": [
+    {
+      "id": "kugou-concept-daily-checkin",
+      "name": "酷狗概念版每日签到",
+      "singleIndexVersion": 3,
+      "baselineVersion": 3,
+      "version": 4,
+      "baselinePath": "index.json"
+    },
+    {
+      "id": "quietstart.cloud-space-50gb-install",
+      "name": "云盘免费领50GB安装任务",
+      "singleIndexVersion": 4,
+      "baselineVersion": 4,
+      "version": 5,
+      "baselinePath": "index.json"
+    },
+    {
+      "id": "quietstart.harmony-star-assistant",
+      "name": "鸿蒙星空小助手",
+      "singleIndexVersion": 2,
+      "baselineVersion": 2,
+      "version": 3,
+      "baselinePath": "index.json"
+    },
+    {
+      "id": "quietstart.movie-free-member-install",
+      "name": "视频免会员安装任务",
+      "singleIndexVersion": 2,
+      "baselineVersion": 2,
+      "version": 3,
+      "baselinePath": "index.json"
+    },
+    {
+      "id": "quietstart.music-free-member-install",
+      "name": "音乐免会员安装任务",
+      "singleIndexVersion": 3,
+      "baselineVersion": 3,
+      "version": 4,
+      "baselinePath": "index.json"
+    },
+    {
+      "id": "quietstart.qidian-welfare-center",
+      "name": "起点读书福利中心任务奖励",
+      "singleIndexVersion": 10,
+      "baselineVersion": 10,
+      "version": 11,
+      "baselinePath": "index.json"
+    },
+    {
+      "id": "quietstart.qishui-membership-rewards",
+      "name": "汽水音乐免费畅听广告奖励",
+      "singleIndexVersion": 3,
+      "baselineVersion": 3,
+      "version": 4,
+      "baselinePath": "index.json"
+    },
+    {
+      "id": "quietstart.qqmusic-coin-center",
+      "name": "QQ音乐金币中心",
+      "singleIndexVersion": 6,
+      "baselineVersion": 6,
+      "version": 7,
+      "baselinePath": "index.json"
+    },
+    {
+      "id": "quietstart.qqmusic-free-listen-video",
+      "name": "QQ音乐免会员视频任务",
+      "singleIndexVersion": 5,
+      "baselineVersion": 5,
+      "version": 6,
+      "baselinePath": "index.json"
+    },
+    {
+      "id": "quietstart.splash-ad",
+      "name": "跳过开屏广告",
+      "singleIndexVersion": 6,
+      "baselineVersion": 6,
+      "version": 7,
+      "baselinePath": "index.json"
+    },
+    {
+      "id": "quietstart.taobao-taojinbi-earn",
+      "name": "淘宝淘金币赚金币任务",
+      "singleIndexVersion": 6,
+      "baselineVersion": 6,
+      "version": 7,
+      "baselinePath": "index.json"
+    },
+    {
+      "id": "quietstart.taobao-taojinbi-energy",
+      "name": "淘宝淘金币赚能量任务",
+      "singleIndexVersion": 5,
+      "baselineVersion": 5,
+      "version": 6,
+      "baselinePath": "index.json"
+    },
+    {
+      "id": "quietstart.theme-free-gifts",
+      "name": "主题免费领好礼三段任务",
+      "singleIndexVersion": 5,
+      "baselineVersion": 5,
+      "version": 6,
+      "baselinePath": "index.json"
+    },
+    {
+      "id": "quietstart.wechat-assist",
+      "name": "绿泡泡辅助",
+      "singleIndexVersion": 1,
+      "baselineVersion": 1,
+      "version": 2,
+      "baselinePath": "index.json"
+    }
+  ]
+}
