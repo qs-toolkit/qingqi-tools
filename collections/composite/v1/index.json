@@ -91,31 +91,6 @@
       ]
     },
     {
-      "id": "quietstart.jcc-assistant",
-      "name": "金铲铲助手",
-      "releases": [
-        {
-          "version": 1,
-          "url": "packs/quietstart.jcc-assistant/1.json",
-          "sha256": "57bd5c8876d63cc05a19065a01e440b975bcbf144cba4c52950efe1761c7d3e6",
-          "minAppVersionCode": 129161,
-          "requires": {
-            "hostApi": {
-              "major": 1,
-              "minMinor": 0
-            },
-            "minPlatformApi": 26,
-            "features": [
-              "companion.v1",
-              "companion-foreground.v1",
-              "config.v1",
-              "config-layout.v1"
-            ]
-          }
-        }
-      ]
-    },
-    {
       "id": "quietstart.movie-free-member-install",
       "name": "视频免会员安装任务",
       "releases": [
