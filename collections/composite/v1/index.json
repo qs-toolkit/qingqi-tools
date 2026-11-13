@@ -122,7 +122,7 @@
         {
           "version": 1,
           "url": "packs/quietstart.movie-free-member-install/1.json",
-          "sha256": "b31c9c0929046d0a52599997631cb7d9a6be5131786c7231c0bce2d51360b211",
+          "sha256": "ea1562b3260718c0a3612880ce109422a42ccae00228e239552744a1aed465ed",
           "minAppVersionCode": 129261,
           "requires": {
             "hostApi": {
