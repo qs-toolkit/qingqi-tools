@@ -28,8 +28,10 @@
       "name": "鸿蒙星空小助手",
       "singleIndexVersion": 2,
       "baselineVersion": 2,
-      "version": 3,
-      "baselinePath": "index.json"
+      "version": 4,
+      "baselinePath": "index.json",
+      "revision": 1,
+      "scriptSha256": "5712cc6b9ddae15097d62cde27eb35bc21424f5d8d0da155d5acdcafbc9703df"
     },
     {
       "id": "quietstart.movie-free-member-install",
@@ -119,5 +121,6 @@
       "version": 2,
       "baselinePath": "index.json"
     }
-  ]
+  ],
+  "revisionSemantics": "Initial version is single-config index +1; each subsequent content update increments the current composite version."
 }
