@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "strategy": "single-config-current-index-plus-one",
-  "date": "2026-11-13",
+  "date": "2026-11-14",
   "channels": [
     "collections/composite/v1",
     "collections/composite/v1/latest"
@@ -28,10 +28,10 @@
       "name": "鸿蒙星空小助手",
       "singleIndexVersion": 2,
       "baselineVersion": 2,
-      "version": 6,
+      "version": 7,
       "baselinePath": "index.json",
-      "revision": 3,
-      "scriptSha256": "9c67ac47f2e796b936fadfc1ed6860520d620a38539895d1d4a729b3311be0f5"
+      "revision": 4,
+      "scriptSha256": "f288b382ad83998feb7898a51a83aec62e5ff7cf307d1137e3c8b54589a62c85"
     },
     {
       "id": "quietstart.movie-free-member-install",
