@@ -30,8 +30,8 @@
       "baselineVersion": 2,
       "version": 13,
       "baselinePath": "index.json",
-      "revision": 15,
-      "scriptSha256": "c2dceed3389adfae2b64a0e2ccd86b42c425614ccab5221804cbf1ee90189e7d"
+      "revision": 16,
+      "scriptSha256": "1ab893026d708384afffafc2b4bb37cd0dd37ecc8e699e1e810bf18639ec6cc8"
     },
     {
       "id": "quietstart.movie-free-member-install",
