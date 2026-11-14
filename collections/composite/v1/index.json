@@ -95,9 +95,9 @@
       "name": "视频免会员安装任务",
       "releases": [
         {
-          "version": 3,
-          "url": "packs/quietstart.movie-free-member-install/3.json",
-          "sha256": "f3ad9ddd945bd2fa88c28ea9736c9126b2c73cbffba68ad5c968dbc54002a289",
+          "version": 4,
+          "url": "packs/quietstart.movie-free-member-install/4.json",
+          "sha256": "0fae960ff24a0d3d5c33e7ecc038ccdd83d51b5174dd7bf0f86dca6eb54b47df",
           "minAppVersionCode": 129261,
           "requires": {
             "hostApi": {
@@ -124,9 +124,9 @@
       "name": "音乐免会员安装任务",
       "releases": [
         {
-          "version": 4,
-          "url": "packs/quietstart.music-free-member-install/4.json",
-          "sha256": "1c5811d3506e6bd3f2a9e9b805f25405f45f4c5f46d69c4ff30fe411ddcf6648",
+          "version": 5,
+          "url": "packs/quietstart.music-free-member-install/5.json",
+          "sha256": "9c5ece04199209c27de8585e75bfafba820ea4cd09ccbe51a74d579070081abf",
           "minAppVersionCode": 129261,
           "requires": {
             "hostApi": {
