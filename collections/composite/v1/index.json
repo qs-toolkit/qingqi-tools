@@ -64,9 +64,9 @@
       "name": "鸿蒙星空小助手",
       "releases": [
         {
-          "version": 10,
-          "url": "packs/quietstart.harmony-star-assistant/10.json",
-          "sha256": "9d7e29d319ea81acccefdd0812cf251bce264c86f6b89d9610a82311a8511104",
+          "version": 11,
+          "url": "packs/quietstart.harmony-star-assistant/11.json",
+          "sha256": "d9d602cf0b18bc4eb78fb6aeec56047914a43bdcc81ca882be7be33fb6950c8b",
           "minAppVersionCode": 129161,
           "requires": {
             "hostApi": {
