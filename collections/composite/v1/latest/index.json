@@ -68,8 +68,8 @@
       "releases": [
         {
           "version": 13,
-          "url": "packs/quietstart.harmony-star-assistant/13-c840d1392f84e8f426f4b1c7aff54687aa2c2dd9f136ae20cb87aa1b78a6664b.json",
-          "sha256": "c840d1392f84e8f426f4b1c7aff54687aa2c2dd9f136ae20cb87aa1b78a6664b",
+          "url": "packs/quietstart.harmony-star-assistant/13-0edfeef2cb9829c089a8611401d1da86a05f73f8b5fc36b4d28bdee4395393e4.json",
+          "sha256": "0edfeef2cb9829c089a8611401d1da86a05f73f8b5fc36b4d28bdee4395393e4",
           "minAppVersionCode": 129161,
           "requires": {
             "hostApi": {
