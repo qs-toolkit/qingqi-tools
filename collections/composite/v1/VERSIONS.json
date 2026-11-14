@@ -28,10 +28,10 @@
       "name": "鸿蒙星空小助手",
       "singleIndexVersion": 2,
       "baselineVersion": 2,
-      "version": 11,
+      "version": 12,
       "baselinePath": "index.json",
-      "revision": 8,
-      "scriptSha256": "e97bb7ce40c7ba962fd489c4ac1a4e72462d84f80dfda76264e06c511365c88d"
+      "revision": 9,
+      "scriptSha256": "f79bc98e2dc20ddb959c4a69bfc24b2eac65fab5c03925c12a35f7048f577dbc"
     },
     {
       "id": "quietstart.movie-free-member-install",
