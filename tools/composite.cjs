@@ -15,7 +15,10 @@ function checkCollection(directory) {
     const versions = new Set();
     for (const release of pack.releases) {
       ensure(++total <= 128 && Number.isSafeInteger(release.version) && release.version > 0 && !versions.has(release.version), 'invalid-or-duplicate-version'); versions.add(release.version);
-      ensure(release.url === 'packs/' + pack.id + '/' + release.version + '.json', 'release-path-must-be-immutable-and-local');
+      const releaseBase = 'packs/' + pack.id + '/' + release.version;
+      // A user-requested version reset keeps historical canonical files intact.
+      // The full content digest pins the replacement address to these exact bytes.
+      ensure(release.url === releaseBase + '.json' || release.url === releaseBase + '-' + release.sha256 + '.json', 'release-path-must-be-immutable-and-local');
       const text = fs.readFileSync(path.join(directory, release.url), 'utf8');
       ensure(/^[0-9a-f]{64}$/.test(release.sha256) && sha(text) === release.sha256, 'release-sha256-mismatch');
       const envelope = JSON.parse(text), files = new Map();
