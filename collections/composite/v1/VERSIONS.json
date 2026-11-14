@@ -38,20 +38,20 @@
       "name": "视频免会员安装任务",
       "singleIndexVersion": 2,
       "baselineVersion": 2,
-      "version": 4,
+      "version": 5,
       "baselinePath": "index.json",
-      "revision": 1,
-      "scriptSha256": "22ad361d914eb5f659f85fbf94c2ab00a320964cdb5b662dd0851c51cc952065"
+      "revision": 2,
+      "scriptSha256": "275205896cb731db42070cbeb7f85926d23bec9ded0a2fdbcdba617c7ab060d0"
     },
     {
       "id": "quietstart.music-free-member-install",
       "name": "音乐免会员安装任务",
       "singleIndexVersion": 3,
       "baselineVersion": 3,
-      "version": 5,
+      "version": 6,
       "baselinePath": "index.json",
-      "revision": 1,
-      "scriptSha256": "8cd1a3481a23893baa6716174be5a6a27c65edb2d0061dd40e9f38ff65e327fc"
+      "revision": 2,
+      "scriptSha256": "56268968d6641a287a760718a89d5818ba7c085bf1971724ce61961aa4f25419"
     },
     {
       "id": "quietstart.qidian-welfare-center",
