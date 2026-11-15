@@ -34,6 +34,30 @@
       "name": "云盘免费领50GB安装任务",
       "releases": [
         {
+          "version": 6,
+          "url": "packs/quietstart.cloud-space-50gb-install/6.json",
+          "sha256": "34185963fd095899ac2df050689235ad1ef37538e51efe6cd3a8cc13cc8e4eb3",
+          "minAppVersionCode": 129261,
+          "requires": {
+            "hostApi": {
+              "major": 1,
+              "minMinor": 0
+            },
+            "minPlatformApi": 26,
+            "features": [
+              "task-intent.v1",
+              "config.v1",
+              "config-layout.v1",
+              "query.snapshot-refs.v1",
+              "query.snapshot-refs.v2",
+              "query.event-scene.v1",
+              "query.content-scope.v1",
+              "input.select.v1",
+              "input.select-bound.v1"
+            ]
+          }
+        },
+        {
           "version": 5,
           "url": "packs/quietstart.cloud-space-50gb-install/5.json",
           "sha256": "d1401af2cd5ab789ee6d1f0dc14b83c91781edbfb14d9b143e8c7cfe29c5155c",
@@ -123,6 +147,30 @@
       "id": "quietstart.music-free-member-install",
       "name": "音乐免会员安装任务",
       "releases": [
+        {
+          "version": 8,
+          "url": "packs/quietstart.music-free-member-install/8.json",
+          "sha256": "557c7db0a122648c3993e31d37ac7c52909d9606ae12aaef98f54d482c4682d1",
+          "minAppVersionCode": 130047,
+          "requires": {
+            "hostApi": {
+              "major": 1,
+              "minMinor": 0
+            },
+            "minPlatformApi": 26,
+            "features": [
+              "task-intent.v1",
+              "config.v1",
+              "config-layout.v1",
+              "query.snapshot-refs.v1",
+              "query.snapshot-refs.v2",
+              "query.event-scene.v1",
+              "input.select.v1",
+              "input.select-bound.v1",
+              "entry.control-targets.v1"
+            ]
+          }
+        },
         {
           "version": 6,
           "url": "packs/quietstart.music-free-member-install/6.json",
@@ -302,6 +350,29 @@
       "id": "quietstart.taobao-taojinbi-earn",
       "name": "淘宝淘金币赚金币任务",
       "releases": [
+        {
+          "version": 12,
+          "url": "packs/quietstart.taobao-taojinbi-earn/12.json",
+          "sha256": "3478a1064ec7a865b3e0f40dced37a30b8e37330d8c33946a1e8de95bc1ca7d8",
+          "minAppVersionCode": 130050,
+          "requires": {
+            "hostApi": {
+              "major": 1,
+              "minMinor": 0
+            },
+            "minPlatformApi": 26,
+            "features": [
+              "task-intent.v1",
+              "config.v1",
+              "config-layout.v1",
+              "config.range.v1",
+              "input.keyboard-dismiss.v1",
+              "query.nodes-observation.v1",
+              "query.snapshot-refs.v2",
+              "input.select.v1"
+            ]
+          }
+        },
         {
           "version": 7,
           "url": "packs/quietstart.taobao-taojinbi-earn/7.json",

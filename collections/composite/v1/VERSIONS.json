@@ -20,8 +20,22 @@
       "name": "云盘免费领50GB安装任务",
       "singleIndexVersion": 4,
       "baselineVersion": 4,
-      "version": 5,
-      "baselinePath": "index.json"
+      "version": 6,
+      "baselinePath": "index.json",
+      "scriptSha256": "3ba2b506885df51b1b8f47686698ce5c3e325c3da0220568350966a7f7bb5075",
+      "minAppVersionCode": 129261,
+      "channelRevisions": {
+        "normal": {
+          "sha256": "34185963fd095899ac2df050689235ad1ef37538e51efe6cd3a8cc13cc8e4eb3",
+          "scriptSha256": "3ba2b506885df51b1b8f47686698ce5c3e325c3da0220568350966a7f7bb5075",
+          "minAppVersionCode": 129261
+        },
+        "latest": {
+          "sha256": "5d292bd21076efac25ef935749bf35004ff728f2e8e1891729ea729f64904ad1",
+          "scriptSha256": "4614f7119e5217f86e9e34b076578160136fdc25c41e22d797ba27242242c6bb",
+          "minAppVersionCode": 129394
+        }
+      }
     },
     {
       "id": "quietstart.harmony-star-assistant",
@@ -51,10 +65,23 @@
       "name": "音乐免会员安装任务",
       "singleIndexVersion": 3,
       "baselineVersion": 3,
-      "version": 6,
+      "version": 8,
       "baselinePath": "index.json",
       "revision": 2,
-      "scriptSha256": "56268968d6641a287a760718a89d5818ba7c085bf1971724ce61961aa4f25419"
+      "scriptSha256": "56268968d6641a287a760718a89d5818ba7c085bf1971724ce61961aa4f25419",
+      "minAppVersionCode": 130047,
+      "channelRevisions": {
+        "normal": {
+          "sha256": "557c7db0a122648c3993e31d37ac7c52909d9606ae12aaef98f54d482c4682d1",
+          "scriptSha256": "56268968d6641a287a760718a89d5818ba7c085bf1971724ce61961aa4f25419",
+          "minAppVersionCode": 130047
+        },
+        "latest": {
+          "sha256": "f4fe42c6413c50802b4f447166865c43e45a299054542b812a9f36c2ef7f37f1",
+          "scriptSha256": "f2d743b09bb30d43b48b7abeb66193b8190c978d50605e791d61ba0c3854e4bc",
+          "minAppVersionCode": 130047
+        }
+      }
     },
     {
       "id": "quietstart.qidian-welfare-center",
@@ -101,8 +128,22 @@
       "name": "淘宝淘金币赚金币任务",
       "singleIndexVersion": 6,
       "baselineVersion": 6,
-      "version": 7,
-      "baselinePath": "index.json"
+      "version": 12,
+      "baselinePath": "index.json",
+      "scriptSha256": "aa9090262b47a635aa43fd97ff92de5fcb89cabdd70c0f29fd90a9c6335df456",
+      "minAppVersionCode": 130050,
+      "channelRevisions": {
+        "normal": {
+          "sha256": "3478a1064ec7a865b3e0f40dced37a30b8e37330d8c33946a1e8de95bc1ca7d8",
+          "scriptSha256": "aa9090262b47a635aa43fd97ff92de5fcb89cabdd70c0f29fd90a9c6335df456",
+          "minAppVersionCode": 130050
+        },
+        "latest": {
+          "sha256": "34f4d6f0dc90a49959779d7b4c88b00f61e0518ae6be238ba03e4c54e0a2b8dd",
+          "scriptSha256": "5d9d3d2b8635002945d02a23d748749ef5e4103eda148eccd83e8457824a896f",
+          "minAppVersionCode": 130050
+        }
+      }
     },
     {
       "id": "quietstart.taobao-taojinbi-energy",
