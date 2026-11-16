@@ -192,9 +192,9 @@
       "name": "汽水音乐免费畅听广告奖励",
       "releases": [
         {
-          "version": 4,
-          "url": "packs/quietstart.qishui-membership-rewards/4.json",
-          "sha256": "e199619dd61c5b7264bc9cd28f573c6bf1764a689c446991314cedc69b5611b4",
+          "version": 5,
+          "url": "packs/quietstart.qishui-membership-rewards/5.json",
+          "sha256": "682790cde43685036f7ac247c9612e841a6874763bcbac02304ffb9cb9fd0815",
           "minAppVersionCode": 129247,
           "requires": {
             "hostApi": {

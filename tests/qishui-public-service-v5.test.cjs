@@ -5,6 +5,8 @@ const id='quietstart.qishui-membership-rewards';
 for(const channel of ['collections/composite/v1','collections/composite/v1/latest']){
  test(channel+' Qishui V5 preserves identity, configuration and input declarations while admitting the exact public-service badge',()=>{
   const release=read(channel+'/index.json').packs.find(p=>p.id===id).releases[0];assert.equal(release.version,5);
+  assert.deepEqual(read(channel+'/index-130047.json').packs.find(p=>p.id===id).releases[0],release,
+    'newer-client catalog must expose the same V5 update');
   const text=fs.readFileSync(path.join(root,channel,release.url),'utf8');
   assert.equal(crypto.createHash('sha256').update(text).digest('hex'),release.sha256);
   const before=payload(channel+'/packs/'+id+'/4.json'),after=payload(channel+'/'+release.url);
