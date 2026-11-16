@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "strategy": "single-config-current-index-plus-one",
-  "date": "2026-11-15",
+  "date": "2026-11-16",
   "channels": [
     "collections/composite/v1",
     "collections/composite/v1/latest"
@@ -96,8 +96,10 @@
       "name": "汽水音乐免费畅听广告奖励",
       "singleIndexVersion": 3,
       "baselineVersion": 3,
-      "version": 4,
-      "baselinePath": "index.json"
+      "version": 5,
+      "baselinePath": "index.json",
+      "scriptSha256": "24b010aaea9b87ef9ea978e4ccfdd80eaf7c195d9bb6750bcf5533697cc80174",
+      "revision": 1
     },
     {
       "id": "quietstart.qqmusic-coin-center",
