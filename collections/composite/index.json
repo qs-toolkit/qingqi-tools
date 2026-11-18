@@ -1765,6 +1765,28 @@
       ]
     },
     {
+      "id": "quietstart.splash-ad",
+      "name": "跳过开屏广告",
+      "releases": [
+        {
+          "version": 7,
+          "url": "packs/quietstart.splash-ad/7.json",
+          "sha256": "a8e44b460997c45338b46d3612103b6a62845ca44a6ce09bc257d50976885073",
+          "minAppVersionCode": 129527,
+          "requires": {
+            "hostApi": {
+              "major": 1,
+              "minMinor": 0
+            },
+            "minPlatformApi": 26,
+            "features": [
+              "declarative-task.v1"
+            ]
+          }
+        }
+      ]
+    },
+    {
       "id": "quietstart.taobao-taojinbi-earn",
       "name": "淘宝淘金币赚金币任务",
       "releases": [
@@ -2389,6 +2411,31 @@
               "query.snapshot-refs.v2",
               "input.select.v1",
               "input.select-bound.v1"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "quietstart.wechat-assist",
+      "name": "绿泡泡辅助",
+      "releases": [
+        {
+          "version": 2,
+          "url": "packs/quietstart.wechat-assist/2.json",
+          "sha256": "f32c4874f4941c28c0b8b9797cb0b9bad0412abdadcc39e9f29c9674d329741e",
+          "minAppVersionCode": 129555,
+          "requires": {
+            "hostApi": {
+              "major": 1,
+              "minMinor": 0
+            },
+            "minPlatformApi": 26,
+            "features": [
+              "declarative-task.v1",
+              "rules.policy-script.v1",
+              "rules.long-press-duration.v1",
+              "rules.policy-input-epoch.v1"
             ]
           }
         }
